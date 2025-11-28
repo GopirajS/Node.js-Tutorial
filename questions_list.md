@@ -4,27 +4,34 @@
 
 ## **1. Node.js Basics**
 
-* What is Node.js?
-* Why was Node.js created?
-* What is the V8 engine?
-* What makes Node.js single-threaded?
-* What is non-blocking I/O?
-* What is the difference between Node.js and JavaScript (browser)?
-* When should you NOT use Node.js?
-* What type of applications are best for Node.js?
-* What is the role of libuv in Node.js?
+- [What is Node.js?](#what_is_node_js)
+
+- [What is the V8 engine?](#what_is_the_v8_engine)
+
+- [What is non-blocking I/O?](#what_is_non_blocking_input_output)
+
+- [What is the difference between Node.js and JavaScript (browser)?](#what_is_the_difference_between_node_js_and_javascript_browser)
+
+- [What is the role of libuv in Node.js?](#what_is_the_role_of_libuv_in_node_js)
+
+- [What is event-driven architecture in Node.js?](#what_is_event_driven_architecture)
+
+- [What is thread pool in Node.js?](#what_is_thread_pool)
+
+- [What is I/O Polling Techniques in Node.js?](#what_is_Polling)
+
 
 ---
 
 ## **2. Node.js Architecture**
 
-* How does the Node.js event loop work?
-* What are the phases of the event loop?
-* What is the call stack?
-* What is the callback queue?
-* What is the microtask queue?
-* What are timers in Node.js?
-* How does asynchronous execution work internally?
+- How does the Node.js event loop work?
+- What are the phases of the event loop?
+- What is the call stack?
+- What is the callback queue?
+- What is the microtask queue?
+- What are timers in Node.js?
+- How does asynchronous execution work internally?
 
 ---
 
@@ -122,6 +129,8 @@
 * What is JWT?
 * What is OAuth?
 * What is hashing?
+* What is encryption?
+* What is hashing vs encryption?
 * What is salting?
 * What is rate limiting?
 * What is helmet.js?
@@ -171,7 +180,7 @@
 ## **15. Clustering & Scaling**
 
 * What is the cluster module?
-* How does worker process work?
+* What is a worker process. How does work?
 * Why does scaling matter in Node.js?
 * What is PM2?
 * What is load balancing?
