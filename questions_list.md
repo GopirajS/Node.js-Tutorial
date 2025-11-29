@@ -1,76 +1,5 @@
-# ✅ **Node.js Topic-Wise Interview & Learning Questions**
 
----
-
-## **1. Node.js Basics**
-
-- [What is Node.js?](#what_is_node_js)
-
-- [What is the V8 engine?](#what_is_the_v8_engine)
-
-- [What is non-blocking I/O?](#what_is_non_blocking_input_output)
-
-- [What is the difference between Node.js and JavaScript (browser)?](#what_is_the_difference_between_node_js_and_javascript_browser)
-
-- [What is the role of libuv in Node.js?](#what_is_the_role_of_libuv_in_node_js)
-
-- [What is event-driven architecture in Node.js?](#what_is_event_driven_architecture)
-
-- [What is thread pool in Node.js?](#what_is_thread_pool)
-
-- [What is I/O Polling Techniques in Node.js?](#what_is_Polling)
-
-
----
-
-## **2. Node.js Architecture**
-
-- How does the Node.js event loop work?
-- What are the phases of the event loop?
-- What is the call stack?
-- What is the callback queue?
-- What is the microtask queue?
-- What are timers in Node.js?
-- How does asynchronous execution work internally?
-
----
-
-## **3. Modules & CommonJS**
-
-* What is a module in Node.js?
-* What is CommonJS?
-* What is `require()`?
-* What is `module.exports`?
-* What is the difference between `exports` and `module.exports`?
-* How does Node.js resolve modules?
-* What is the `node_modules` folder?
-
----
-
-## **4. ES Modules (ESM) in Node.js**
-
-* What is an ES module?
-* What is the difference between ESM and CommonJS?
-* When should you use `"type": "module"`?
-* What are named exports vs default exports?
-* How do you import JSON using ESM?
-
----
-
-## **5. NPM & Package Management**
-
-* What is npm?
-* What is `package.json`?
-* What is `package-lock.json`?
-* What are dependencies vs devDependencies?
-* What is semantic versioning?
-* What is a global package?
-* What is npx?
-* How does versioning work in npm (`^`, `~`)?
-
----
-
-## **6. Node.js Core Modules**
+## **Node.js Core Modules**
 
 * What is the `fs` module?
 * What is the difference between sync and async file methods?
@@ -82,40 +11,40 @@
 
 ---
 
-## **7. Asynchronous Programming**
+## **Asynchronous Programming**
 
 * What are callbacks?
 * What is callback hell?
 * What are Promises?
 * What is async/await?
 * What are microtasks vs macrotasks?
-* What is error-first callback?
-* How does try/catch work with async functions?
+* What is an error-first callback?
+* How does try/catch work with async/await?
 
 ---
 
-## **8. Express.js (important for backend dev)**
+## **Express.js**
 
 * What is Express.js?
 * What is middleware?
 * What are the types of middleware?
-* How does routing work in Express?
-* What is `next()` in Express?
+* What is routing in Express?
+* What is `next()` and why is it used?
 * What is error-handling middleware?
 * How to handle route parameters?
 * What is express.json() used for?
 
 ---
 
-## **9. Databases in Node.js**
+## **Databases in Node.js**
 
-### SQL
+### 🔹 SQL
 
-* What is a connection pool(sql)?
-* What is parameterized query?
+* What is a connection pool?
+* What is a parameterized query?
 * What is SQL injection?
 
-### NoSQL (MongoDB)
+### 🔹 NoSQL (MongoDB)
 
 * What is MongoDB?
 * What is Mongoose?
@@ -124,7 +53,7 @@
 
 ---
 
-## **10. Authentication & Security**
+## **Authentication & Security**
 
 * What is JWT?
 * What is OAuth?
@@ -138,7 +67,7 @@
 
 ---
 
-## **11. Node.js Streams**
+## **Node.js Streams**
 
 * What is a stream?
 * What are the four types of streams?
@@ -149,69 +78,68 @@
 
 ---
 
-## **12. Buffers**
+## **Buffers**
 
-* What is a Buffer in Node.js?
+* What is a Buffer?
 * How does Node.js handle binary data?
-* How do you create a new buffer?
+* How do you create a buffer?
 
 ---
 
-## **13. File System**
+## **File System**
 
-* What is the difference between readFile and createReadStream?
-* What is unlink?
-* What is appendFile?
-* What is rename?
+* Difference between `readFile` and `createReadStream`
+* What is `fs.unlink()`?
+* What is `fs.appendFile()`?
+* What is `fs.rename()`?
 
 ---
 
-## **14. Process & OS**
+## **Process & OS**
 
 * What is `process` in Node.js?
 * What are environment variables?
 * What is `process.env`?
 * What is `process.nextTick()`?
-* What is the difference between nextTick and setImmediate?
+* Difference between nextTick and setImmediate
 * What is the `os` module?
 
 ---
 
-## **15. Clustering & Scaling**
+## **Clustering & Scaling**
 
 * What is the cluster module?
-* What is a worker process. How does work?
+* What is a worker process and how does it work?
 * Why does scaling matter in Node.js?
 * What is PM2?
 * What is load balancing?
 
 ---
 
-## **16. Error Handling**
+## **Error Handling**
 
 * What are operational errors vs programmer errors?
 * What is an uncaught exception?
 * What is an unhandled promise rejection?
-* How do error codes work in Node.js?
+* How do Node.js error codes work?
 
 ---
 
-## **17. Deployment**
+## **Deployment**
 
 * What is Node.js production mode?
 * What is PM2?
-* What is reverse proxy?
-* How to deploy Node.js on AWS?
-* What is environment-based config?
+* What is a reverse proxy?
+* How to deploy a Node.js app on AWS?
+* What is environment-based configuration?
 
 ---
 
-## **18. Advanced Node.js**
+## **Advanced Node.js (Intermediate-friendly Only)**
 
-* What is worker threads?
+*(Kept only those suitable for intermediate level)*
+
+* What are worker threads?
 * What is garbage collection?
-* What is native addon?
 * What is Zero Downtime Deployment?
-* What is event emitter leak?
-
-
+* What is an event emitter memory leak?
