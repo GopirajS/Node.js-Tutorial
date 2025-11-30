@@ -94,6 +94,26 @@ document.querySelector('#backToTop').addEventListener('click', function(e) {
 
 ---
 
+
+## **Asynchronous Programming**
+
+
+* [What are callbacks?](#what_are_callbacks)\
+
+* [What is an error-first callback?](#what_is_an_error_first_callback)
+
+* [What are microtasks vs macrotasks?](#what_are_microtasks_vs_macrotasks)
+
+* [What are Promises?](#what_are_promises)
+
+* [What are Promises Chain?](#what_are_promises)
+
+* [What is async/await?](#what_is_async_await)
+
+---
+
+---
+
 <h1 style="text-align:center;" >Node.js Basics</h1>
 
 ---
@@ -1435,6 +1455,399 @@ console.log(hash);
 
 **The `crypto` module provides tools to secure your application using encryption, hashing, and cryptographic functions.**
 
+
+
+<span style="color:green;">================================================================ </span>
+
+
+
+<span style="color:green;">================================================================ </span>
+
+<h1 style="text-align:center;" >Asynchronous Programming</h1>
+
+<h2 id="what_are_callbacks" style="color:green">What are callbacks?</h2>
+
+### 🔁 What Are Callbacks?
+
+A **callback** is a **function passed as an argument to another function**, and it runs **after an asynchronous task completes**.
+
+It’s how Node.js handles async operations like reading files, making requests, or waiting for timers—*without blocking the program*.
+
+---
+
+### 🧪 Simple Example
+
+```js
+function greet(name, callback) {
+  console.log("Hello " + name);
+  callback(); // run after main task
+}
+
+greet("John", () => {
+  console.log("Callback finished!");
+});
+```
+
+---
+
+### 📦 Real Node.js Async Example (fs module)
+
+```js
+const fs = require('fs');
+
+fs.readFile("file.txt", "utf8", (err, data) => {
+  if (err) return console.error(err);
+  console.log(data);
+});
+```
+
+---
+
+### 🎯 Why Callbacks Are Important
+
+* They let Node.js do **non-blocking** operations
+* They run **when the async task is done**
+* They keep the server fast, even with many requests
+
+---
+
+### ⚠️ Callback Hell (Common Problem)
+
+Too many nested callbacks:
+
+```js
+doA(() => {
+  doB(() => {
+    doC(() => {
+      doD(() => {
+        console.log("Too deep!");
+      });
+    });
+  });
+});
+```
+
+This is why Node.js later introduced **Promises** and **async/await**.
+
+---
+
+### 🧠 Simple Definition
+
+**A callback is a function you give to another function, and it runs later when the async work finishes.**
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="what_is_an_error_first_callback" style="color:green"> ⚠️ What Is an Error-First Callback? </h2>
+
+![Image](https://github.com/user-attachments/assets/216cb864-dede-4cff-b9ed-020f2c7aa943)
+
+
+An **error-first callback** is a special style of callback function used in Node.js where:
+
+* The **first argument is always the error** (if any)
+* The **second argument is the result**
+
+This pattern helps Node.js easily detect and handle errors in async operations.
+
+---
+
+### 🧪 Example Format
+
+```js
+function callback(err, result) {
+  if (err) {
+    // handle error
+  } else {
+    // use the result
+  }
+}
+```
+
+---
+
+### 📌 Real Node.js Example (fs.readFile)
+
+```js
+const fs = require("fs");
+
+fs.readFile("file.txt", "utf8", (err, data) => {
+  if (err) {
+    console.error("Something went wrong!");
+    return;
+  }
+
+  console.log("File content:", data);
+});
+```
+
+---
+
+### 🎯 Why This Pattern Exists?
+
+* Makes error handling **consistent**
+* Easy to detect failure: if `err` is not `null`, something went wrong
+* Works perfectly with async operations
+
+---
+
+### 🧠 Simple Definition
+
+**An error-first callback is a callback where the first argument is an error, and the second is the result. If the error exists, you handle it; otherwise, you use the result.**
+
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="what_are_microtasks_vs_macrotasks" style="color:green">🕒 What Are Microtasks vs Macrotasks?</h2>
+
+<img  alt="Image" src="https://github.com/user-attachments/assets/a4a016cb-91fe-4d25-98ce-92ebb71d3f8d" />
+
+In Node.js (and browsers), asynchronous work is handled by the **event loop**, which uses two main queues:
+
+
+### 🧩 **Macrotasks (Task Queue)**
+
+Macrotasks are **big async operations** that run *after the current code finishes*.
+
+**Examples of macrotasks:**
+
+* `setTimeout()`
+* `setInterval()`
+* `setImmediate()`
+* I/O callbacks (fs, http)
+* `requestAnimationFrame` (browser)
+
+**Runs later** → slower priority.
+
+---
+
+### ⚡ **Microtasks (Microtask Queue)**
+
+Microtasks are **small, high-priority async tasks** that run **before macrotasks**.
+
+**Examples of microtasks:**
+
+* Promises (`.then`, `.catch`, `.finally`)
+* `process.nextTick()` (Node-specific)
+* QueueMicrotask
+
+**Runs immediately after current code** → highest priority.
+
+---
+
+### 🎯 Which runs first?
+
+✔ **Microtasks ALWAYS run before macrotasks**
+✔ After each macrotask, Node empties the microtask queue
+
+---
+
+### 🧪 Example
+
+```js
+console.log("A");
+
+setTimeout(() => console.log("B"), 0);  // macrotask
+Promise.resolve().then(() => console.log("C")); // microtask
+
+console.log("D");
+```
+
+**Output:**
+
+```
+A
+D
+C  <-- microtask
+B  <-- macrotask
+```
+
+---
+
+### 🧠 Simple Definition
+
+* **Microtasks = high-priority async tasks (Promises)**
+* **Macrotasks = regular async tasks (setTimeout, I/O)**
+* **Microtasks run first**
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="what_are_promises" style="color:green">🤝 What Are Promises?</h2>
+
+<img  alt="Image" src="https://github.com/user-attachments/assets/d5e64e34-c7d6-43a0-9a79-9d4c479255c2" />
+
+A **Promise** in JavaScript is an object that represents the **eventual result of an asynchronous operation**.
+It’s a cleaner alternative to callbacks and helps avoid *callback hell*.
+
+A Promise can be in one of three states:
+
+1. **Pending** → still running
+2. **Fulfilled** → completed successfully
+3. **Rejected** → failed
+
+---
+
+### 🧪 Simple Example
+
+```js
+const myPromise = new Promise((resolve, reject) => {
+  const success = true;
+
+  if (success) {
+    resolve("Done!");
+  } else {
+    reject("Error!");
+  }
+});
+
+myPromise
+  .then(result => console.log(result))
+  .catch(error => console.log(error));
+```
+
+---
+
+### 🎯 Why Promises Are Useful?
+
+* Avoids callback nesting
+* Easy error handling
+* Chain async operations
+* Works with `async/await`
+
+---
+
+### 🧠 Simple Definition
+
+**A Promise is a placeholder for a value that you will get in the future (success or failure).**
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="what_are_promises" style="color:green">🔗 What Is a Promise Chain?</h2>
+
+<img  alt="Image" src="https://github.com/user-attachments/assets/55a26169-70cb-4d51-808a-260c80a74c22" />
+
+
+A **Promise chain** is when you connect multiple `.then()` calls one after another so each step runs **after the previous Promise finishes**.
+
+It allows you to run async tasks in sequence **without callback hell**.
+
+---
+
+### 🧩 How It Works
+
+Each `.then()` returns a **new Promise**, so you can keep chaining:
+
+```js
+doTask1()
+  .then(result1 => doTask2(result1))
+  .then(result2 => doTask3(result2))
+  .then(result3 => console.log("All done!", result3))
+  .catch(error => console.log("Error:", error));
+```
+
+---
+
+### 🧪 Simple Example
+
+```js
+Promise.resolve(1)
+  .then(num => num + 1)     // 2
+  .then(num => num * 5)     // 10
+  .then(num => console.log(num));
+```
+
+**Output:**
+
+```
+10
+```
+
+---
+
+### 🎯 Why Promise Chaining Is Useful?
+
+* Runs async tasks **step-by-step**
+* Avoids nested callbacks
+* Makes async code **clean and readable**
+* Errors propagate automatically to `.catch()`
+
+---
+
+### 🧠 Simple Definition
+
+**Promise chaining means linking multiple `.then()` calls so each one waits for the previous promise to finish.**
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="what_is_async_await" style="color:green">⏳ What Is async/await?</h2>
+
+<img  alt="Image" src="https://github.com/user-attachments/assets/335e4109-6c67-49b6-ad55-d4964b54a0e9" />
+
+**`async/await`** is modern JavaScript syntax that makes working with Promises look like **simple, synchronous code**—even though it’s still fully asynchronous.
+
+It is built on top of Promises and helps you avoid long `.then()` chains.
+
+---
+
+### 🔧 How It Works
+
+* You mark a function as **`async`**
+* Inside it, you use **`await`** to pause the function until a Promise resolves
+* The code *looks* synchronous but *runs* asynchronously
+
+---
+
+### 🧪 Simple Example
+
+```js
+async function demo() {
+  const result = await Promise.resolve("Hello!");
+  console.log(result);
+}
+
+demo();
+```
+
+**Output:**
+
+```
+Hello!
+```
+
+---
+
+### 📦 Real Example (Fetching Data)
+
+```js
+async function getData() {
+  try {
+    const response = await fetch("https://api.example.com");
+    const json = await response.json();
+    console.log(json);
+  } catch (err) {
+    console.error("Error:", err);
+  }
+}
+```
+
+---
+
+### 🎯 Why async/await is great?
+
+* Cleaner and more readable
+* Easier error handling using `try...catch`
+* No callback hell
+* No long Promise chains
+
+---
+
+### 🧠 Simple Definition
+
+**`async/await` lets you write asynchronous code that looks like normal, synchronous code, using Promises behind the scenes.**
 
 
 <span style="color:green;">================================================================ </span>
