@@ -2,11 +2,12 @@
 ## **Asynchronous Programming**
 
 * What are callbacks?
+* What are callbacks function?
 * What is callback hell?
+* What is an error-first callback?
+* What are microtasks vs macrotasks?
 * What are Promises?
 * What is async/await?
-* What are microtasks vs macrotasks?
-* What is an error-first callback?
 * How does try/catch work with async/await?
 
 ---

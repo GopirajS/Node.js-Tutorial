@@ -1,3 +1,26 @@
+<a href="#top" id="backToTop" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+">⬆ Top</a>
+
+<script>
+document.querySelector('#backToTop').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('#top').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+</script>
+
+
+
 # ✅ **Node.js Topic-Wise Interview & Learning Questions**
 
 ---
