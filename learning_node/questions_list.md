@@ -1,13 +1,20 @@
 
 ## **Node.js Core Modules**
 
-* What is the `fs` module?
-* What is the difference between sync and async file methods?
-* What is the `path` module used for?
-* How does the `http` module work?
-* What is the `events` module?
-* What are event emitters?
-* What is the `crypto` module used for?
+
+* [What is the `fs` module?](#what_is_the_fs_module)
+
+* [What is the difference between sync and async file methods?](#what_is_the_difference_between_sync_and_async_file_methods)
+
+* [What is the `path` module used for?](#what_is_the_path_module_used_for)
+
+* [How does the `http` module work?](#how_does_the_http_module_work)
+
+* [What is the `events` module?](#what_is_the_events_module)
+
+* [What are event emitters?](#what_are_event_emitters)
+
+* [What is the `crypto` module used for?](#what_is_the_crypto_module_used_for)
 
 ---
 
