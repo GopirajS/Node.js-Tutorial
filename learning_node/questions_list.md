@@ -1,48 +1,3 @@
-
-## **Express.js**
-
-* What is Express.js?
-* What is middleware?
-* What are the types of middleware?
-* What is routing in Express?
-* What is `next()` and why is it used?
-* What is error-handling middleware?
-* How to handle route parameters?
-* What is express.json() used for?
-
----
-
-## **Databases in Node.js**
-
-### 🔹 SQL
-
-* What is a connection pool?
-* What is a parameterized query?
-* What is SQL injection?
-
-### 🔹 NoSQL (MongoDB)
-
-* What is MongoDB?
-* What is Mongoose?
-* What is a schema?
-* What are collections and documents?
-
----
-
-## **Authentication & Security**
-
-* What is JWT?
-* What is OAuth?
-* What is hashing?
-* What is encryption?
-* What is hashing vs encryption?
-* What is salting?
-* What is rate limiting?
-* What is helmet.js?
-* What is CSRF?
-
----
-
 ## **Node.js Streams**
 
 * What is a stream?
@@ -62,14 +17,6 @@
 
 ---
 
-## **File System**
-
-* Difference between `readFile` and `createReadStream`
-* What is `fs.unlink()`?
-* What is `fs.appendFile()`?
-* What is `fs.rename()`?
-
----
 
 ## **Process & OS**
 
@@ -89,6 +36,16 @@
 * Why does scaling matter in Node.js?
 * What is PM2?
 * What is load balancing?
+
+---
+
+
+## **File System**
+
+* Difference between `readFile` and `createReadStream`
+* What is `fs.unlink()`?
+* What is `fs.appendFile()`?
+* What is `fs.rename()`?
 
 ---
 
@@ -119,3 +76,33 @@
 * What is garbage collection?
 * What is Zero Downtime Deployment?
 * What is an event emitter memory leak?
+
+---
+
+## **Express.js**
+
+* What is Express.js?
+* What is middleware?
+* What are the types of middleware?
+* What is routing in Express?
+* What is `next()` and why is it used?
+* What is error-handling middleware?
+* How to handle route parameters?
+* What is express.json() used for?
+
+---
+
+## **Databases in Node.js**
+
+### 🔹 SQL
+
+* What is a connection pool?
+* What is a parameterized query?
+* What is SQL injection?
+
+### 🔹 NoSQL (MongoDB)
+
+* What is MongoDB?
+* What is Mongoose?
+* What is a schema?
+* What are collections and documents?

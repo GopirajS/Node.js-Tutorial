@@ -49,7 +49,7 @@ document.querySelector('#backToTop').addEventListener('click', function(e) {
 
 * [What is an ES module?](#what_is_an_es_module)
 
-* [What is the difference between ESM and CommonJS?](#what_is_the_difference_between_esm_and_commonjs)
+* [What is the difference between CommonJS and ESM?](#what_is_the_difference_between_esm_and_commonjs)
 
 * [What are named exports vs default exports?](#what_are_named_exports_vs_default_exports)
 
@@ -109,6 +109,26 @@ document.querySelector('#backToTop').addEventListener('click', function(e) {
 * [What is async/await?](#what_is_async_await)
 
 ---
+
+
+## **Authentication & Security**
+
+
+* [What is JWT?](#What_is_JWT)
+
+* [What is OAuth?](#What_is_OAuth)
+
+* [What Is Hashing vs Encryption?](#What_Is_Hashing_vs_Encryption)
+
+* [What is salting?](#What_is_salting)
+
+* [What is rate limiting?](#What_is_rate_limiting)
+
+* [What is helmet.js?](#What_is_helmet_js)
+
+* [What is CSRF?](#What_is_CSRF)
+
+* [What is Stateful and Stateless authentication](#What_is_Stateful_and_Stateless_authentication)
 
 ---
 
@@ -536,7 +556,7 @@ greet();
 
 <span style="color:green;">================================================================ </span>
 
-<h2 id="what_is_the_difference_between_esm_and_commonjs" style="color:green">🔀 What Is the Difference Between ESM and CommonJS? </h2>
+<h2 id="what_is_the_difference_between_esm_and_commonjs" style="color:green">🔀 What Is the Difference Between CommonJS and ESM  ? </h2>
 
 <img  alt="Image" src="https://github.com/user-attachments/assets/250c7bf6-1042-4304-ba34-ffd5629259d7" />
 
@@ -1107,7 +1127,7 @@ The **`events` module** in Node.js provides the foundation for **event-driven pr
 
 ---
 
-## ✅ What the `events` module is
+### ✅ What the `events` module is
 
 It is a **built-in Node.js module** that defines the `EventEmitter` class.
 This class lets objects **emit events** and **register listeners** for those events.
@@ -1116,7 +1136,7 @@ Node.js itself uses this pattern internally—streams, HTTP servers, file reads,
 
 ---
 
-## ✅ Why the `events` module is useful
+### ✅ Why the `events` module is useful
 
 ### It allows you to:
 
@@ -1320,6 +1340,8 @@ console.log(hash);
 
 <h2 id="what_are_callbacks" style="color:green">What are callbacks?</h2>
 
+<img  alt="Image" src="https://github.com/user-attachments/assets/60cd0b82-7dc2-4d10-a6dc-9965f1891e2a" />
+
 ### 🔁 What Are Callbacks?
 
 A **callback** is a **function passed as an argument to another function**, and it runs **after an asynchronous task completes**.
@@ -1396,7 +1418,7 @@ This is why Node.js later introduced **Promises** and **async/await**.
 ![Image](https://github.com/user-attachments/assets/216cb864-dede-4cff-b9ed-020f2c7aa943)
 
 
-An **error-first callback** is a special style of callback function used in Node.js where:
+An **error-first callback** is a **special style** of callback function used in Node.js where:
 
 * The **first argument is always the error** (if any)
 * The **second argument is the result**
@@ -1701,6 +1723,500 @@ async function getData() {
 ### 🧠 Simple Definition
 
 **`async/await` lets you write asynchronous code that looks like normal, synchronous code, using Promises behind the scenes.**
+
+
+<span style="color:green;">================================================================ </span>
+
+<h1 style="text-align:center;" >Authentication & Security</h1>
+
+
+<h2 id="What_is_JWT" style="color:green"> 🔐 What Is JWT? </h2>
+
+![Image](https://github.com/user-attachments/assets/8d3dee46-f9cc-4188-a6fd-74baf505338c)
+
+A **JWT (JSON Web Token)** is a **secure, compact token** used for **authentication and data exchange** between a client and server.
+
+It’s commonly used for **login systems**, **API authentication**, and **secure communication**.
+
+---
+
+### 🧩 What a JWT Looks Like
+
+A JWT has **three parts**, separated by dots:
+
+```
+header.payload.signature
+```
+
+Example:
+
+```
+eyJhbGciOiJIUzI1NiIsInR5c... (header)
+eyJ1c2VySWQiOjEsInJvbGUiOi... (payload)
+SflKxwRJSMeKKF2QT4fwpMeJf36PO... (signature)
+```
+
+---
+
+### 📦 JWT Parts Explained
+
+1. **Header**
+
+   * Contains algorithm + type
+   * Example: `{ "alg": "HS256", "typ": "JWT" }`
+
+2. **Payload**
+
+   * Contains user data (claims)
+   * Example: `{ "id": 1, "role": "admin" }`
+
+3. **Signature**
+
+   * Ensures token **can't be tampered with**
+   * Created using a secret key
+
+---
+
+### 🔧 How JWT Works
+
+1. User logs in
+2. Server creates a JWT and sends it to client
+3. Client stores token (localStorage, cookie, etc.)
+4. Client sends token on every request
+5. Server verifies the signature
+6. If valid → allow access
+
+---
+
+### 🎯 Why JWT Is Popular?
+
+* Stateless → no session storage needed
+* Fast for APIs
+* Works across domains and platforms
+* Easy to pass in headers
+* Secure when used with HTTPS
+
+---
+
+### 🧠 Simple Definition
+
+**A JWT is a secure token containing encoded user data, used to verify identity without storing sessions on the server.**
+
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="What_is_OAuth" style="color:green"> 🔑 What Is OAuth? </h2>
+
+**OAuth** is an **authorization** framework that lets users give one app **permission** to access their data **on another service** — **without sharing their password**.
+
+Think of it as:
+**“Login with Google / Facebook / GitHub” safely.”**
+
+---
+
+### 🧩 Simple Example
+
+You want an app to access your Google Drive files.
+
+* You **don’t give your Google password** to that app
+* Google shows a **permission screen**
+* You click **Allow**
+* Google gives the app a **temporary access token**
+* The app uses the token (not your password)
+
+---
+
+### 🔧 Key Idea
+
+OAuth provides **secure delegated access** using **tokens**, not passwords.
+
+---
+
+### 📦 Where You See OAuth?
+
+* “Login with Google”
+* “Login with GitHub”
+* Connecting apps to Dropbox
+* Allowing apps to access your Twitter or Facebook data
+* Payment apps connecting to banks
+
+---
+
+### 🔐 Why OAuth Is Safe?
+
+* Your password is **never shared**
+* Access can be limited (read-only, write, etc.)
+* Tokens can expire anytime
+* You can revoke access anytime
+
+---
+
+### 🧠 Simple Definition
+
+**OAuth is a secure way to let apps access your data on another service using permission-based tokens instead of passwords.**
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="What_Is_Hashing_vs_Encryption" style="color:green"> 🔐 What Is Hashing vs Encryption? </h2>
+
+<img  alt="Image" src="https://github.com/user-attachments/assets/b3269bb1-237a-4f1f-8745-b005413b695c" />
+
+### 🧩 **Hashing (One-Way)**
+
+🔒 **Purpose:** Protect data like passwords
+➡️ **One-way only — cannot be reversed**
+
+* Turns data into a fixed-length string
+* Same input → same output
+* You **cannot get the original value back**
+* Used for storing passwords securely
+
+**Example:**
+`"password123"` → `ef92b778bafe771e...`
+
+✔ Secure
+✔ Fast
+✔ Ideal for passwords
+❌ Cannot be decrypted
+
+---
+
+### 🔐 **Encryption (Two-Way)**
+
+🔑 **Purpose:** Keep data private
+➡️ **Two-way — can be reversed if you have the key**
+
+* Converts data into unreadable cipher text
+* Requires a **key** to encrypt and decrypt
+* Used for secure communication (HTTPS, tokens, files)
+
+**Example:**
+`"hello"` → `EncryptedTextXYZ`
+Then using the key → `"hello"` again
+
+✔ Reversible
+✔ Used for secure transfers
+✔ Needs keys
+❗ Lost key = lost data
+
+---
+
+### 🎯 Simple Summary
+
+| Feature                         | Hashing              | Encryption                    |
+| ------------------------------- | -------------------- | ----------------------------- |
+| Direction                       | One-way              | Two-way                       |
+| Can you get original data back? | ❌ No                 | ✅ Yes (with key)              |
+| Used for                        | Passwords, checksums | Sensitive data, communication |
+| Key required                    | ❌ No                 | ✅ Yes                         |
+
+---
+
+### 🧠 One-Line Definition
+
+**Hashing = one-way protection**
+**Encryption = two-way protection with keys**
+
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="What_is_salting" style="color:green">🧂 What Is Salting? </h2>
+
+**Salting** is a security technique where you add a **random string (salt)** to a password *before hashing it*.
+This makes the hash **unique**, even if two users have the same password.
+
+---
+
+### 🧪 Example (Very Simple)
+
+Password:
+
+```
+"hello123"
+```
+
+Salt:
+
+```
+"XyZ9@#"
+```
+
+Combined →
+
+```
+"hello123XyZ9@#"
+```
+
+Then hashed.
+
+---
+
+### 🔒 Why Salting Is Important?
+
+* Prevents attackers from using **precomputed hash tables** (rainbow tables)
+* Makes every password hash **unique**
+* Even if two users use the same password, their hashes are **different**
+* Makes cracking passwords much harder
+
+---
+
+### 🧠 Simple Definition
+
+**Salting adds a random value to a password before hashing to make the hash unique and more secure.**
+
+
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="What_is_rate_limiting" style="color:green"> 🚦 What Is Rate Limiting? </h2>
+
+<img  alt="Image" src="https://github.com/user-attachments/assets/0ffc0e25-53cc-4130-b577-243e67a2c248" />
+
+**Rate limiting** is a security technique that **controls how many requests a user (or IP) can make within a specific time**.
+
+It prevents **abuse, spam, brute-force attacks, and server overload**.
+
+---
+
+### 🧪 Simple Example
+
+Allow only **100 requests per minute** per user/IP.
+
+If someone sends the 101st request →
+❌ Blocked or delayed.
+
+---
+
+### 🎯 Why Rate Limiting Is Important?
+
+* Stops **brute-force login attempts**
+* Protects APIs from **spamming & flooding**
+* Prevents **DDoS-like behavior**
+* Saves server resources
+* Makes your app stable and secure
+
+---
+
+### 🧩 How It Works
+
+A rate limiter tracks:
+
+* IP address
+* User ID
+* Number of requests
+* Time window
+
+If user exceeds the allowed limit → return error:
+
+```
+429 Too Many Requests
+```
+
+---
+
+### 🔐 Where It's Commonly Used?
+
+* Login routes
+* Public APIs
+* Contact forms
+* Payment systems
+* File upload endpoints
+
+---
+
+### 🧠 Simple Definition
+
+**Rate limiting restricts how many requests someone can send in a time period to protect servers from abuse.**
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="What_is_helmet_js" style="color:green"> 🛡️ What Is helmet.js? </h2>
+
+<img  alt="Image" src="https://github.com/user-attachments/assets/d7e71641-aa81-4278-b21c-17533e56ebdd"/>
+
+**helmet.js** is an **Express.js security middleware** that helps protect your Node.js applications by setting **various HTTP security headers** automatically.
+
+It makes your app safer with almost zero setup.
+
+---
+
+### 🔧 What Helmet Does
+
+Helmet adds security headers like:
+
+* **Content Security Policy (CSP)** → blocks malicious scripts
+* **XSS Protection** → reduces cross-site scripting attacks
+* **Hide X-Powered-By** → hides Express/Node info
+* **HSTS** → enforces HTTPS
+* **NoSniff** → prevents MIME-type sniffing
+* **Frameguard** → stops clickjacking
+
+---
+
+### 🧪 Simple Example
+
+```js
+const express = require("express");
+const helmet = require("helmet");
+
+const app = express();
+app.use(helmet());
+
+app.listen(3000);
+```
+
+Just one line: `app.use(helmet())` → your app gets multiple security layers.
+
+---
+
+### 🎯 Why Use helmet.js?
+
+* Protects your API from common web vulnerabilities
+* Requires almost **no configuration**
+* Recommended for production apps
+* Works perfectly with Express.js
+
+---
+
+### 🧠 Simple Definition
+
+**helmet.js is a security middleware for Express that adds important HTTP headers to protect your app from attacks like XSS, clickjacking, and code injection.**
+
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="What_is_CSRF" style="color:green"> What is CSRF (Cross-Site Request Forgery) </h2>
+
+<img  alt="Image" src="https://github.com/user-attachments/assets/6b1bc7f2-6856-4730-a1ca-717e45bf9106" />
+
+### **Simple Explanation**
+
+CSRF happens when a **bad website tricks your browser into performing an action on another website where you’re already logged in** — without you knowing.
+
+### **Simple Example**
+
+You're logged in to your bank.
+You open an evil website in another tab.
+That website secretly sends a request:
+
+```
+POST https://yourbank.com/transfer?amount=5000&to=attacker
+```
+
+Your browser includes your **bank cookies**, so the bank thinks *you* requested it.
+
+---
+
+## **Technical Explanation**
+
+CSRF exploits the fact that:
+
+* Browsers **automatically send cookies** (session cookies, auth cookies) with every request.
+* If the attacker can make your browser **send a request** (form submit, image load, script, fetch), the server cannot tell it wasn’t you.
+
+### **Attack Example (HTML Form)**
+
+```html
+<form action="https://bank.com/transfer" method="POST" style="display:none">
+  <input type="hidden" name="amount" value="5000">
+  <input type="hidden" name="to" value="attacker">
+</form>
+<script>
+  document.forms[0].submit();
+</script>
+```
+
+If you're logged into the bank in the same browser, the request works.
+
+---
+
+## **Protection**
+
+### 1. **CSRF Tokens**
+
+Server generates a random token and adds it to forms:
+
+```html
+<input type="hidden" name="csrf_token" value="93hf83hf83h">
+```
+
+Server verifies the token → attacker cannot guess it.
+
+### 2. **SameSite Cookies**
+
+Set cookies so they **aren’t sent** on cross-site requests:
+
+```
+Set-Cookie: session=abc123; SameSite=Strict;
+```
+
+### 3. **Double Submit Cookie**
+
+Send token in both **cookie + body/header** → must match.
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="What_is_Stateful_and_Stateless_authentication" style="color:green"> *Stateful Authentication and Stateless Authentication  </h2>
+
+![Image](https://github.com/user-attachments/assets/7c51ab7e-c75e-40bc-858f-24c241dc0dac)
+
+### ✅ **Stateful Authentication (Session-based) — CORRECT VERSION**
+
+**Flow:**
+
+1. **User sends email + password**
+2. **Server checks credentials**
+3. If correct → **Server creates a session** (stores it in memory, Redis, or DB)
+4. Server sends back a **session ID in a cookie**
+5. On the next request → client sends the **cookie**
+6. Server **compares the session ID** with the saved session
+7. If matches → server returns the response
+
+**Key point:**
+✔️ Server **stores session data**
+✔️ Server **validates each request by checking stored session**
+
+This is **stateful** because the server keeps "state".
+
+---
+
+### ✅ **Stateless Authentication (JWT token) — CORRECT VERSION**
+
+**Flow:**
+
+1. **User sends email + password**
+2. **Server checks credentials**
+3. If correct → **Server creates a JWT token**
+4. Server sends JWT token to the client
+5. Client stores token (cookie or localStorage)
+6. Next request → client sends **Authorization: Bearer JWT** header
+7. Server **verifies token signature** (no DB lookup needed)
+8. If valid → server returns the response
+
+**Key point:**
+✔️ Server does **not store the token**
+✔️ Token is **self-contained** (payload + signature)
+
+This is **stateless** because the server keeps **no session state**.
+
+---
+
+### 🎯 Summary Table
+
+| Feature                           | Stateful (Session)     | Stateless (JWT)             |
+| --------------------------------- | ---------------------- | --------------------------- |
+| Server stores data?               | ✔️ Yes (session store) | ❌ No                        |
+| Authentication data stored where? | Server                 | JWT token itself            |
+| Client sends?                     | Session cookie         | JWT in header/cookie        |
+| Performance                       | Slower at scale        | Faster at scale             |
+| Logout?                           | Easy (delete session)  | Hard (need token blacklist) |
 
 
 <span style="color:green;">================================================================ </span>
