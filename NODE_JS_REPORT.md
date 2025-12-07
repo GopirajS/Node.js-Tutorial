@@ -132,6 +132,24 @@ document.querySelector('#backToTop').addEventListener('click', function(e) {
 
 ---
 
+## **Node.js Streams and Buffers**
+
+* [What is a stream?](#What_is_a_stream)
+
+* [What are the four types of streams?](#What_are_the_four_types_of_streams)
+
+* What is a readable stream?
+* What is a writable stream?
+* What is piping?
+* What is backpressure?
+
+* [What is a Buffer?](#What_is_a_Buffer)
+
+* How does Node.js handle binary data?
+* How do you create a buffer?
+
+---
+
 <h1 style="text-align:center;" >Node.js Basics</h1>
 
 ---
@@ -2218,5 +2236,151 @@ This is **stateless** because the server keeps **no session state**.
 | Performance                       | Slower at scale        | Faster at scale             |
 | Logout?                           | Easy (delete session)  | Hard (need token blacklist) |
 
+
+<span style="color:green;">================================================================ </span>
+
+
+<span style="color:green;">================================================================ </span>
+
+<h1 style="text-align:center;" >Node.js Streams and Buffers</h1>
+
+<h2 id="UNIQE_IDENDIFATION" style="color:green"> 🌊 What is a Stream in Node.js? </h2>
+
+![Image](https://github.com/user-attachments/assets/384719ac-3129-4d65-9cd5-90e150e1dacd)
+
+### 🌊 **What is a Stream in Node.js?**
+
+A **stream** is a feature in Node.js that lets you **process data in small chunks** instead of loading the whole data into memory at once.
+
+### 🧒 Simple Explanation
+
+Imagine watching a YouTube video —
+you don’t download the entire video first.
+You receive it **bit by bit** and play it immediately.
+That’s exactly how streams work.
+
+### 🧠 Technical Explanation
+
+A stream is an **EventEmitter** that handles **continuous data flow**.
+It lets you **read** or **write** data chunk-by-chunk, improving performance and memory usage.
+
+### ⭐ Why Use Streams?
+
+* Efficient with **large files** (videos, logs)
+* Uses **less memory**
+* Faster processing
+* Non-blocking
+
+### 📘 Example
+
+Reading a file using a stream:
+
+```js
+const fs = require('fs');
+
+const stream = fs.createReadStream('big.txt');
+
+stream.on('data', chunk => {
+  console.log("Chunk received:", chunk.toString());
+});
+```
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="What_are_the_four_types_of_streams" style="color:green"> 🛠️ What Are the Four Types of Streams in Node.js? </h2>
+
+![Image](https://github.com/user-attachments/assets/b351125d-81c4-41d0-a5cb-9772e4a5a9b8)
+
+### 1️⃣ **Readable Stream**
+
+📥 *Data comes **into** your program.*
+Used to **read** data chunk-by-chunk.
+
+**Examples:**
+
+* `fs.createReadStream()`
+* HTTP request body (`req` in Express)
+
+---
+
+### 2️⃣ **Writable Stream**
+
+📤 *Data goes **out** of your program.*
+Used to **write** data chunk-by-chunk.
+
+**Examples:**
+
+* `fs.createWriteStream()`
+* HTTP response (`res` in Express)
+
+---
+
+### 3️⃣ **Duplex Stream**
+
+🔁 *Can both read and write independently.*
+Acts like **two separate channels** in one.
+
+**Examples:**
+
+* TCP sockets
+* Net streams
+
+---
+
+### 4️⃣ **Transform Stream**
+
+🔄 *Can read and write**, and also **modify** data as it flows.*
+Think of it as a “filter” or “processor”.
+
+**Examples:**
+
+* `zlib.createGzip()` (compress data)
+* `crypto.createCipher()` (encrypt data)
+
+---
+
+### 🧠 Quick Summary Table
+
+| Type      | Can Read? | Can Write? | Can Transform? |
+| --------- | --------- | ---------- | -------------- |
+| Readable  | ✔         | ✖          | ✖              |
+| Writable  | ✖         | ✔          | ✖              |
+| Duplex    | ✔         | ✔          | ✖              |
+| Transform | ✔         | ✔          | ✔              |
+
+---
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="What_is_a_Buffer" style="color:green"> What is a Buffer? </h2>
+
+<img  alt="Image" src="https://github.com/user-attachments/assets/434900aa-d45a-4049-a376-f1db8b0c15e4" />
+
+📦 A **Buffer** in Node.js is a special memory container used to store **raw binary data** (bytes).
+Node.js uses Buffers to handle data that is **not text**, like files, images, videos, network packets, etc.
+
+---
+
+### 🔍 **Simple Explanation**
+
+A Buffer is like a **box full of bytes**.
+Each byte is a number (0–255).
+
+Example: reading an image → you get binary data → stored in a Buffer.
+
+---
+
+### 🧪 **Technical Explanation**
+
+Buffers are used when dealing with:
+
+* `fs` file operations
+* network requests (`net`, `http`)
+* stream processing
+* converting binary ↔ text
+
+Node.js allocates Buffers from its own memory space (outside V8 engine).
 
 <span style="color:green;">================================================================ </span>
