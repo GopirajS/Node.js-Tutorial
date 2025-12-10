@@ -1,14 +1,4 @@
 
-
-## **Process & OS**
-
-* What is `process` in Node.js?
-* What are environment variables?
-* What is `process.env`?
-* What is `process.nextTick()`?
-* Difference between nextTick and setImmediate
-* What is the `os` module?
-
 ---
 
 ## **Clustering & Scaling**

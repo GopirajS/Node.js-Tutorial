@@ -104,7 +104,7 @@ document.querySelector('#backToTop').addEventListener('click', function(e) {
 
 * [What are Promises?](#what_are_promises)
 
-* [What are Promises Chain?](#what_are_promises)
+* [What are Promises Chain?](#what_are_promises_Chain)
 
 * [What is async/await?](#what_is_async_await)
 
@@ -147,6 +147,22 @@ document.querySelector('#backToTop').addEventListener('click', function(e) {
 
 * How does Node.js handle binary data?
 * How do you create a buffer?
+
+---
+
+## **Process & OS**
+
+* [What is `process` in Node.js?](#What_is_process_in_Node)
+
+* [What are environment variables?](#What_are_Environment_Variables)
+
+* [What is `process.env`?](#What_is_process_env)
+
+* [What is `process.nextTick()`?](#What_is_process_nextTick)
+
+* [Difference between nextTick and setImmediate](#process_nextTick_and_setImmediate)
+
+* [What is the `os` module?](#What_is_the_os_module)
 
 ---
 
@@ -1569,7 +1585,8 @@ B  <-- macrotask
 
 <h2 id="what_are_promises" style="color:green">🤝 What Are Promises?</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/d5e64e34-c7d6-43a0-9a79-9d4c479255c2" />
+<img  alt="Image" src="https://github.com/user-attachments/assets/86b22f62-8792-4b93-84a0-c0cbf4d5788d" />
+
 
 A **Promise** in JavaScript is an object that represents the **eventual result of an asynchronous operation**.
 It’s a cleaner alternative to callbacks and helps avoid *callback hell*.
@@ -1600,6 +1617,8 @@ myPromise
   .catch(error => console.log(error));
 ```
 
+<img  alt="Image" src="https://github.com/user-attachments/assets/d5e64e34-c7d6-43a0-9a79-9d4c479255c2" />
+
 ---
 
 ### 🎯 Why Promises Are Useful?
@@ -1618,7 +1637,7 @@ myPromise
 
 <span style="color:green;">================================================================ </span>
 
-<h2 id="what_are_promises" style="color:green">🔗 What Is a Promise Chain?</h2>
+<h2 id="what_are_promises_Chain" style="color:green">🔗 What Is a Promise Chain?</h2>
 
 <img  alt="Image" src="https://github.com/user-attachments/assets/55a26169-70cb-4d51-808a-260c80a74c22" />
 
@@ -2382,5 +2401,420 @@ Buffers are used when dealing with:
 * converting binary ↔ text
 
 Node.js allocates Buffers from its own memory space (outside V8 engine).
+
+<span style="color:green;">================================================================ </span>
+
+
+<h1 style="text-align:center;" >Process & OS</h1>
+
+<h2 id="What_is_process_in_Node" style="color:green"> ⚙️ What is `process` in Node.js?** </h2>
+
+<img  alt="Image" src="https://github.com/user-attachments/assets/e4fd0ff5-f06f-48a6-9e4b-901cec1dc0bf" />
+
+The **`process`** object is a built-in Node.js object that gives you information and control over the **current running Node.js program**.
+
+Think of it as the “remote control” for your Node.js app.
+
+---
+
+### 🧩 **Simple Explanation**
+
+`process` tells you:
+
+* where your app is running
+* what arguments were passed
+* what the environment variables are
+* when your app should exit
+* CPU & memory usage
+
+---
+
+### 🧪 **Technical Explanation**
+
+`process` is an instance of **EventEmitter** and provides access to:
+
+* `process.env` → environment variables
+* `process.argv` → command-line arguments
+* `process.pid` → process ID
+* `process.cwd()` → current directory
+* `process.exit()` → stop the app
+* `process.memoryUsage()` → RAM details
+* `process.uptime()` → how long app is running
+
+---
+
+### 🧰 **Example**
+
+```js
+console.log(process.pid);       // process ID
+console.log(process.argv);      // command line args
+console.log(process.env.NODE_ENV); // env variable
+```
+
+---
+
+### 🎯 **When is it used?**
+
+* Reading environment variables (`process.env.DB_PASS`)
+* Checking command-line tools (`process.argv`)
+* Exiting program safely (`process.exit()`)
+* Logging system info (memory/CPU)
+* Gracefully shutting down servers
+
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="What_are_Environment_Variables" style="color:green"> 🌍 What are Environment Variables? </h2>
+
+Environment variables are **key–value settings** stored **outside your code** that your application can read at runtime.
+
+They are used to store **configuration** such as:
+
+* database passwords
+* API keys
+* port numbers
+* environment mode (`development`, `production`)
+
+---
+
+### 🧩 **Simple Explanation**
+
+Think of environment variables as **secret settings** that the server gives to your app.
+
+You **don’t write them in code** → you load them from the system.
+
+---
+
+### 🧪 **Technical Explanation**
+
+Environment variables live inside the OS and are accessed in Node.js using:
+
+```js
+process.env
+```
+
+Example:
+
+```bash
+export DB_PASSWORD=123456
+```
+
+Then in Node.js:
+
+```js
+console.log(process.env.DB_PASSWORD);
+```
+
+---
+
+### 🧰 **Common Use Examples**
+
+#### **1. Setting PORT**
+
+```bash
+export PORT=3000
+```
+
+```js
+console.log(process.env.PORT); // 3000
+```
+
+#### **2. Hiding API Keys**
+
+```bash
+export API_KEY=abcdefg
+```
+
+```js
+console.log(process.env.API_KEY);
+```
+
+#### **3. Using `.env` file with dotenv**
+
+`.env`
+
+```
+JWT_SECRET=mysecretkey
+```
+
+Code:
+
+```js
+require('dotenv').config();
+console.log(process.env.JWT_SECRET);
+```
+
+---
+
+### 🎯 **Why use environment variables?**
+
+* Keep passwords OUT of source code
+* Different settings for dev / test / production
+* Easy to configure on servers
+* Improve security
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="What_is_process_env" style="color:green">  🌿 What is `process.env`?</h2>
+
+`process.env` is a **special object in Node.js** that lets you access all **environment variables** of your system.
+
+Think of it as a **bag of configuration values** (API keys, passwords, ports) available to your app.
+
+---
+
+### 🔍 **Simple Explanation**
+
+`process.env` = **all environment variables your app can read**.
+
+Example:
+If you set:
+
+```
+PORT=4000
+```
+
+You can read it in Node.js:
+
+```js
+console.log(process.env.PORT); // 4000
+```
+
+---
+
+### 🧪 **Technical Explanation**
+
+* `process` = Node’s current running program
+* `env` = environment (variables provided by OS)
+* `process.env` is just a **JavaScript object**
+
+It contains values like:
+
+```js
+{
+  PATH: "/usr/bin:/bin",
+  HOME: "/home/user",
+  NODE_ENV: "production",
+  PORT: "3000"
+}
+```
+
+---
+
+### 🧰 **Common Uses**
+
+#### ✔ 1. App Mode (dev/prod)
+
+```js
+if (process.env.NODE_ENV === "production") {
+  console.log("Running in production mode");
+}
+```
+
+#### ✔ 2. Secrets (passwords, keys)
+
+```js
+console.log(process.env.DB_PASSWORD);
+```
+
+#### ✔ 3. Port number
+
+```js
+const PORT = process.env.PORT || 3000;
+```
+
+---
+
+### 🎯 **Why it's important**
+
+* Keeps secrets out of your code
+* Allows different configurations for different environments
+* Works in all cloud servers (AWS, Vercel, DigitalOcean)
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="What_is_process_nextTick" style="color:green"> ⚡ What is `process.nextTick()`? </h2>
+
+
+`process.nextTick()` is a Node.js function that lets you run a callback **immediately after the current operation**, *before* the event loop continues.
+
+It schedules a function to run **at the end of the current phase** — *before any timers, promises, or I/O callbacks*.
+
+---
+
+### 🌱 **Simple Explanation**
+
+`process.nextTick()` means:
+
+👉 “Run this function **right after the current line is done**, before anything else happens.”
+
+It’s like saying:
+**"Do this as soon as possible, before moving forward."**
+
+---
+
+### 🧪 **Technical Explanation**
+
+* It adds the callback to the **microtask queue** (like a special priority list).
+* It runs **before**:
+
+  * `setTimeout`
+  * `setImmediate`
+  * I/O callbacks
+  * Promises (in practice, `nextTick` runs even before promise microtasks)
+
+Because of this, it has **higher priority**.
+
+---
+
+### 🧰 **Example**
+
+```js
+console.log("Start");
+
+process.nextTick(() => {
+  console.log("Next Tick");
+});
+
+console.log("End");
+```
+
+**Output:**
+
+```
+Start
+End
+Next Tick
+```
+
+`nextTick` runs **after the current code finishes**, but **before** the event loop continues.
+
+---
+
+### 🎯 **When to use `process.nextTick()`**
+
+* When you need to **finish something immediately** before the event loop continues
+* When you must run code **after the current function but before anything else**
+
+Examples:
+
+* Initialize something before the app runs I/O
+* Ensure callbacks run predictably
+* Avoid breaking synchronous flow when switching to async
+
+---
+
+### ⚠️ **Warning**
+
+Avoid using too many `nextTick()` calls because it can block the event loop (infinite loop risk).
+
+
+
+<span style="color:green;">================================================================ </span>
+
+<h2 id="process_nextTick_and_setImmediate" style="color:green"> ⚡ Difference Between `process.nextTick()` and `setImmediate()` </h2>
+
+Here is the simplest, clearest explanation:
+
+---
+
+### 🔹 **`process.nextTick()`**
+
+🟢 Runs **immediately after the current code finishes**
+🟢 Runs **before** the event loop continues
+🟢 Has **higher priority** than everything (even Promises)
+
+**When it runs:**
+👉 *Before timers, before I/O callbacks, before setImmediate*
+
+**Example:**
+
+```js
+console.log("A");
+
+process.nextTick(() => console.log("nextTick"));
+
+console.log("B");
+```
+
+**Output:**
+
+```
+A
+B
+nextTick
+```
+
+---
+
+### 🔹 **`setImmediate()`**
+
+🔵 Runs **at the end of the current event loop cycle**
+🔵 Runs **after I/O events are done**
+🔵 Lower priority than nextTick
+
+**When it runs:**
+👉 *On the next iteration of the event loop*
+
+**Example:**
+
+```js
+console.log("A");
+
+setImmediate(() => console.log("immediate"));
+
+console.log("B");
+```
+
+**Output:**
+
+```
+A
+B
+immediate
+```
+
+---
+
+### ⭐ **Side-by-Side Comparison**
+
+| Feature                        | `process.nextTick()`         | `setImmediate()`         |
+| ------------------------------ | ---------------------------- | ------------------------ |
+| Priority                       | Higher                       | Lower                    |
+| Runs                           | Before event loop continues  | On next event loop cycle |
+| Executes before timers?        | ✔ Yes                        | ✖ No                     |
+| Executes before I/O callbacks? | ✔ Yes                        | ✖ No                     |
+| Good for                       | Quick, urgent microtasks     | Running after I/O events |
+| Danger                         | Too many → blocks event loop | Safe                     |
+
+---
+
+### 🎯 **Super Simple Comparison**
+
+* **nextTick** → *Run ASAP, before anything else.*
+* **setImmediate** → *Run soon, but after the current event loop cycle.*
+
+---
+
+### 🧘 **Simple Example to See Order**
+
+```js
+process.nextTick(() => console.log("1 nextTick"));
+
+setImmediate(() => console.log("2 immediate"));
+
+console.log("3 normal code");
+```
+
+**Output always:**
+
+```
+3 normal code
+1 nextTick
+2 immediate
+```
 
 <span style="color:green;">================================================================ </span>
