@@ -1,13 +1,4 @@
 
----
-
-## **Clustering & Scaling**
-
-* What is the cluster module?
-* What is a worker process and how does it work?
-* Why does scaling matter in Node.js?
-* What is PM2?
-* What is load balancing?
 
 ---
 
