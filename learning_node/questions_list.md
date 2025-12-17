@@ -1,4 +1,31 @@
 
+## **Express.js**
+
+* What is Express.js?
+* What is middleware?
+* What are the types of middleware?
+* What is routing in Express?
+* What is `next()` and why is it used?
+* What is error-handling middleware?
+* How to handle route parameters?
+* What is express.json() used for?
+
+---
+
+## **Databases in Node.js**
+
+### 🔹 SQL
+
+* What is a connection pool?
+* What is a parameterized query?
+* What is SQL injection?
+
+### 🔹 NoSQL (MongoDB)
+
+* What is MongoDB?
+* What is Mongoose?
+* What is a schema?
+* What are collections and documents?
 
 ---
 
@@ -41,31 +68,3 @@
 * What is an event emitter memory leak?
 
 ---
-
-## **Express.js**
-
-* What is Express.js?
-* What is middleware?
-* What are the types of middleware?
-* What is routing in Express?
-* What is `next()` and why is it used?
-* What is error-handling middleware?
-* How to handle route parameters?
-* What is express.json() used for?
-
----
-
-## **Databases in Node.js**
-
-### 🔹 SQL
-
-* What is a connection pool?
-* What is a parameterized query?
-* What is SQL injection?
-
-### 🔹 NoSQL (MongoDB)
-
-* What is MongoDB?
-* What is Mongoose?
-* What is a schema?
-* What are collections and documents?
