@@ -314,7 +314,7 @@ Here:
 
 <h2 id="what_is_the_role_of_libuv_in_node_js" style="color:green"> 🔧 What is the Role of "libuv" in Node.js? </h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/65384c4f-0339-40d3-a6ae-299c32f3706d" />
+<img  alt="Image" src="https://github.com/user-attachments/assets/db065628-34b0-4b66-a846-2dadc63de2ff" />
 
 **libuv** is a C library inside Node.js that makes **asynchronous, non-blocking I/O** possible.
 
@@ -481,7 +481,7 @@ Default size: **4 threads**
 
 <h2 id="what_is_Polling" style="color:green"> 🔍 I/O Polling Techniques in Node.js </h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/1b543125-c044-44a7-bbf8-5a71f76d8987" />
+<img  alt="Image" src="https://github.com/user-attachments/assets/bbd65570-966f-4f71-9a8c-ff0807c54c6c" />
 
 **I/O Polling** is how Node.js **checks the status** of non-blocking tasks
 (like file read, DB query, network request).
@@ -585,7 +585,7 @@ greet();
 
 <h2 id="what_is_the_difference_between_esm_and_commonjs" style="color:green">🔀 What Is the Difference Between CommonJS and ESM  ? </h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/250c7bf6-1042-4304-ba34-ffd5629259d7" />
+<img  alt="Image" src="https://github.com/user-attachments/assets/97eadb4f-1e3c-4ae6-851b-924c33acd5a6" />
 
 ### 📦 **1. Syntax**
 
@@ -729,7 +729,7 @@ import add from './math.js';
 
 <h2 id="what_is_package_json" style="color:green">📦 What is `package.json`?</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/32074b23-f7de-455b-bef4-cd144e693bf4" />
+<img  alt="Image" src="https://github.com/user-attachments/assets/2fd33a5f-20ff-44c1-8cb0-adc9b71b465f" />
 
 `package.json` is the **main configuration file** for a Node.js project.
 It tells Node.js and npm **important info** about your project.
@@ -1442,7 +1442,7 @@ This is why Node.js later introduced **Promises** and **async/await**.
 
 <h2 id="what_is_an_error_first_callback" style="color:green"> ⚠️ What Is an Error-First Callback? </h2>
 
-![Image](https://github.com/user-attachments/assets/216cb864-dede-4cff-b9ed-020f2c7aa943)
+![Image](https://github.com/user-attachments/assets/e1be7fb3-d944-4ea9-acb1-23d727644e78)
 
 
 An **error-first callback** is a **special style** of callback function used in Node.js where:
@@ -1690,7 +1690,7 @@ Promise.resolve(1)
 
 <h2 id="what_is_async_await" style="color:green">⏳ What Is async/await?</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/335e4109-6c67-49b6-ad55-d4964b54a0e9" />
+<img  alt="Image" src="https://github.com/user-attachments/assets/d2932c3c-da04-4ff9-bb92-f5d6a79ebc7e" />
 
 **`async/await`** is modern JavaScript syntax that makes working with Promises look like **simple, synchronous code**—even though it’s still fully asynchronous.
 
@@ -1891,7 +1891,7 @@ OAuth provides **secure delegated access** using **tokens**, not passwords.
 
 <h2 id="What_Is_Hashing_vs_Encryption" style="color:green"> 🔐 What Is Hashing vs Encryption? </h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/b3269bb1-237a-4f1f-8745-b005413b695c" />
+<img  src="https://github.com/user-attachments/assets/a922cceb-9a13-4180-a944-20be6d2c425d" />
 
 ### 🧩 **Hashing (One-Way)**
 
