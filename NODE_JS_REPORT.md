@@ -2,7 +2,7 @@
 
 ---
 
-## **Node.js Basics**
+###   **Node.js Basics**
 
 - [What is Node.js?](#what_is_node_js)
 
@@ -21,7 +21,7 @@
 - [What is I/O Polling Techniques in Node.js?](#what_is_Polling)
 
 
-## **ES Modules (ESM) in Node.js**
+###   **ES Modules (ESM) in Node.js**
 
 
 * [What is an ES module?](#what_is_an_es_module)
@@ -32,7 +32,7 @@
 
 ---
 
-## **NPM & Package Management**
+###   **NPM & Package Management**
 
 
 * [What is `package.json`?](#what_is_package_json)
@@ -50,7 +50,7 @@
 
 ---
 
-## **Node.js Core Modules**
+###   **Node.js Core Modules**
 
 
 * [What is the `fs` module?](#what_is_the_fs_module)
@@ -70,7 +70,7 @@
 ---
 
 
-## **Asynchronous Programming**
+###   **Asynchronous Programming**
 
 
 * [What are callbacks?](#what_are_callbacks)\
@@ -88,7 +88,7 @@
 ---
 
 
-## **Authentication & Security**
+###   **Authentication & Security**
 
 
 * [What is JWT?](#What_is_JWT)
@@ -109,7 +109,7 @@
 
 ---
 
-## **Node.js Streams and Buffers**
+###   **Node.js Streams and Buffers**
 
 * [What is a stream?](#What_is_a_stream)
 
@@ -127,7 +127,7 @@
 
 ---
 
-## **Process & OS**
+###   **Process & OS**
 
 * [What is `process` in Node.js?](#What_is_process_in_Node)
 
@@ -144,7 +144,7 @@
 ---
 
 
-## **Clustering & Scaling**
+###   **Clustering & Scaling**
 
 * [What is the cluster module?](#What_is_the_Cluster_Module)
 
@@ -173,14 +173,14 @@ Node.js allows you to run JavaScript directly on your computer or server.
 
 ---
 
-### **A very simple way to remember:**
+###   **A very simple way to remember:**
 
 * **Browser = JavaScript for webpages**
 * **Node.js = JavaScript for backend/server**
 
 ---
 
-### **Why is Node.js popular?**
+###   **Why is Node.js popular?**
 
 * It is **fast** (uses Google Chrome’s V8 engine).
 * It can handle many requests at the same time.
@@ -203,14 +203,14 @@ It is used in:
 
 ---
 
-### **Why is it important?**
+###   **Why is it important?**
 
 * It converts JavaScript into **machine code** (code the computer understands).
 * This makes JavaScript run **very fast and efficiently**.
 
 ---
 
-### **In short:**
+###   **In short:**
 
 **V8 = Fast JavaScript engine created by Google.**
 
@@ -236,7 +236,7 @@ Instead, it:
 
 ---
 
-## 🧠 Why is it important?
+###   🧠 Why is it important?
 
 * It prevents the main thread from **getting stuck** waiting.
 * Helps Node.js handle **thousands of requests at the same time**.
@@ -244,7 +244,7 @@ Instead, it:
 
 ---
 
-## 🔌 Example (Simple)
+###   🔌 Example (Simple)
 
 ```js
 fs.readFile("file.txt", "utf8", (err, data) => {
@@ -260,7 +260,7 @@ Here:
 
 ---
 
-## 🗣️ **Short Interview Answer**
+###   🗣️ **Short Interview Answer**
 
 **“Non-blocking I/O means Node.js performs input/output operations asynchronously. It doesn't wait for the operation to finish; instead, it uses callbacks, promises, or async/await to handle results. This keeps the main thread free and allows Node.js to handle many requests efficiently.”**
 
@@ -270,42 +270,42 @@ Here:
 
 <h2 id="what_is_the_difference_between_node_js_and_javascript_browser" style="color:green"> 🔍 Difference Between Node.js and JavaScript (Browser) </h2>
 
-### 🌐 1. **Environment**
+###   🌐 1. **Environment**
 
 * **Browser JavaScript:** Runs inside a web browser (Chrome, Firefox, Safari).
 * **Node.js:** Runs **outside the browser** on the server using the **V8 engine**.
 
 ---
 
-### 📁 2. **APIs Available**
+###   📁 2. **APIs Available**
 
 * **Browser JS:** Has **DOM**, `window`, `document`, `localStorage`, `fetch` (browser version).
 * **Node.js:** Has **file system**, **network**, **process**, **streams**, and other backend APIs.
 
 ---
 
-### 🧵 3. **Threading Model**
+###   🧵 3. **Threading Model**
 
 * **Browser JS:** Single-threaded (main thread + Web Workers).
 * **Node.js:** Single-threaded for JS but uses **event loop + thread pool** for async tasks.
 
 ---
 
-### 📦 4. **Modules**
+###   📦 4. **Modules**
 
 * **Browser JS:** Uses ES Modules (`import/export`).
 * **Node.js:** Supports **CommonJS (`require`)** and **ES Modules**.
 
 ---
 
-### 🚀 5. **Use Cases**
+###   🚀 5. **Use Cases**
 
 * **Browser JS:** User interfaces, web pages, DOM manipulation.
 * **Node.js:** Backend development, APIs, real-time apps, CLI tools.
 
 ---
 
-## 🗣️ **Short Interview Answer**
+###   🗣️ **Short Interview Answer**
 
 **“JavaScript is a programming language, but Node.js is a runtime environment that allows JavaScript to run outside the browser. Browsers provide DOM APIs, while Node.js provides server-side APIs like file system and networking. In short, browser JS is for frontend; Node.js is for backend.”**
 
@@ -322,14 +322,14 @@ It is the **engine behind Node.js’s event loop and thread pool**.
 
 ---
 
-## 🧠 libuv Handles 4 Main Things
+###   🧠 libuv Handles 4 Main Things
 
-### ⏱️ 1. **Event Loop**
+###   ⏱️ 1. **Event Loop**
 
 * Manages how Node.js runs asynchronous tasks
 * Decides *when* callbacks, promises, and async functions execute
 
-### 🧵 2. **Thread Pool**
+###   🧵 2. **Thread Pool**
 
 * Provides background threads for slow tasks like:
 
@@ -339,7 +339,7 @@ It is the **engine behind Node.js’s event loop and thread pool**.
   * Compression
 * Offloads work so the main thread never gets blocked
 
-### 🌐 3. **Cross-Platform Support**
+###   🌐 3. **Cross-Platform Support**
 
 * Makes Node.js run the same on:
 
@@ -348,7 +348,7 @@ It is the **engine behind Node.js’s event loop and thread pool**.
   * macOS
 * Handles OS-level differences internally
 
-### 🖧 4. **Async I/O Operations**
+###   🖧 4. **Async I/O Operations**
 
 * Manages networking (TCP/UDP)
 * Manages timers (setTimeout / setInterval)
@@ -356,7 +356,7 @@ It is the **engine behind Node.js’s event loop and thread pool**.
 
 ---
 
-## 🗣️ **Short Interview Answer**
+###   🗣️ **Short Interview Answer**
 
 **“libuv is the C library that provides Node.js with an event loop and a thread pool. It enables non-blocking I/O by handling asynchronous operations like file system tasks, network requests, timers, and DNS in the background. This allows Node.js to remain fast and efficient even with a single-threaded JavaScript runtime.”**
 
@@ -374,7 +374,7 @@ Node.js is built heavily on this pattern.
 
 ---
 
-### 🔔 How It Works (Simple Explanation)
+###   🔔 How It Works (Simple Explanation)
 
 1. **An event happens**
    (e.g., user clicks, file finishes reading, data received)
@@ -388,7 +388,7 @@ This makes Node.js **fast**, **non-blocking**, and great for handling many reque
 
 ---
 
-### 🧱 Example Flow
+###   🧱 Example Flow
 
 * You start reading a file → Node emits a **"start"** event
 * File finishes → Node emits a **"done"** event
@@ -398,7 +398,7 @@ You write listeners for these events.
 
 ---
 
-### 🧪 Small Example
+###   🧪 Small Example
 
 ```js
 const EventEmitter = require('events');
@@ -413,7 +413,7 @@ events.emit('order');
 
 ---
 
-### 🎯 Why Node.js Uses Event-Driven Architecture?
+###   🎯 Why Node.js Uses Event-Driven Architecture?
 
 * ⚡ Handles many requests at once
 * 🧵 No need for multi-threading
@@ -422,7 +422,7 @@ events.emit('order');
 
 ---
 
-### 🛠 Real-Life Examples in Node.js
+###   🛠 Real-Life Examples in Node.js
 
 | Example      | Event Trigger   |
 | ------------ | --------------- |
@@ -434,7 +434,7 @@ events.emit('order');
 
 ---
 
-### 🧠 In One Line (Very Simple)
+###   🧠 In One Line (Very Simple)
 
 **Node.js works like: Something happens → Node emits an event → Your code reacts.**
 
@@ -450,7 +450,7 @@ The **Thread Pool** in Node.js is a group of **background worker threads** that 
 
 ---
 
-## ✅ What It Does
+###   ✅ What It Does
 
 When Node.js gets a **slow or CPU-heavy task**, like:
 
@@ -463,7 +463,7 @@ When Node.js gets a **slow or CPU-heavy task**, like:
 
 ---
 
-## 🔧 Who Provides It?
+###   🔧 Who Provides It?
 
 The Thread Pool is provided by **libuv** (a C library inside Node.js).
 
@@ -471,7 +471,7 @@ Default size: **4 threads**
 
 ---
 
-## 🗣️ Simple Interview Answer
+###   🗣️ Simple Interview Answer
 
 **“Thread Pool is a group of background threads in Node.js that handle heavy tasks so the main thread doesn’t get blocked.”**
 **“Thread Pool = background workers for heavy tasks.”**
@@ -497,7 +497,7 @@ When finished, the event loop runs the callback.
 These are **application-level polling techniques** (used in web apps), not Node.js internals —
 but interviewers often ask them together.
 
-## 🕒 **1. Long Polling (Simple)**
+###   🕒 **1. Long Polling (Simple)**
 
 Client sends a request →
 Server **waits** until new data is available →
@@ -510,7 +510,7 @@ If no new data, server holds the request for some time.
 
 ---
 
-## 🔗 **2. WebSocket (Simple)**
+###   🔗 **2. WebSocket (Simple)**
 
 A **continuous, two-way connection** between client and server.
 
@@ -546,7 +546,7 @@ Node.js supports ESM using the `.mjs` extension **or** `"type": "module"` in `pa
 
 ---
 
-### 🧩 Key Features
+###   🧩 Key Features
 
 * Uses `import` and `export` keywords
 * Supports static analysis (better optimization)
@@ -555,7 +555,7 @@ Node.js supports ESM using the `.mjs` extension **or** `"type": "module"` in `pa
 
 ---
 
-### 🧪 Example
+###   🧪 Example
 
 **export.js**
 
@@ -576,7 +576,7 @@ greet();
 
 ---
 
-### 🧠 Simple Definition
+###   🧠 Simple Definition
 
 **ES Modules are the modern JavaScript module system using `import` and `export`. They replace older CommonJS (`require`, `module.exports`).**
 
@@ -587,7 +587,7 @@ greet();
 
 <img  alt="Image" src="https://github.com/user-attachments/assets/97eadb4f-1e3c-4ae6-851b-924c33acd5a6" />
 
-### 📦 **1. Syntax**
+###   📦 **1. Syntax**
 
 **CommonJS (CJS)**
 
@@ -605,28 +605,28 @@ export default something;
 
 ---
 
-### ⚙️ **2. Loading Type**
+###   ⚙️ **2. Loading Type**
 
 * **CJS:** Loaded **synchronously**
 * **ESM:** Loaded **asynchronously**
 
 ---
 
-### 🌍 **3. Where They're Used**
+###   🌍 **3. Where They're Used**
 
 * **CJS:** Node.js originally (older system)
 * **ESM:** Modern JavaScript (browser + Node.js)
 
 ---
 
-### 🔧 **4. Filename Requirements**
+###   🔧 **4. Filename Requirements**
 
 * **CJS:** `.js` (default)
 * **ESM:** `.mjs` or `"type": "module"` in `package.json`
 
 ---
 
-### 🔁 **5. Exports**
+###   🔁 **5. Exports**
 
 * **CJS:** Only one export object
 
@@ -643,21 +643,21 @@ export default something;
 
 ---
 
-### 🧠 **6. Top-Level await**
+###   🧠 **6. Top-Level await**
 
 * **CJS:** ❌ Not supported
 * **ESM:** ✅ Supported
 
 ---
 
-### ⚡ **7. Performance**
+###   ⚡ **7. Performance**
 
 * **CJS:** Faster for small modules
 * **ESM:** Better optimization by engines
 
 ---
 
-### 🧠 Simple Summary
+###   🧠 Simple Summary
 
 * **CommonJS = require + module.exports (old system)**
 * **ESM = import + export (modern standard)**
@@ -668,7 +668,7 @@ Node.js supports **both**, but ESM is the **future**.
 
 <h2 id="what_are_named_exports_vs_default_exports" style="color:green">What are named exports vs default exports?</h2>
 
-### 🔹 Named Exports
+###   🔹 Named Exports
 
 Export **multiple items by name**.
 
@@ -692,7 +692,7 @@ import { add, subtract } from './math.js';
 
 ---
 
-### 🔸 Default Export
+###   🔸 Default Export
 
 Export **one main value** from a file.
 
@@ -717,7 +717,7 @@ import add from './math.js';
 
 ---
 
-### ✅ Quick Summary (Icons)
+###   ✅ Quick Summary (Icons)
 
 * 🔹 **Named exports** → many exports, import by exact name
 * 🔸 **Default export** → one main export, name is flexible
@@ -734,7 +734,7 @@ import add from './math.js';
 `package.json` is the **main configuration file** for a Node.js project.
 It tells Node.js and npm **important info** about your project.
 
-### 📘 What it contains
+###   📘 What it contains
 
 * 📛 **Project name & version**
 * 📚 **List of dependencies** (packages your project needs)
@@ -742,7 +742,7 @@ It tells Node.js and npm **important info** about your project.
 * 🧩 **Metadata** (author, license, description)
 * 🔧 **Settings** (like `"type": "module"`)
 
-### 🧠 Simple idea
+###   🧠 Simple idea
 
 👉 `package.json` is the **brain of your Node project**—it keeps track of everything your project uses and needs.
 
@@ -754,14 +754,14 @@ It tells Node.js and npm **important info** about your project.
 
 `package-lock.json` is a file that **locks the exact versions** of every package (and their sub-packages) installed in your project.
 
-### 📘 What it does
+###   📘 What it does
 
 * Ensures **everyone installs the same versions**
 * Speeds up installation
 * Records the full dependency tree
 * Prevents unexpected updates that might break your app
 
-### 🧠 Simple idea
+###   🧠 Simple idea
 
 👉 `package-lock.json` makes your project’s dependencies **stable and consistent**, no matter who installs it or when.
 
@@ -772,7 +772,7 @@ It tells Node.js and npm **important info** about your project.
 
 <img  alt="Image" src="https://github.com/user-attachments/assets/54ce5787-892a-44aa-a506-0605e6c707e7" />
 
-### 📦 Dependencies (`dependencies`)
+###   📦 Dependencies (`dependencies`)
 
 These are packages your project **needs to run** in production.
 
@@ -792,7 +792,7 @@ These packages are required when your app is actually running.
 
 ---
 
-### ⚙️ DevDependencies (`devDependencies`)
+###   ⚙️ DevDependencies (`devDependencies`)
 
 These are packages used **only during development**, not in production.
 
@@ -813,7 +813,7 @@ They help you build, test, or develop the project but are **not needed by users*
 
 ---
 
-### 🧠 Simple idea
+###   🧠 Simple idea
 
 👉 **Dependencies = needed to run the app**
 👉 **DevDependencies = needed to build or develop the app, not to run it**
@@ -825,11 +825,11 @@ They help you build, test, or develop the project but are **not needed by users*
 
 <img  alt="Image" src="https://github.com/user-attachments/assets/16878532-d9e0-4ace-a9de-27b460dc4548" />
 
-### 🔢 What is Semantic Versioning?
+###   🔢 What is Semantic Versioning?
 
 Semantic Versioning (SemVer) is a system for writing version numbers in the format:
 
-### **📌 MAJOR.MINOR.PATCH**
+###   **📌 MAJOR.MINOR.PATCH**
 
 Example:
 
@@ -837,7 +837,7 @@ Example:
 2.5.3
 ```
 
-### 🧩 What each number means
+###   🧩 What each number means
 
 * **🔴 MAJOR** — Breaking changes
   (Old code might stop working)
@@ -862,19 +862,19 @@ Installed with:
 npm install -g packageName
 ```
 
-### 📌 What it means
+###   📌 What it means
 
 * You can use it **from anywhere** in your terminal
 * It works like a **system command**
 
-### 🛠 Examples of global packages
+###   🛠 Examples of global packages
 
 * `nodemon`
 * `npm` (itself)
 * `pm2`
 * `eslint` (sometimes)
 
-### 🧠 Simple idea
+###   🧠 Simple idea
 
 👉 A global package is like a **tool installed on your whole computer**, not just one project.
 
@@ -885,7 +885,7 @@ npm install -g packageName
 
 <img  alt="Image" src="https://github.com/user-attachments/assets/43b49ee4-b18c-4e0e-8e7f-557a305564bd" />
 
-### 📦 **npm (Node Package Manager)**
+###   📦 **npm (Node Package Manager)**
 
 `npm` is used to **install, manage, or remove** packages in your project.
 
@@ -908,7 +908,7 @@ npm uninstall lodash       # remove package
 
 ---
 
-### ⚡ **npx (Node Package Execute)**
+###   ⚡ **npx (Node Package Execute)**
 
 `npx` is used to **run packages without installing them globally**.
 
@@ -930,7 +930,7 @@ npx nodemon app.js
 
 ---
 
-### ✅ Final Simple Difference
+###   ✅ Final Simple Difference
 
 * **npm** → installs packages
 * **npx** → runs packages (without installing them globally)
@@ -947,7 +947,7 @@ Let me know if you want examples of when to use each!
 
 The `fs` (File System) module in Node.js allows you to **work with files and folders** on your computer.
 
-### 📌 What you can do with `fs`
+###   📌 What you can do with `fs`
 
 * 📄 Read files
 * ✍️ Write files
@@ -956,7 +956,7 @@ The `fs` (File System) module in Node.js allows you to **work with files and fol
 * 🔄 Update or rename files
 * 👀 Watch file changes
 
-### 🛠 Example
+###   🛠 Example
 
 ```js
 const fs = require('fs');
@@ -966,7 +966,7 @@ fs.readFile('test.txt', 'utf8', (err, data) => {
 });
 ```
 
-### 🧠 Simple idea
+###   🧠 Simple idea
 
 👉 `fs` lets Node.js **interact with your system’s files** just like a file manager.
 
@@ -978,7 +978,7 @@ fs.readFile('test.txt', 'utf8', (err, data) => {
 
 <img  alt="Image" src="https://github.com/user-attachments/assets/2ce4228c-e602-435d-868e-4c6dd8b32f5c" />
 
-### ⚡ Async (Asynchronous)
+###   ⚡ Async (Asynchronous)
 
 Async methods **do not block** the program.
 Node keeps running other code while the file operation happens in the background.
@@ -997,7 +997,7 @@ console.log("I run immediately!");
 
 ---
 
-### ⏸ Sync (Synchronous)
+###   ⏸ Sync (Synchronous)
 
 Sync methods **block** the program until the operation finishes.
 Nothing else can run during that time.
@@ -1015,7 +1015,7 @@ console.log("I run after file is done!");
 
 ---
 
-### ✅ Simple Summary
+###   ✅ Simple Summary
 
 * **Async = non-blocking, recommended for real apps**
 * **Sync = blocking, avoid in servers**
@@ -1029,7 +1029,7 @@ console.log("I run after file is done!");
 
 The `path` module helps you **work with file and folder paths** in a safe and consistent way.
 
-### 📌 What it does
+###   📌 What it does
 
 * Joins paths
 * Resolves absolute paths
@@ -1037,7 +1037,7 @@ The `path` module helps you **work with file and folder paths** in a safe and co
 * Normalizes messy paths
 * Extracts filenames or directory names
 
-### 🛠 Example
+###   🛠 Example
 
 ```js
 const path = require('path');
@@ -1046,7 +1046,7 @@ const fullPath = path.join('folder', 'subfolder', 'file.txt');
 console.log(fullPath);
 ```
 
-### 🧠 Simple idea
+###   🧠 Simple idea
 
 👉 The `path` module helps Node.js handle **file paths correctly on all operating systems** (Windows, Mac, Linux).
 
@@ -1059,9 +1059,9 @@ The **`http` module** in Node.js is used to **create and manage HTTP servers and
 
 ---
 
-## ✅ **What the `http` module is used for**
+###   ✅ **What the `http` module is used for**
 
-### **1. Creating HTTP Servers**
+###   **1. Creating HTTP Servers**
 
 It allows you to create a web server that listens for requests and sends responses.
 
@@ -1080,7 +1080,7 @@ server.listen(3000, () => {
 
 ---
 
-### **2. Handling HTTP Requests**
+###   **2. Handling HTTP Requests**
 
 You can access:
 
@@ -1090,7 +1090,7 @@ You can access:
 
 ---
 
-### **3. Sending HTTP Responses**
+###   **3. Sending HTTP Responses**
 
 Use methods like:
 
@@ -1107,7 +1107,7 @@ res.end(JSON.stringify({ message: "OK" }));
 
 ---
 
-### **4. Creating HTTP Clients**
+###   **4. Creating HTTP Clients**
 
 You can also make outgoing HTTP requests using `http.request()` or `http.get()`.
 
@@ -1126,7 +1126,7 @@ http.get('http://example.com', (res) => {
 
 ---
 
-## ✅ **When to use `http` module**
+###   ✅ **When to use `http` module**
 
 Use it when:
 
@@ -1136,7 +1136,7 @@ Use it when:
 
 ---
 
-## ❗ When NOT to use it
+###   ❗ When NOT to use it
 
 For most real-world apps, use frameworks like:
 
@@ -1154,7 +1154,7 @@ The **`events` module** in Node.js provides the foundation for **event-driven pr
 
 ---
 
-### ✅ What the `events` module is
+###   ✅ What the `events` module is
 
 It is a **built-in Node.js module** that defines the `EventEmitter` class.
 This class lets objects **emit events** and **register listeners** for those events.
@@ -1163,9 +1163,9 @@ Node.js itself uses this pattern internally—streams, HTTP servers, file reads,
 
 ---
 
-### ✅ Why the `events` module is useful
+###  ✅ Why the `events` module is useful
 
-### It allows you to:
+###  It allows you to:
 
 * Create custom events
 * Attach multiple listeners
@@ -1175,9 +1175,9 @@ Node.js itself uses this pattern internally—streams, HTTP servers, file reads,
 
 ---
 
-### 📌 Basic Example
+###  📌 Basic Example
 
-### Create an event emitter and listen for an event:
+###  Create an event emitter and listen for an event:
 
 ```js
 const EventEmitter = require('events');
@@ -1201,7 +1201,7 @@ Hello, John!
 
 ---
 
-### 📌 Common Methods
+###  📌 Common Methods
 
 | Method                            | Description                |
 | --------------------------------- | -------------------------- |
@@ -1213,17 +1213,17 @@ Hello, John!
 
 ---
 
-### 📌 Real Use Cases
+###  📌 Real Use Cases
 
-### ✔ Handling server requests
+###  ✔ Handling server requests
 
 HTTP server emits `request`, `connection`, `close` events.
 
-### ✔ Streams
+###  ✔ Streams
 
 Readable/Writable streams use events like `data`, `end`, `error`.
 
-### ✔ Custom app logic
+###  ✔ Custom app logic
 
 For example, an event after user registration:
 
@@ -1233,7 +1233,7 @@ emitter.emit('user_registered', userData);
 
 ---
 
-### 🧠 Summary (in simple words)
+###  🧠 Summary (in simple words)
 
 The **`events` module** is like Node.js’s built-in **pub/sub system**.
 You emit an event → Code listening for that event runs.
@@ -1259,7 +1259,7 @@ Node.js provides this through the **`EventEmitter` class** inside the `events` m
 
 ---
 
-### 🔧 How It Works
+###  🔧 How It Works
 
 * You *emit* an event → like saying **“Hey! Something happened!”**
 * You *listen* for that event → using `on()` or `once()`
@@ -1267,7 +1267,7 @@ Node.js provides this through the **`EventEmitter` class** inside the `events` m
 
 ---
 
-### 🧪 Simple Example
+###  🧪 Simple Example
 
 ```js
 const EventEmitter = require('events');
@@ -1283,7 +1283,7 @@ emitter.emit('greet'); // triggers the event
 
 ---
 
-### 🔍 Key Methods
+###  🔍 Key Methods
 
 | Method                  | Meaning             |
 | ----------------------- | ------------------- |
@@ -1294,7 +1294,7 @@ emitter.emit('greet'); // triggers the event
 
 ---
 
-### 🎯 Real Uses of Event Emitters
+###  🎯 Real Uses of Event Emitters
 
 * HTTP server emits `"request"`
 * Streams emit `"data"`, `"end"`
@@ -1303,7 +1303,7 @@ emitter.emit('greet'); // triggers the event
 
 ---
 
-### 🧠 In Simple Words
+###  🧠 In Simple Words
 
 **Event Emitters let Node.js say: “I’ll call you when something happens.”**
 
@@ -1324,7 +1324,7 @@ It helps you securely handle passwords, tokens, signatures, and more.
 
 ---
 
-### 🧪 Simple Example (Hashing a Password)
+###  🧪 Simple Example (Hashing a Password)
 
 ```js
 const crypto = require('crypto');
@@ -1339,7 +1339,7 @@ console.log(hash);
 
 ---
 
-### 🔧 Common Things You Can Do with `crypto`
+###  🔧 Common Things You Can Do with `crypto`
 
 | Feature           | Use                                             |
 | ----------------- | ----------------------------------------------- |
@@ -1351,7 +1351,7 @@ console.log(hash);
 
 ---
 
-### 🧠 Simple Definition
+###  🧠 Simple Definition
 
 **The `crypto` module provides tools to secure your application using encryption, hashing, and cryptographic functions.**
 
@@ -1369,7 +1369,7 @@ console.log(hash);
 
 <img  alt="Image" src="https://github.com/user-attachments/assets/60cd0b82-7dc2-4d10-a6dc-9965f1891e2a" />
 
-### 🔁 What Are Callbacks?
+###  🔁 What Are Callbacks?
 
 A **callback** is a **function passed as an argument to another function**, and it runs **after an asynchronous task completes**.
 
@@ -1377,7 +1377,7 @@ It’s how Node.js handles async operations like reading files, making requests,
 
 ---
 
-### 🧪 Simple Example
+###  🧪 Simple Example
 
 ```js
 function greet(name, callback) {
@@ -1392,7 +1392,7 @@ greet("John", () => {
 
 ---
 
-### 📦 Real Node.js Async Example (fs module)
+###  📦 Real Node.js Async Example (fs module)
 
 ```js
 const fs = require('fs');
@@ -1405,7 +1405,7 @@ fs.readFile("file.txt", "utf8", (err, data) => {
 
 ---
 
-### 🎯 Why Callbacks Are Important
+###  🎯 Why Callbacks Are Important
 
 * They let Node.js do **non-blocking** operations
 * They run **when the async task is done**
@@ -1413,7 +1413,7 @@ fs.readFile("file.txt", "utf8", (err, data) => {
 
 ---
 
-### ⚠️ Callback Hell (Common Problem)
+###  ⚠️ Callback Hell (Common Problem)
 
 Too many nested callbacks:
 
@@ -1433,7 +1433,7 @@ This is why Node.js later introduced **Promises** and **async/await**.
 
 ---
 
-### 🧠 Simple Definition
+###  🧠 Simple Definition
 
 **A callback is a function you give to another function, and it runs later when the async work finishes.**
 
@@ -1454,7 +1454,7 @@ This pattern helps Node.js easily detect and handle errors in async operations.
 
 ---
 
-### 🧪 Example Format
+###  🧪 Example Format
 
 ```js
 function callback(err, result) {
@@ -1468,7 +1468,7 @@ function callback(err, result) {
 
 ---
 
-### 📌 Real Node.js Example (fs.readFile)
+###  📌 Real Node.js Example (fs.readFile)
 
 ```js
 const fs = require("fs");
@@ -1485,7 +1485,7 @@ fs.readFile("file.txt", "utf8", (err, data) => {
 
 ---
 
-### 🎯 Why This Pattern Exists?
+###  🎯 Why This Pattern Exists?
 
 * Makes error handling **consistent**
 * Easy to detect failure: if `err` is not `null`, something went wrong
@@ -1493,7 +1493,7 @@ fs.readFile("file.txt", "utf8", (err, data) => {
 
 ---
 
-### 🧠 Simple Definition
+###  🧠 Simple Definition
 
 **An error-first callback is a callback where the first argument is an error, and the second is the result. If the error exists, you handle it; otherwise, you use the result.**
 
@@ -1508,7 +1508,7 @@ fs.readFile("file.txt", "utf8", (err, data) => {
 In Node.js (and browsers), asynchronous work is handled by the **event loop**, which uses two main queues:
 
 
-### 🧩 **Macrotasks (Task Queue)**
+###  🧩 **Macrotasks (Task Queue)**
 
 Macrotasks are **big async operations** that run *after the current code finishes*.
 
@@ -1524,7 +1524,7 @@ Macrotasks are **big async operations** that run *after the current code finishe
 
 ---
 
-### ⚡ **Microtasks (Microtask Queue)**
+###  ⚡ **Microtasks (Microtask Queue)**
 
 Microtasks are **small, high-priority async tasks** that run **before macrotasks**.
 
@@ -1538,14 +1538,14 @@ Microtasks are **small, high-priority async tasks** that run **before macrotasks
 
 ---
 
-### 🎯 Which runs first?
+###  🎯 Which runs first?
 
 ✔ **Microtasks ALWAYS run before macrotasks**
 ✔ After each macrotask, Node empties the microtask queue
 
 ---
 
-### 🧪 Example
+###  🧪 Example
 
 ```js
 console.log("A");
@@ -1567,7 +1567,7 @@ B  <-- macrotask
 
 ---
 
-### 🧠 Simple Definition
+###  🧠 Simple Definition
 
 * **Microtasks = high-priority async tasks (Promises)**
 * **Macrotasks = regular async tasks (setTimeout, I/O)**
@@ -1592,7 +1592,7 @@ A Promise can be in one of three states:
 
 ---
 
-### 🧪 Simple Example
+###  🧪 Simple Example
 
 ```js
 const myPromise = new Promise((resolve, reject) => {
@@ -1614,7 +1614,7 @@ myPromise
 
 ---
 
-### 🎯 Why Promises Are Useful?
+###  🎯 Why Promises Are Useful?
 
 * Avoids callback nesting
 * Easy error handling
@@ -1623,7 +1623,7 @@ myPromise
 
 ---
 
-### 🧠 Simple Definition
+###  🧠 Simple Definition
 
 **A Promise is a placeholder for a value that you will get in the future (success or failure).**
 
@@ -1641,7 +1641,7 @@ It allows you to run async tasks in sequence **without callback hell**.
 
 ---
 
-### 🧩 How It Works
+###  🧩 How It Works
 
 Each `.then()` returns a **new Promise**, so you can keep chaining:
 
@@ -1655,7 +1655,7 @@ doTask1()
 
 ---
 
-### 🧪 Simple Example
+###  🧪 Simple Example
 
 ```js
 Promise.resolve(1)
@@ -1672,7 +1672,7 @@ Promise.resolve(1)
 
 ---
 
-### 🎯 Why Promise Chaining Is Useful?
+###  🎯 Why Promise Chaining Is Useful?
 
 * Runs async tasks **step-by-step**
 * Avoids nested callbacks
@@ -1681,7 +1681,7 @@ Promise.resolve(1)
 
 ---
 
-### 🧠 Simple Definition
+###  🧠 Simple Definition
 
 **Promise chaining means linking multiple `.then()` calls so each one waits for the previous promise to finish.**
 
@@ -1698,7 +1698,7 @@ It is built on top of Promises and helps you avoid long `.then()` chains.
 
 ---
 
-### 🔧 How It Works
+###  🔧 How It Works
 
 * You mark a function as **`async`**
 * Inside it, you use **`await`** to pause the function until a Promise resolves
@@ -1706,7 +1706,7 @@ It is built on top of Promises and helps you avoid long `.then()` chains.
 
 ---
 
-### 🧪 Simple Example
+###  🧪 Simple Example
 
 ```js
 async function demo() {
@@ -1725,7 +1725,7 @@ Hello!
 
 ---
 
-### 📦 Real Example (Fetching Data)
+###  📦 Real Example (Fetching Data)
 
 ```js
 async function getData() {
@@ -1741,7 +1741,7 @@ async function getData() {
 
 ---
 
-### 🎯 Why async/await is great?
+###  🎯 Why async/await is great?
 
 * Cleaner and more readable
 * Easier error handling using `try...catch`
@@ -1750,7 +1750,7 @@ async function getData() {
 
 ---
 
-### 🧠 Simple Definition
+###  🧠 Simple Definition
 
 **`async/await` lets you write asynchronous code that looks like normal, synchronous code, using Promises behind the scenes.**
 
@@ -1770,7 +1770,7 @@ It’s commonly used for **login systems**, **API authentication**, and **secure
 
 ---
 
-### 🧩 What a JWT Looks Like
+###  🧩 What a JWT Looks Like
 
 A JWT has **three parts**, separated by dots:
 
@@ -1788,7 +1788,7 @@ SflKxwRJSMeKKF2QT4fwpMeJf36PO... (signature)
 
 ---
 
-### 📦 JWT Parts Explained
+###  📦 JWT Parts Explained
 
 1. **Header**
 
@@ -1807,7 +1807,7 @@ SflKxwRJSMeKKF2QT4fwpMeJf36PO... (signature)
 
 ---
 
-### 🔧 How JWT Works
+###  🔧 How JWT Works
 
 1. User logs in
 2. Server creates a JWT and sends it to client
@@ -1818,7 +1818,7 @@ SflKxwRJSMeKKF2QT4fwpMeJf36PO... (signature)
 
 ---
 
-### 🎯 Why JWT Is Popular?
+###  🎯 Why JWT Is Popular?
 
 * Stateless → no session storage needed
 * Fast for APIs
@@ -1828,7 +1828,7 @@ SflKxwRJSMeKKF2QT4fwpMeJf36PO... (signature)
 
 ---
 
-### 🧠 Simple Definition
+###  🧠 Simple Definition
 
 **A JWT is a secure token containing encoded user data, used to verify identity without storing sessions on the server.**
 
@@ -1845,7 +1845,7 @@ Think of it as:
 
 ---
 
-### 🧩 Simple Example
+###  🧩 Simple Example
 
 You want an app to access your Google Drive files.
 
@@ -1857,13 +1857,13 @@ You want an app to access your Google Drive files.
 
 ---
 
-### 🔧 Key Idea
+###  🔧 Key Idea
 
 OAuth provides **secure delegated access** using **tokens**, not passwords.
 
 ---
 
-### 📦 Where You See OAuth?
+###  📦 Where You See OAuth?
 
 * “Login with Google”
 * “Login with GitHub”
@@ -1873,7 +1873,7 @@ OAuth provides **secure delegated access** using **tokens**, not passwords.
 
 ---
 
-### 🔐 Why OAuth Is Safe?
+###  🔐 Why OAuth Is Safe?
 
 * Your password is **never shared**
 * Access can be limited (read-only, write, etc.)
@@ -1882,7 +1882,7 @@ OAuth provides **secure delegated access** using **tokens**, not passwords.
 
 ---
 
-### 🧠 Simple Definition
+###  🧠 Simple Definition
 
 **OAuth is a secure way to let apps access your data on another service using permission-based tokens instead of passwords.**
 
@@ -1893,7 +1893,7 @@ OAuth provides **secure delegated access** using **tokens**, not passwords.
 
 <img  src="https://github.com/user-attachments/assets/a922cceb-9a13-4180-a944-20be6d2c425d" />
 
-### 🧩 **Hashing (One-Way)**
+###  🧩 **Hashing (One-Way)**
 
 🔒 **Purpose:** Protect data like passwords
 ➡️ **One-way only — cannot be reversed**
@@ -1913,7 +1913,7 @@ OAuth provides **secure delegated access** using **tokens**, not passwords.
 
 ---
 
-### 🔐 **Encryption (Two-Way)**
+###  🔐 **Encryption (Two-Way)**
 
 🔑 **Purpose:** Keep data private
 ➡️ **Two-way — can be reversed if you have the key**
@@ -1933,7 +1933,7 @@ Then using the key → `"hello"` again
 
 ---
 
-### 🎯 Simple Summary
+###  🎯 Simple Summary
 
 | Feature                         | Hashing              | Encryption                    |
 | ------------------------------- | -------------------- | ----------------------------- |
@@ -1944,7 +1944,7 @@ Then using the key → `"hello"` again
 
 ---
 
-### 🧠 One-Line Definition
+###  🧠 One-Line Definition
 
 **Hashing = one-way protection**
 **Encryption = two-way protection with keys**
@@ -1960,7 +1960,7 @@ This makes the hash **unique**, even if two users have the same password.
 
 ---
 
-### 🧪 Example (Very Simple)
+###  🧪 Example (Very Simple)
 
 Password:
 
@@ -1984,7 +1984,7 @@ Then hashed.
 
 ---
 
-### 🔒 Why Salting Is Important?
+###  🔒 Why Salting Is Important?
 
 * Prevents attackers from using **precomputed hash tables** (rainbow tables)
 * Makes every password hash **unique**
@@ -1993,7 +1993,7 @@ Then hashed.
 
 ---
 
-### 🧠 Simple Definition
+###  🧠 Simple Definition
 
 **Salting adds a random value to a password before hashing to make the hash unique and more secure.**
 
@@ -2012,7 +2012,7 @@ It prevents **abuse, spam, brute-force attacks, and server overload**.
 
 ---
 
-### 🧪 Simple Example
+###  🧪 Simple Example
 
 Allow only **100 requests per minute** per user/IP.
 
@@ -2021,7 +2021,7 @@ If someone sends the 101st request →
 
 ---
 
-### 🎯 Why Rate Limiting Is Important?
+###  🎯 Why Rate Limiting Is Important?
 
 * Stops **brute-force login attempts**
 * Protects APIs from **spamming & flooding**
@@ -2031,7 +2031,7 @@ If someone sends the 101st request →
 
 ---
 
-### 🧩 How It Works
+###  🧩 How It Works
 
 A rate limiter tracks:
 
@@ -2048,7 +2048,7 @@ If user exceeds the allowed limit → return error:
 
 ---
 
-### 🔐 Where It's Commonly Used?
+###  🔐 Where It's Commonly Used?
 
 * Login routes
 * Public APIs
@@ -2058,7 +2058,7 @@ If user exceeds the allowed limit → return error:
 
 ---
 
-### 🧠 Simple Definition
+###  🧠 Simple Definition
 
 **Rate limiting restricts how many requests someone can send in a time period to protect servers from abuse.**
 
@@ -2075,7 +2075,7 @@ It makes your app safer with almost zero setup.
 
 ---
 
-### 🔧 What Helmet Does
+###  🔧 What Helmet Does
 
 Helmet adds security headers like:
 
@@ -2088,7 +2088,7 @@ Helmet adds security headers like:
 
 ---
 
-### 🧪 Simple Example
+###  🧪 Simple Example
 
 ```js
 const express = require("express");
@@ -2104,7 +2104,7 @@ Just one line: `app.use(helmet())` → your app gets multiple security layers.
 
 ---
 
-### 🎯 Why Use helmet.js?
+###  🎯 Why Use helmet.js?
 
 * Protects your API from common web vulnerabilities
 * Requires almost **no configuration**
@@ -2113,7 +2113,7 @@ Just one line: `app.use(helmet())` → your app gets multiple security layers.
 
 ---
 
-### 🧠 Simple Definition
+###  🧠 Simple Definition
 
 **helmet.js is a security middleware for Express that adds important HTTP headers to protect your app from attacks like XSS, clickjacking, and code injection.**
 
@@ -2125,11 +2125,11 @@ Just one line: `app.use(helmet())` → your app gets multiple security layers.
 
 <img  alt="Image" src="https://github.com/user-attachments/assets/6b1bc7f2-6856-4730-a1ca-717e45bf9106" />
 
-### **Simple Explanation**
+###  **Simple Explanation**
 
 CSRF happens when a **bad website tricks your browser into performing an action on another website where you’re already logged in** — without you knowing.
 
-### **Simple Example**
+###  **Simple Example**
 
 You're logged in to your bank.
 You open an evil website in another tab.
@@ -2143,14 +2143,14 @@ Your browser includes your **bank cookies**, so the bank thinks *you* requested 
 
 ---
 
-## **Technical Explanation**
+###  **Technical Explanation**
 
 CSRF exploits the fact that:
 
 * Browsers **automatically send cookies** (session cookies, auth cookies) with every request.
 * If the attacker can make your browser **send a request** (form submit, image load, script, fetch), the server cannot tell it wasn’t you.
 
-### **Attack Example (HTML Form)**
+###  **Attack Example (HTML Form)**
 
 ```html
 <form action="https://bank.com/transfer" method="POST" style="display:none">
@@ -2166,9 +2166,9 @@ If you're logged into the bank in the same browser, the request works.
 
 ---
 
-## **Protection**
+###  **Protection**
 
-### 1. **CSRF Tokens**
+###  1. **CSRF Tokens**
 
 Server generates a random token and adds it to forms:
 
@@ -2178,7 +2178,7 @@ Server generates a random token and adds it to forms:
 
 Server verifies the token → attacker cannot guess it.
 
-### 2. **SameSite Cookies**
+###  2. **SameSite Cookies**
 
 Set cookies so they **aren’t sent** on cross-site requests:
 
@@ -2186,7 +2186,7 @@ Set cookies so they **aren’t sent** on cross-site requests:
 Set-Cookie: session=abc123; SameSite=Strict;
 ```
 
-### 3. **Double Submit Cookie**
+###  3. **Double Submit Cookie**
 
 Send token in both **cookie + body/header** → must match.
 
@@ -2197,7 +2197,7 @@ Send token in both **cookie + body/header** → must match.
 
 ![Image](https://github.com/user-attachments/assets/7c51ab7e-c75e-40bc-858f-24c241dc0dac)
 
-### ✅ **Stateful Authentication (Session-based) — CORRECT VERSION**
+###  ✅ **Stateful Authentication (Session-based) — CORRECT VERSION**
 
 **Flow:**
 
@@ -2217,7 +2217,7 @@ This is **stateful** because the server keeps "state".
 
 ---
 
-### ✅ **Stateless Authentication (JWT token) — CORRECT VERSION**
+###  ✅ **Stateless Authentication (JWT token) — CORRECT VERSION**
 
 **Flow:**
 
@@ -2238,7 +2238,7 @@ This is **stateless** because the server keeps **no session state**.
 
 ---
 
-### 🎯 Summary Table
+###  🎯 Summary Table
 
 | Feature                           | Stateful (Session)     | Stateless (JWT)             |
 | --------------------------------- | ---------------------- | --------------------------- |
@@ -2260,30 +2260,30 @@ This is **stateless** because the server keeps **no session state**.
 
 ![Image](https://github.com/user-attachments/assets/384719ac-3129-4d65-9cd5-90e150e1dacd)
 
-### 🌊 **What is a Stream in Node.js?**
+###  🌊 **What is a Stream in Node.js?**
 
 A **stream** is a feature in Node.js that lets you **process data in small chunks** instead of loading the whole data into memory at once.
 
-### 🧒 Simple Explanation
+###  🧒 Simple Explanation
 
 Imagine watching a YouTube video —
 you don’t download the entire video first.
 You receive it **bit by bit** and play it immediately.
 That’s exactly how streams work.
 
-### 🧠 Technical Explanation
+###  🧠 Technical Explanation
 
 A stream is an **EventEmitter** that handles **continuous data flow**.
 It lets you **read** or **write** data chunk-by-chunk, improving performance and memory usage.
 
-### ⭐ Why Use Streams?
+###  ⭐ Why Use Streams?
 
 * Efficient with **large files** (videos, logs)
 * Uses **less memory**
 * Faster processing
 * Non-blocking
 
-### 📘 Example
+###  📘 Example
 
 Reading a file using a stream:
 
@@ -2304,7 +2304,7 @@ stream.on('data', chunk => {
 
 ![Image](https://github.com/user-attachments/assets/b351125d-81c4-41d0-a5cb-9772e4a5a9b8)
 
-### 1️⃣ **Readable Stream**
+###  1️⃣ **Readable Stream**
 
 📥 *Data comes **into** your program.*
 Used to **read** data chunk-by-chunk.
@@ -2316,7 +2316,7 @@ Used to **read** data chunk-by-chunk.
 
 ---
 
-### 2️⃣ **Writable Stream**
+###  2️⃣ **Writable Stream**
 
 📤 *Data goes **out** of your program.*
 Used to **write** data chunk-by-chunk.
@@ -2328,7 +2328,7 @@ Used to **write** data chunk-by-chunk.
 
 ---
 
-### 3️⃣ **Duplex Stream**
+###  3️⃣ **Duplex Stream**
 
 🔁 *Can both read and write independently.*
 Acts like **two separate channels** in one.
@@ -2340,7 +2340,7 @@ Acts like **two separate channels** in one.
 
 ---
 
-### 4️⃣ **Transform Stream**
+###  4️⃣ **Transform Stream**
 
 🔄 *Can read and write**, and also **modify** data as it flows.*
 Think of it as a “filter” or “processor”.
@@ -2352,7 +2352,7 @@ Think of it as a “filter” or “processor”.
 
 ---
 
-### 🧠 Quick Summary Table
+###  🧠 Quick Summary Table
 
 | Type      | Can Read? | Can Write? | Can Transform? |
 | --------- | --------- | ---------- | -------------- |
@@ -2375,7 +2375,7 @@ Node.js uses Buffers to handle data that is **not text**, like files, images, vi
 
 ---
 
-### 🔍 **Simple Explanation**
+###  🔍 **Simple Explanation**
 
 A Buffer is like a **box full of bytes**.
 Each byte is a number (0–255).
@@ -2384,7 +2384,7 @@ Example: reading an image → you get binary data → stored in a Buffer.
 
 ---
 
-### 🧪 **Technical Explanation**
+###  🧪 **Technical Explanation**
 
 Buffers are used when dealing with:
 
@@ -2410,7 +2410,7 @@ Think of it as the “remote control” for your Node.js app.
 
 ---
 
-### 🧩 **Simple Explanation**
+###  🧩 **Simple Explanation**
 
 `process` tells you:
 
@@ -2422,7 +2422,7 @@ Think of it as the “remote control” for your Node.js app.
 
 ---
 
-### 🧪 **Technical Explanation**
+###  🧪 **Technical Explanation**
 
 `process` is an instance of **EventEmitter** and provides access to:
 
@@ -2436,7 +2436,7 @@ Think of it as the “remote control” for your Node.js app.
 
 ---
 
-### 🧰 **Example**
+###  🧰 **Example**
 
 ```js
 console.log(process.pid);       // process ID
@@ -2446,7 +2446,7 @@ console.log(process.env.NODE_ENV); // env variable
 
 ---
 
-### 🎯 **When is it used?**
+###  🎯 **When is it used?**
 
 * Reading environment variables (`process.env.DB_PASS`)
 * Checking command-line tools (`process.argv`)
@@ -2471,7 +2471,7 @@ They are used to store **configuration** such as:
 
 ---
 
-### 🧩 **Simple Explanation**
+###  🧩 **Simple Explanation**
 
 Think of environment variables as **secret settings** that the server gives to your app.
 
@@ -2479,7 +2479,7 @@ You **don’t write them in code** → you load them from the system.
 
 ---
 
-### 🧪 **Technical Explanation**
+###  🧪 **Technical Explanation**
 
 Environment variables live inside the OS and are accessed in Node.js using:
 
@@ -2501,9 +2501,9 @@ console.log(process.env.DB_PASSWORD);
 
 ---
 
-### 🧰 **Common Use Examples**
+###  🧰 **Common Use Examples**
 
-#### **1. Setting PORT**
+###  **1. Setting PORT**
 
 ```bash
 export PORT=3000
@@ -2513,7 +2513,7 @@ export PORT=3000
 console.log(process.env.PORT); // 3000
 ```
 
-#### **2. Hiding API Keys**
+###  **2. Hiding API Keys**
 
 ```bash
 export API_KEY=abcdefg
@@ -2523,7 +2523,7 @@ export API_KEY=abcdefg
 console.log(process.env.API_KEY);
 ```
 
-#### **3. Using `.env` file with dotenv**
+###  **3. Using `.env` file with dotenv**
 
 `.env`
 
@@ -2540,7 +2540,7 @@ console.log(process.env.JWT_SECRET);
 
 ---
 
-### 🎯 **Why use environment variables?**
+###  🎯 **Why use environment variables?**
 
 * Keep passwords OUT of source code
 * Different settings for dev / test / production
@@ -2558,7 +2558,7 @@ Think of it as a **bag of configuration values** (API keys, passwords, ports) av
 
 ---
 
-### 🔍 **Simple Explanation**
+###  🔍 **Simple Explanation**
 
 `process.env` = **all environment variables your app can read**.
 
@@ -2577,7 +2577,7 @@ console.log(process.env.PORT); // 4000
 
 ---
 
-### 🧪 **Technical Explanation**
+###  🧪 **Technical Explanation**
 
 * `process` = Node’s current running program
 * `env` = environment (variables provided by OS)
@@ -2596,9 +2596,9 @@ It contains values like:
 
 ---
 
-### 🧰 **Common Uses**
+###  🧰 **Common Uses**
 
-#### ✔ 1. App Mode (dev/prod)
+###  ✔ 1. App Mode (dev/prod)
 
 ```js
 if (process.env.NODE_ENV === "production") {
@@ -2606,13 +2606,13 @@ if (process.env.NODE_ENV === "production") {
 }
 ```
 
-#### ✔ 2. Secrets (passwords, keys)
+###  ✔ 2. Secrets (passwords, keys)
 
 ```js
 console.log(process.env.DB_PASSWORD);
 ```
 
-#### ✔ 3. Port number
+###  ✔ 3. Port number
 
 ```js
 const PORT = process.env.PORT || 3000;
@@ -2620,7 +2620,7 @@ const PORT = process.env.PORT || 3000;
 
 ---
 
-### 🎯 **Why it's important**
+###  🎯 **Why it's important**
 
 * Keeps secrets out of your code
 * Allows different configurations for different environments
@@ -2638,7 +2638,7 @@ It schedules a function to run **at the end of the current phase** — *before a
 
 ---
 
-### 🌱 **Simple Explanation**
+###  🌱 **Simple Explanation**
 
 `process.nextTick()` means:
 
@@ -2649,7 +2649,7 @@ It’s like saying:
 
 ---
 
-### 🧪 **Technical Explanation**
+###  🧪 **Technical Explanation**
 
 * It adds the callback to the **microtask queue** (like a special priority list).
 * It runs **before**:
@@ -2663,7 +2663,7 @@ Because of this, it has **higher priority**.
 
 ---
 
-### 🧰 **Example**
+###  🧰 **Example**
 
 ```js
 console.log("Start");
@@ -2687,7 +2687,7 @@ Next Tick
 
 ---
 
-### 🎯 **When to use `process.nextTick()`**
+###  🎯 **When to use `process.nextTick()`**
 
 * When you need to **finish something immediately** before the event loop continues
 * When you must run code **after the current function but before anything else**
@@ -2700,7 +2700,7 @@ Examples:
 
 ---
 
-### ⚠️ **Warning**
+###  ⚠️ **Warning**
 
 Avoid using too many `nextTick()` calls because it can block the event loop (infinite loop risk).
 
@@ -2714,7 +2714,7 @@ Here is the simplest, clearest explanation:
 
 ---
 
-### 🔹 **`process.nextTick()`**
+###  🔹 **`process.nextTick()`**
 
 🟢 Runs **immediately after the current code finishes**
 🟢 Runs **before** the event loop continues
@@ -2743,7 +2743,7 @@ nextTick
 
 ---
 
-### 🔹 **`setImmediate()`**
+###  🔹 **`setImmediate()`**
 
 🔵 Runs **at the end of the current event loop cycle**
 🔵 Runs **after I/O events are done**
@@ -2772,7 +2772,7 @@ immediate
 
 ---
 
-### ⭐ **Side-by-Side Comparison**
+###  ⭐ **Side-by-Side Comparison**
 
 | Feature                        | `process.nextTick()`         | `setImmediate()`         |
 | ------------------------------ | ---------------------------- | ------------------------ |
@@ -2785,14 +2785,14 @@ immediate
 
 ---
 
-### 🎯 **Super Simple Comparison**
+###  🎯 **Super Simple Comparison**
 
 * **nextTick** → *Run ASAP, before anything else.*
 * **setImmediate** → *Run soon, but after the current event loop cycle.*
 
 ---
 
-### 🧘 **Simple Example to See Order**
+###  🧘 **Simple Example to See Order**
 
 ```js
 process.nextTick(() => console.log("1 nextTick"));
@@ -2823,7 +2823,7 @@ The **cluster module** in Node.js allows you to create **multiple Node.js proces
 
 ---
 
-### 🌱 **Simple Explanation**
+###  🌱 **Simple Explanation**
 
 Node.js runs on **a single CPU core** by default.
 If your server has **8 CPU cores**, Node.js still uses only **one**.
@@ -2834,7 +2834,7 @@ The **cluster module** lets you start **one master + many worker processes** so 
 
 ---
 
-### ⚙️ **Technical Explanation**
+###  ⚙️ **Technical Explanation**
 
 * The **master process** creates worker processes
 * Each worker runs the SAME server code
@@ -2844,7 +2844,7 @@ The **cluster module** lets you start **one master + many worker processes** so 
 
 ---
 
-### 🧰 **Basic Example**
+###  🧰 **Basic Example**
 
 ```js
 const cluster = require('cluster');
@@ -2870,7 +2870,7 @@ if (cluster.isMaster) {
 
 ---
 
-### 🚀 **Why use Cluster?**
+###  🚀 **Why use Cluster?**
 
 * Make use of ALL CPU cores
 * Handle more traffic
@@ -2880,7 +2880,7 @@ if (cluster.isMaster) {
 
 ---
 
-### 🎯 **Real Use Cases**
+###  🎯 **Real Use Cases**
 
 * High-traffic APIs
 * Chat applications
@@ -2897,7 +2897,7 @@ Node.js is single-threaded, so workers help you **use all CPU cores** and **hand
 
 ---
 
-## 🌱 **Simple Explanation**
+###  🌱 **Simple Explanation**
 
 Think of your server as a restaurant:
 
@@ -2909,7 +2909,7 @@ Each chef (worker) cooks food **independently**, so the restaurant serves more c
 
 ---
 
-## ⚙️ **Technical Explanation**
+###  ⚙️ **Technical Explanation**
 
 A **worker process** is created using the `cluster` module:
 
@@ -2943,31 +2943,31 @@ if (cluster.isMaster) {
 
 ---
 
-## 🔄 **How Worker Processes Work**
+###  🔄 **How Worker Processes Work**
 
-### **1. Master process starts**
+###  **1. Master process starts**
 
 * Checks number of CPU cores
 * Creates a worker for each core
 
-### **2. Workers start running code**
+###  **2. Workers start running code**
 
 * Each worker runs the server
 * All listen on the same port (e.g., 3000)
 
-### **3. Incoming requests**
+###  **3. Incoming requests**
 
 * OS decides: “Which worker should handle this request?”
 * It gives requests to workers in a round-robin or OS-level scheduling
 
-### **4. If a worker crashes**
+###  **4. If a worker crashes**
 
 * Master detects it
 * Master can automatically spawn a NEW worker
 
 ---
 
-## 🎯 **Why Worker Processes Are Useful**
+###  🎯 **Why Worker Processes Are Useful**
 
 * Handle **more users** at the same time
 * Improve **performance**
@@ -2977,7 +2977,7 @@ if (cluster.isMaster) {
 
 ---
 
-## 🧠 **Short Summary**
+###  🧠 **Short Summary**
 
 | Role              | Description                                 |
 | ----------------- | ------------------------------------------- |
@@ -2996,7 +2996,7 @@ Scaling matters because it allows your Node.js application to handle **more user
 
 ---
 
-## 🌱 **Simple Explanation**
+###  🌱 **Simple Explanation**
 
 Imagine your shop has only **one cashier**.
 If 100 customers come in, the line becomes huge.
@@ -3008,7 +3008,7 @@ Scaling lets you use **all CPU cores** → more cashiers → more speed.
 
 ---
 
-## ⚙️ **Technical Reason**
+###  ⚙️ **Technical Reason**
 
 Node.js runs JavaScript on **a single thread**, meaning:
 
@@ -3016,7 +3016,7 @@ Node.js runs JavaScript on **a single thread**, meaning:
 * Heavy CPU tasks can block other requests
 * Only **one CPU core** is used out of many
 
-### Scaling solves this by:
+###  Scaling solves this by:
 
 * Creating **multiple worker processes**
 * Distributing incoming requests across workers
@@ -3025,33 +3025,33 @@ Node.js runs JavaScript on **a single thread**, meaning:
 
 ---
 
-## 🚀 **Benefits of Scaling**
+###  🚀 **Benefits of Scaling**
 
-### **1. More Requests per Second**
+###  **1. More Requests per Second**
 
 More workers → more traffic handling.
 
-### **2. Faster Response Times**
+###  **2. Faster Response Times**
 
 The server doesn't get overloaded.
 
-### **3. Prevents Crashes**
+###  **3. Prevents Crashes**
 
 If one worker crashes, others continue working.
 
-### **4. Uses Full Hardware**
+###  **4. Uses Full Hardware**
 
 If your server has 8 cores, Node.js can use all 8.
 
-### **5. Better User Experience**
+###  **5. Better User Experience**
 
 No slowdowns, no timeouts.
 
 ---
 
-## 🔧 **How Scaling Happens in Node.js**
+###  🔧 **How Scaling Happens in Node.js**
 
-### **1. Using Cluster Module**
+###  **1. Using Cluster Module**
 
 Creates multiple worker processes:
 
@@ -3059,7 +3059,7 @@ Creates multiple worker processes:
 cluster.fork();
 ```
 
-### **2. Using PM2 (recommended)**
+###  **2. Using PM2 (recommended)**
 
 PM2 handles:
 
@@ -3071,17 +3071,17 @@ PM2 handles:
 pm2 start app.js -i max
 ```
 
-### **3. Horizontal Scaling**
+###  **3. Horizontal Scaling**
 
 Add more servers behind a load balancer.
 
-### **4. Auto-scaling (Cloud)**
+###  **4. Auto-scaling (Cloud)**
 
 AWS, Google Cloud automatically add/remove servers.
 
 ---
 
-## 🧠 **Short Summary**
+###  🧠 **Short Summary**
 
 | Need               | Reason                           |
 | ------------------ | -------------------------------- |
@@ -3102,19 +3102,19 @@ It keeps your app **running forever**, helps with **auto-restart**, **load balan
 
 ---
 
-## **Why do developers use PM2?**
+###  **Why do developers use PM2?**
 
 PM2 helps solve real-world production issues:
 
-### 🔥 **1. Auto-Restart on Crash**
+###  🔥 **1. Auto-Restart on Crash**
 
 If your Node app crashes, PM2 automatically restarts it.
 
-### 🔄 **2. Auto-Restart on Code Changes**
+###  🔄 **2. Auto-Restart on Code Changes**
 
 Using **pm2 reload / watch** mode, your app restarts when files change.
 
-### ⚖️ **3. Load Balancing (Cluster Mode)**
+###  ⚖️ **3. Load Balancing (Cluster Mode)**
 
 PM2 can start multiple Node processes using all CPU cores:
 
@@ -3122,11 +3122,11 @@ PM2 can start multiple Node processes using all CPU cores:
 pm2 start app.js -i max
 ```
 
-### 📜 **4. Log Management**
+###  📜 **4. Log Management**
 
 PM2 stores **stdout**, **stderr**, and **error logs** in organized files.
 
-### 📈 **5. Monitoring Dashboard**
+###  📈 **5. Monitoring Dashboard**
 
 PM2 provides CPU, memory usage, uptime:
 
@@ -3134,7 +3134,7 @@ PM2 provides CPU, memory usage, uptime:
 pm2 monit
 ```
 
-### 🚀 **6. Startup Scripts**
+###  🚀 **6. Startup Scripts**
 
 PM2 can generate scripts to start your app when the server boots:
 
@@ -3144,33 +3144,33 @@ pm2 startup
 
 ---
 
-## **Simple Definition**
+###  **Simple Definition**
 
 > **PM2 is a tool that keeps your Node.js apps alive, scalable, and easy to manage in production.**
 
 ---
 
-## **Small PM2 Example**
+###  **Small PM2 Example**
 
-### Start app:
+###  Start app:
 
 ```sh
 pm2 start server.js
 ```
 
-### Restart:
+###  Restart:
 
 ```sh
 pm2 restart server.js
 ```
 
-### Cluster mode:
+###  Cluster mode:
 
 ```sh
 pm2 start server.js -i max
 ```
 
-### View logs:
+###  View logs:
 
 ```sh
 pm2 logs
