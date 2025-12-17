@@ -217,7 +217,7 @@ It is used in:
 
 <span style="color:green;">================================================================ </span>
 
-<h2 id="what_is_non_blocking_input_output" style="color:green">⚡ What is Non-Blocking I/O in Node.js?</h2>
+<h2 id="what_is_non_blocking_input_output" style="color:green">What is Non-Blocking I/O in Node.js?</h2>
 
 <img  alt="Image" src="https://github.com/user-attachments/assets/fd7c9572-37f3-4ace-b5cc-95ea6626f8c6" />
 
