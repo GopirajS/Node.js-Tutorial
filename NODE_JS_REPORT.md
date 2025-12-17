@@ -2,7 +2,7 @@
 
 ---
 
-###   **Node.js Basics**
+##   Node.js Basics
 
 - [What is Node.js?](#what_is_node_js)
 
@@ -21,7 +21,7 @@
 - [What is I/O Polling Techniques in Node.js?](#what_is_Polling)
 
 
-###   **ES Modules (ESM) in Node.js**
+##   ES Modules (ESM) in Node.js
 
 
 * [What is an ES module?](#what_is_an_es_module)
@@ -32,7 +32,7 @@
 
 ---
 
-###   **NPM & Package Management**
+##   NPM & Package Management
 
 
 * [What is `package.json`?](#what_is_package_json)
@@ -50,7 +50,7 @@
 
 ---
 
-###   **Node.js Core Modules**
+##   Node.js Core Modules
 
 
 * [What is the `fs` module?](#what_is_the_fs_module)
@@ -70,7 +70,7 @@
 ---
 
 
-###   **Asynchronous Programming**
+##   Asynchronous Programming
 
 
 * [What are callbacks?](#what_are_callbacks)\
@@ -88,7 +88,7 @@
 ---
 
 
-###   **Authentication & Security**
+##   Authentication & Security
 
 
 * [What is JWT?](#What_is_JWT)
@@ -109,7 +109,7 @@
 
 ---
 
-###   **Node.js Streams and Buffers**
+##   Node.js Streams and Buffers
 
 * [What is a stream?](#What_is_a_stream)
 
@@ -127,7 +127,7 @@
 
 ---
 
-###   **Process & OS**
+##   Process & OS
 
 * [What is `process` in Node.js?](#What_is_process_in_Node)
 
@@ -144,7 +144,7 @@
 ---
 
 
-###   **Clustering & Scaling**
+##   Clustering & Scaling
 
 * [What is the cluster module?](#What_is_the_Cluster_Module)
 
@@ -492,7 +492,7 @@ When finished, the event loop runs the callback.
 
 ---
 
-# 🧪 **Polling Types (Simple Explanation)**
+### 🧪 **Polling Types (Simple Explanation)**
 
 These are **application-level polling techniques** (used in web apps), not Node.js internals —
 but interviewers often ask them together.
@@ -521,7 +521,7 @@ Both sides can send data any time without repeated requests.
 
 ---
 
-# 🗣️ **Super Simple Interview Answer**
+### 🗣️ **Super Simple Interview Answer**
 
 **“I/O Polling in Node.js means checking when non-blocking tasks are finished.
 Short polling means checking repeatedly.
