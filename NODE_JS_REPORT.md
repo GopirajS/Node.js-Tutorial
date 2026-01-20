@@ -163,9 +163,10 @@
 
 ---
 
+
 <h2 id="what_is_node_js" style="color:green">What is Node.js</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/2c33f160-decb-4ac0-a9e5-f3d10ce9c16c" />
+![img](learning_node/imgs/nodejs.png)
 
 **Node.js is a way to run JavaScript outside the browser.**
 Normally, JavaScript runs only inside web browsers (like Chrome, Firefox).
@@ -192,7 +193,9 @@ Node.js allows you to run JavaScript directly on your computer or server.
 
 <h2 id="what_is_the_v8_engine" style="color:green">What is the V8 engine?</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/62f95755-0cf0-416e-90e3-b55cb3048aa5" />
+
+![img](learning_node/imgs/javascrupt_engines.jpg)
+
 
 **The V8 engine is a program made by Google that runs JavaScript very fast.**
 
@@ -219,7 +222,9 @@ It is used in:
 
 <h2 id="what_is_non_blocking_input_output" style="color:green">What is Non-Blocking I/O in Node.js?</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/fd7c9572-37f3-4ace-b5cc-95ea6626f8c6" />
+![img](learning_node/imgs/asynchronous-programming.png)
+
+
 
 **Non-blocking I/O** means that **Node.js does not wait** for slow operations (like reading a file, querying a database, or making an API call) to finish.
 
@@ -314,7 +319,7 @@ Here:
 
 <h2 id="what_is_the_role_of_libuv_in_node_js" style="color:green"> 🔧 What is the Role of "libuv" in Node.js? </h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/db065628-34b0-4b66-a846-2dadc63de2ff" />
+![img](learning_node/imgs/libuv.png)
 
 **libuv** is a C library inside Node.js that makes **asynchronous, non-blocking I/O** possible.
 
@@ -365,7 +370,7 @@ It is the **engine behind Node.js’s event loop and thread pool**.
 
 <h2 id="what_is_event_driven_architecture" style="color:green"> ⚡ What is Event-Driven Architecture in Node.js? </h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/973550cb-a223-4ce9-a608-a06c6ae23991" />
+![img](learning_node/imgs/Event-Driven Architecture.jpg)
 
 
 **Event-Driven Architecture (EDA)** is a programming style where your application **reacts to events** instead of following a strict top-to-bottom flow.
@@ -444,7 +449,7 @@ events.emit('order');
 
 <h2 id="what_is_thread_pool" style="color:green"> 🧵 What is Thread Pool in Node.js? </h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/2202fddc-cecd-4c5f-9613-2a256aafd92c" />
+![img](learning_node/imgs/thread_pool.png)
 
 The **Thread Pool** in Node.js is a group of **background worker threads** that handle **heavy or blocking tasks** so the main thread (event loop) stays free.
 
@@ -481,7 +486,8 @@ Default size: **4 threads**
 
 <h2 id="what_is_Polling" style="color:green"> 🔍 I/O Polling Techniques in Node.js </h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/bbd65570-966f-4f71-9a8c-ff0807c54c6c" />
+![img](learning_node/imgs/polling.png)
+
 
 **I/O Polling** is how Node.js **checks the status** of non-blocking tasks
 (like file read, DB query, network request).
@@ -585,7 +591,8 @@ greet();
 
 <h2 id="what_is_the_difference_between_esm_and_commonjs" style="color:green">🔀 What Is the Difference Between CommonJS and ESM  ? </h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/97eadb4f-1e3c-4ae6-851b-924c33acd5a6" />
+![img](learning_node/imgs/CJS_ESM.png)
+
 
 ###   📦 **1. Syntax**
 
@@ -729,7 +736,8 @@ import add from './math.js';
 
 <h2 id="what_is_package_json" style="color:green">📦 What is `package.json`?</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/2fd33a5f-20ff-44c1-8cb0-adc9b71b465f" />
+![img](learning_node/imgs/package.png)
+
 
 `package.json` is the **main configuration file** for a Node.js project.
 It tells Node.js and npm **important info** about your project.
@@ -770,7 +778,8 @@ It tells Node.js and npm **important info** about your project.
 
 <h2 id="what_are_dependencies_vs_devdependencies" style="color:green">📦 Dependencies vs ⚙️ DevDependencies</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/54ce5787-892a-44aa-a506-0605e6c707e7" />
+![img](learning_node/imgs/Dependencies_DevDependencies.jpg)
+
 
 ###   📦 Dependencies (`dependencies`)
 
@@ -823,7 +832,7 @@ They help you build, test, or develop the project but are **not needed by users*
 
 <h2 id="what_is_semantic_versioning" style="color:green">What is semantic versioning?</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/16878532-d9e0-4ace-a9de-27b460dc4548" />
+![img](learning_node/imgs/Semantic_Versioning.png)
 
 ###   🔢 What is Semantic Versioning?
 
@@ -883,7 +892,8 @@ npm install -g packageName
 
 <h2 id="what_is_npx_npm" style="color:green">⚡ Combined Explanation — npm vs npx (clear + simple)</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/43b49ee4-b18c-4e0e-8e7f-557a305564bd" />
+![img](learning_node/imgs/npm_and_npx.jpg)
+
 
 ###   📦 **npm (Node Package Manager)**
 
@@ -976,7 +986,7 @@ fs.readFile('test.txt', 'utf8', (err, data) => {
 
 <h2 id="what_is_the_difference_between_sync_and_async_file_methods" style="color:green">🔄 Difference Between Sync and Async File Methods</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/2ce4228c-e602-435d-868e-4c6dd8b32f5c" />
+![img](learning_node/imgs/sync_async.png)
 
 ###   ⚡ Async (Asynchronous)
 
@@ -1025,7 +1035,8 @@ console.log("I run after file is done!");
 
 <h2 id="what_is_the_path_module_used_for" style="color:green">📍 What is the `path` Module Used For?</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/dc564833-7e2e-4b7e-8836-7ad14a6260d0" />
+![img](learning_node/imgs/nodejs-path-module.png)
+
 
 The `path` module helps you **work with file and folder paths** in a safe and consistent way.
 
@@ -1245,7 +1256,8 @@ You emit an event → Code listening for that event runs.
 
 <h2 id="what_are_event_emitters" style="color:green">📢 What Are Event Emitters?</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/3d1fca0b-772b-4dc3-8056-552f9ce3de3c" />
+![img](learning_node/imgs/Event_Emitters.jpg)
+
 
 **Event Emitters** are objects in Node.js that can:
 
@@ -1367,7 +1379,8 @@ console.log(hash);
 
 <h2 id="what_are_callbacks" style="color:green">What are callbacks?</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/60cd0b82-7dc2-4d10-a6dc-9965f1891e2a" />
+![img](learning_node/imgs/callback.png)
+
 
 ###  🔁 What Are Callbacks?
 
@@ -1442,8 +1455,7 @@ This is why Node.js later introduced **Promises** and **async/await**.
 
 <h2 id="what_is_an_error_first_callback" style="color:green"> ⚠️ What Is an Error-First Callback? </h2>
 
-![Image](https://github.com/user-attachments/assets/e1be7fb3-d944-4ea9-acb1-23d727644e78)
-
+![img](learning_node/imgs/error_first_call_back.gif)
 
 An **error-first callback** is a **special style** of callback function used in Node.js where:
 
@@ -1503,7 +1515,8 @@ fs.readFile("file.txt", "utf8", (err, data) => {
 
 <h2 id="what_are_microtasks_vs_macrotasks" style="color:green">🕒 What Are Microtasks vs Macrotasks?</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/a4a016cb-91fe-4d25-98ce-92ebb71d3f8d" />
+![img](learning_node/imgs/microtask-and-macrotask.jpg)
+
 
 In Node.js (and browsers), asynchronous work is handled by the **event loop**, which uses two main queues:
 
@@ -1578,7 +1591,8 @@ B  <-- macrotask
 
 <h2 id="what_are_promises" style="color:green">🤝 What Are Promises?</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/86b22f62-8792-4b93-84a0-c0cbf4d5788d" />
+![img](learning_node/imgs/promise.png)
+
 
 
 A **Promise** in JavaScript is an object that represents the **eventual result of an asynchronous operation**.
@@ -1610,7 +1624,7 @@ myPromise
   .catch(error => console.log(error));
 ```
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/d5e64e34-c7d6-43a0-9a79-9d4c479255c2" />
+![img](learning_node/imgs/Promiss.png)
 
 ---
 
@@ -1632,7 +1646,8 @@ myPromise
 
 <h2 id="what_are_promises_Chain" style="color:green">🔗 What Is a Promise Chain?</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/55a26169-70cb-4d51-808a-260c80a74c22" />
+![img](learning_node/imgs/Promise-Chaining.png)
+
 
 
 A **Promise chain** is when you connect multiple `.then()` calls one after another so each step runs **after the previous Promise finishes**.
@@ -1690,7 +1705,8 @@ Promise.resolve(1)
 
 <h2 id="what_is_async_await" style="color:green">⏳ What Is async/await?</h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/d2932c3c-da04-4ff9-bb92-f5d6a79ebc7e" />
+![img](learning_node/imgs/async_await.jpg)
+
 
 **`async/await`** is modern JavaScript syntax that makes working with Promises look like **simple, synchronous code**—even though it’s still fully asynchronous.
 
@@ -1762,7 +1778,7 @@ async function getData() {
 
 <h2 id="What_is_JWT" style="color:green"> 🔐 What Is JWT? </h2>
 
-![Image](https://github.com/user-attachments/assets/8d3dee46-f9cc-4188-a6fd-74baf505338c)
+![img](learning_node/imgs/jwt.gif)
 
 A **JWT (JSON Web Token)** is a **secure, compact token** used for **authentication and data exchange** between a client and server.
 
@@ -1891,7 +1907,7 @@ OAuth provides **secure delegated access** using **tokens**, not passwords.
 
 <h2 id="What_Is_Hashing_vs_Encryption" style="color:green"> 🔐 What Is Hashing vs Encryption? </h2>
 
-<img  src="https://github.com/user-attachments/assets/a922cceb-9a13-4180-a944-20be6d2c425d" />
+![img](learning_node/imgs/hashing_encrypting_decryption.png)
 
 ###  🧩 **Hashing (One-Way)**
 
@@ -2004,7 +2020,8 @@ Then hashed.
 
 <h2 id="What_is_rate_limiting" style="color:green"> 🚦 What Is Rate Limiting? </h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/0ffc0e25-53cc-4130-b577-243e67a2c248" />
+![img](learning_node/imgs/rate_limiting.jpg)
+
 
 **Rate limiting** is a security technique that **controls how many requests a user (or IP) can make within a specific time**.
 
@@ -2067,7 +2084,8 @@ If user exceeds the allowed limit → return error:
 
 <h2 id="What_is_helmet_js" style="color:green"> 🛡️ What Is helmet.js? </h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/d7e71641-aa81-4278-b21c-17533e56ebdd"/>
+![img](learning_node/imgs/helmet.jpg)
+
 
 **helmet.js** is an **Express.js security middleware** that helps protect your Node.js applications by setting **various HTTP security headers** automatically.
 
@@ -2123,7 +2141,8 @@ Just one line: `app.use(helmet())` → your app gets multiple security layers.
 
 <h2 id="What_is_CSRF" style="color:green"> What is CSRF (Cross-Site Request Forgery) </h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/6b1bc7f2-6856-4730-a1ca-717e45bf9106" />
+![img](learning_node/imgs/CSRF.png)
+
 
 ###  **Simple Explanation**
 
@@ -2195,7 +2214,7 @@ Send token in both **cookie + body/header** → must match.
 
 <h2 id="What_is_Stateful_and_Stateless_authentication" style="color:green"> *Stateful Authentication and Stateless Authentication  </h2>
 
-![Image](https://github.com/user-attachments/assets/7c51ab7e-c75e-40bc-858f-24c241dc0dac)
+![img](learning_node/imgs/stateful_stateless_auth.gif)
 
 ###  ✅ **Stateful Authentication (Session-based) — CORRECT VERSION**
 
@@ -2252,13 +2271,11 @@ This is **stateless** because the server keeps **no session state**.
 <span style="color:green;">================================================================ </span>
 
 
-<span style="color:green;">================================================================ </span>
-
 <h1 style="text-align:center;" >Node.js Streams and Buffers</h1>
 
 <h2 id="UNIQE_IDENDIFATION" style="color:green"> 🌊 What is a Stream in Node.js? </h2>
 
-![Image](https://github.com/user-attachments/assets/384719ac-3129-4d65-9cd5-90e150e1dacd)
+![img](learning_node/imgs/Streaming.jpeg)
 
 ###  🌊 **What is a Stream in Node.js?**
 
@@ -2302,7 +2319,7 @@ stream.on('data', chunk => {
 
 <h2 id="What_are_the_four_types_of_streams" style="color:green"> 🛠️ What Are the Four Types of Streams in Node.js? </h2>
 
-![Image](https://github.com/user-attachments/assets/b351125d-81c4-41d0-a5cb-9772e4a5a9b8)
+![img](learning_node/imgs/four_type_streaming.jpeg)
 
 ###  1️⃣ **Readable Stream**
 
@@ -2368,7 +2385,8 @@ Think of it as a “filter” or “processor”.
 
 <h2 id="What_is_a_Buffer" style="color:green"> What is a Buffer? </h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/434900aa-d45a-4049-a376-f1db8b0c15e4" />
+![img](learning_node/imgs/buffering.png)
+
 
 📦 A **Buffer** in Node.js is a special memory container used to store **raw binary data** (bytes).
 Node.js uses Buffers to handle data that is **not text**, like files, images, videos, network packets, etc.
@@ -2402,7 +2420,8 @@ Node.js allocates Buffers from its own memory space (outside V8 engine).
 
 <h2 id="What_is_process_in_Node" style="color:green"> ⚙️ What is `process` in Node.js?** </h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/e4fd0ff5-f06f-48a6-9e4b-901cec1dc0bf" />
+![img](learning_node/imgs/process_event_emiter.png)
+
 
 The **`process`** object is a built-in Node.js object that gives you information and control over the **current running Node.js program**.
 
@@ -2817,7 +2836,8 @@ console.log("3 normal code");
 
 <h2 id="What_is_the_Cluster_Module" style="color:green"> 🧩 **What is the Cluster Module? </h2>
 
-<img  alt="Image" src="https://github.com/user-attachments/assets/34469d2e-9f4c-447f-a877-e70d135964d7" />
+![img](learning_node/imgs/Clustering.png)
+
 
 The **cluster module** in Node.js allows you to create **multiple Node.js processes** (workers) that all share the **same server port**, so your app can use **all CPU cores** instead of just one.
 
