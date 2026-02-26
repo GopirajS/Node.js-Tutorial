@@ -164,7 +164,7 @@
 ---
 
 
-<h2 id="what_is_node_js" style="color:green">What is Node.js</h2>
+<h2 id="what_is_node_js" style="color:green; text-align:center;">What is Node.js</h2>
 
 ![img](learning_node/imgs/nodejs.png)
 
@@ -189,9 +189,9 @@ Node.js allows you to run JavaScript directly on your computer or server.
 
 ---
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_the_v8_engine" style="color:green">What is the V8 engine?</h2>
+<h2 id="what_is_the_v8_engine" style="color:green; text-align:center;">What is the V8 engine?</h2>
 
 
 ![img](learning_node/imgs/javascrupt_engines.jpg)
@@ -218,9 +218,9 @@ It is used in:
 **V8 = Fast JavaScript engine created by Google.**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_non_blocking_input_output" style="color:green">What is Non-Blocking I/O in Node.js?</h2>
+<h2 id="what_is_non_blocking_input_output" style="color:green; text-align:center;">What is Non-Blocking I/O in Node.js?</h2>
 
 ![img](learning_node/imgs/asynchronous-programming.png)
 
@@ -270,10 +270,10 @@ Here:
 **“Non-blocking I/O means Node.js performs input/output operations asynchronously. It doesn't wait for the operation to finish; instead, it uses callbacks, promises, or async/await to handle results. This keeps the main thread free and allows Node.js to handle many requests efficiently.”**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
-<h2 id="what_is_the_difference_between_node_js_and_javascript_browser" style="color:green"> 🔍 Difference Between Node.js and JavaScript (Browser) </h2>
+<h2 id="what_is_the_difference_between_node_js_and_javascript_browser" style="color:green; text-align:center;"> 🔍 Difference Between Node.js and JavaScript (Browser) </h2>
 
 ###   🌐 1. **Environment**
 
@@ -315,9 +315,9 @@ Here:
 **“JavaScript is a programming language, but Node.js is a runtime environment that allows JavaScript to run outside the browser. Browsers provide DOM APIs, while Node.js provides server-side APIs like file system and networking. In short, browser JS is for frontend; Node.js is for backend.”**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_the_role_of_libuv_in_node_js" style="color:green"> 🔧 What is the Role of "libuv" in Node.js? </h2>
+<h2 id="what_is_the_role_of_libuv_in_node_js" style="color:green; text-align:center;"> 🔧 What is the Role of "libuv" in Node.js? </h2>
 
 ![img](learning_node/imgs/libuv.png)
 
@@ -366,9 +366,9 @@ It is the **engine behind Node.js’s event loop and thread pool**.
 **“libuv is the C library that provides Node.js with an event loop and a thread pool. It enables non-blocking I/O by handling asynchronous operations like file system tasks, network requests, timers, and DNS in the background. This allows Node.js to remain fast and efficient even with a single-threaded JavaScript runtime.”**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_event_driven_architecture" style="color:green"> ⚡ What is Event-Driven Architecture in Node.js? </h2>
+<h2 id="what_is_event_driven_architecture" style="color:green; text-align:center;"> ⚡ What is Event-Driven Architecture in Node.js? </h2>
 
 ![img](learning_node/imgs/Event-Driven Architecture.jpg)
 
@@ -445,9 +445,9 @@ events.emit('order');
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_thread_pool" style="color:green"> 🧵 What is Thread Pool in Node.js? </h2>
+<h2 id="what_is_thread_pool" style="color:green; text-align:center;"> 🧵 What is Thread Pool in Node.js? </h2>
 
 ![img](learning_node/imgs/thread_pool.png)
 
@@ -482,9 +482,9 @@ Default size: **4 threads**
 **“Thread Pool = background workers for heavy tasks.”**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_Polling" style="color:green"> 🔍 I/O Polling Techniques in Node.js </h2>
+<h2 id="what_is_Polling" style="color:green; text-align:center;"> 🔍 I/O Polling Techniques in Node.js </h2>
 
 ![img](learning_node/imgs/polling.png)
 
@@ -537,11 +537,11 @@ WebSocket creates a constant real-time connection.”**
 **“I/O Polling = checking the status of non-blocking I/O tasks.”**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 <h1 style="text-align:center;">ES Modules (ESM) in Node.js</h1>
 
-<h2 id="what_is_an_es_module" style="color:green">📦 What Is an ES Module (ESM)?</h2>
+<h2 id="what_is_an_es_module" style="color:green; text-align:center;">📦 What Is an ES Module (ESM)?</h2>
 
 ![Image](https://github.com/user-attachments/assets/7af28ebf-07e3-4527-8213-b17d0b5938c2)
 
@@ -587,9 +587,9 @@ greet();
 **ES Modules are the modern JavaScript module system using `import` and `export`. They replace older CommonJS (`require`, `module.exports`).**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_the_difference_between_esm_and_commonjs" style="color:green">🔀 What Is the Difference Between CommonJS and ESM  ? </h2>
+<h2 id="what_is_the_difference_between_esm_and_commonjs" style="color:green; text-align:center;">🔀 What Is the Difference Between CommonJS and ESM  ? </h2>
 
 ![img](learning_node/imgs/CJS_ESM.png)
 
@@ -671,9 +671,9 @@ export default something;
 
 Node.js supports **both**, but ESM is the **future**.
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_are_named_exports_vs_default_exports" style="color:green">What are named exports vs default exports?</h2>
+<h2 id="what_are_named_exports_vs_default_exports" style="color:green; text-align:center;">What are named exports vs default exports?</h2>
 
 ###   🔹 Named Exports
 
@@ -730,11 +730,11 @@ import add from './math.js';
 * 🔸 **Default export** → one main export, name is flexible
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 <h1 style="text-align:center;">NPM & Package Management</h1>
 
-<h2 id="what_is_package_json" style="color:green">📦 What is `package.json`?</h2>
+<h2 id="what_is_package_json" style="color:green; text-align:center;">📦 What is `package.json`?</h2>
 
 ![img](learning_node/imgs/package.png)
 
@@ -756,9 +756,9 @@ It tells Node.js and npm **important info** about your project.
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_package_lock_json" style="color:green">🔒 What is `package-lock.json`?</h2>
+<h2 id="what_is_package_lock_json" style="color:green; text-align:center;">🔒 What is `package-lock.json`?</h2>
 
 `package-lock.json` is a file that **locks the exact versions** of every package (and their sub-packages) installed in your project.
 
@@ -774,9 +774,9 @@ It tells Node.js and npm **important info** about your project.
 👉 `package-lock.json` makes your project’s dependencies **stable and consistent**, no matter who installs it or when.
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_are_dependencies_vs_devdependencies" style="color:green">📦 Dependencies vs ⚙️ DevDependencies</h2>
+<h2 id="what_are_dependencies_vs_devdependencies" style="color:green; text-align:center;">📦 Dependencies vs ⚙️ DevDependencies</h2>
 
 ![img](learning_node/imgs/Dependencies_DevDependencies.jpg)
 
@@ -828,9 +828,9 @@ They help you build, test, or develop the project but are **not needed by users*
 👉 **DevDependencies = needed to build or develop the app, not to run it**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_semantic_versioning" style="color:green">What is semantic versioning?</h2>
+<h2 id="what_is_semantic_versioning" style="color:green; text-align:center;">What is semantic versioning?</h2>
 
 ![img](learning_node/imgs/Semantic_Versioning.png)
 
@@ -859,9 +859,9 @@ Example:
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_a_global_package" style="color:green">🌍 What is a Global Package?</h2>
+<h2 id="what_is_a_global_package" style="color:green; text-align:center;">🌍 What is a Global Package?</h2>
 
 A **global package** is an npm package that you install **system-wide**, not inside a single project.
 
@@ -888,9 +888,9 @@ npm install -g packageName
 👉 A global package is like a **tool installed on your whole computer**, not just one project.
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_npx_npm" style="color:green">⚡ Combined Explanation — npm vs npx (clear + simple)</h2>
+<h2 id="what_is_npx_npm" style="color:green; text-align:center;">⚡ Combined Explanation — npm vs npx (clear + simple)</h2>
 
 ![img](learning_node/imgs/npm_and_npx.jpg)
 
@@ -949,11 +949,11 @@ Let me know if you want examples of when to use each!
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 <h1 style="text-align:center;"> Node.js Core Modules</h1>
 
-<h2 id="what_is_the_fs_module" style="color:green">📁 What is the `fs` Module?</h2>
+<h2 id="what_is_the_fs_module" style="color:green; text-align:center;">📁 What is the `fs` Module?</h2>
 
 The `fs` (File System) module in Node.js allows you to **work with files and folders** on your computer.
 
@@ -982,9 +982,9 @@ fs.readFile('test.txt', 'utf8', (err, data) => {
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_the_difference_between_sync_and_async_file_methods" style="color:green">🔄 Difference Between Sync and Async File Methods</h2>
+<h2 id="what_is_the_difference_between_sync_and_async_file_methods" style="color:green; text-align:center;">🔄 Difference Between Sync and Async File Methods</h2>
 
 ![img](learning_node/imgs/sync_async.png)
 
@@ -1031,9 +1031,9 @@ console.log("I run after file is done!");
 * **Sync = blocking, avoid in servers**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_the_path_module_used_for" style="color:green">📍 What is the `path` Module Used For?</h2>
+<h2 id="what_is_the_path_module_used_for" style="color:green; text-align:center;">📍 What is the `path` Module Used For?</h2>
 
 ![img](learning_node/imgs/nodejs-path-module.png)
 
@@ -1062,9 +1062,9 @@ console.log(fullPath);
 👉 The `path` module helps Node.js handle **file paths correctly on all operating systems** (Windows, Mac, Linux).
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_the_http_module_used_for" style="color:green">What is the `http` module used for?</h2>
+<h2 id="what_is_the_http_module_used_for" style="color:green; text-align:center;">What is the `http` module used for?</h2>
 
 The **`http` module** in Node.js is used to **create and manage HTTP servers and clients**. It provides the core functionality required to build web servers without needing any external libraries.
 
@@ -1157,9 +1157,9 @@ For most real-world apps, use frameworks like:
 
 They simplify routing, middleware, body parsing, and more.
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_the_events_module" style="color:green">What is the `events` module?</h2>
+<h2 id="what_is_the_events_module" style="color:green; text-align:center;">What is the `events` module?</h2>
 
 The **`events` module** in Node.js provides the foundation for **event-driven programming**. It lets you create, listen for, and handle custom events in your application.
 
@@ -1252,9 +1252,9 @@ You emit an event → Code listening for that event runs.
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_are_event_emitters" style="color:green">📢 What Are Event Emitters?</h2>
+<h2 id="what_are_event_emitters" style="color:green; text-align:center;">📢 What Are Event Emitters?</h2>
 
 ![img](learning_node/imgs/Event_Emitters.jpg)
 
@@ -1320,9 +1320,9 @@ emitter.emit('greet'); // triggers the event
 **Event Emitters let Node.js say: “I’ll call you when something happens.”**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_the_crypto_module_used_for" style="color:green">🔐 What Is the `crypto` Module?</h2>
+<h2 id="what_is_the_crypto_module_used_for" style="color:green; text-align:center;">🔐 What Is the `crypto` Module?</h2>
 
 The **`crypto` module** in Node.js is a **built-in security module** used to perform cryptographic operations such as:
 
@@ -1369,15 +1369,14 @@ console.log(hash);
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
-
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 <h1 style="text-align:center;" >Asynchronous Programming</h1>
 
-<h2 id="what_are_callbacks" style="color:green">What are callbacks?</h2>
+<h2 id="what_are_callbacks" style="color:green; text-align:center;">What are callbacks?</h2>
 
 ![img](learning_node/imgs/callback.png)
 
@@ -1451,9 +1450,9 @@ This is why Node.js later introduced **Promises** and **async/await**.
 **A callback is a function you give to another function, and it runs later when the async work finishes.**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_an_error_first_callback" style="color:green"> ⚠️ What Is an Error-First Callback? </h2>
+<h2 id="what_is_an_error_first_callback" style="color:green; text-align:center;"> ⚠️ What Is an Error-First Callback? </h2>
 
 ![img](learning_node/imgs/error_first_call_back.gif)
 
@@ -1511,9 +1510,9 @@ fs.readFile("file.txt", "utf8", (err, data) => {
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_are_microtasks_vs_macrotasks" style="color:green">🕒 What Are Microtasks vs Macrotasks?</h2>
+<h2 id="what_are_microtasks_vs_macrotasks" style="color:green; text-align:center;">🕒 What Are Microtasks vs Macrotasks?</h2>
 
 ![img](learning_node/imgs/microtask-and-macrotask.jpg)
 
@@ -1587,9 +1586,9 @@ B  <-- macrotask
 * **Microtasks run first**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_are_promises" style="color:green">🤝 What Are Promises?</h2>
+<h2 id="what_are_promises" style="color:green; text-align:center;">🤝 What Are Promises?</h2>
 
 ![img](learning_node/imgs/promise.png)
 
@@ -1642,9 +1641,9 @@ myPromise
 **A Promise is a placeholder for a value that you will get in the future (success or failure).**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_are_promises_Chain" style="color:green">🔗 What Is a Promise Chain?</h2>
+<h2 id="what_are_promises_Chain" style="color:green; text-align:center;">🔗 What Is a Promise Chain?</h2>
 
 ![img](learning_node/imgs/Promise-Chaining.png)
 
@@ -1701,9 +1700,9 @@ Promise.resolve(1)
 **Promise chaining means linking multiple `.then()` calls so each one waits for the previous promise to finish.**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="what_is_async_await" style="color:green">⏳ What Is async/await?</h2>
+<h2 id="what_is_async_await" style="color:green; text-align:center;">⏳ What Is async/await?</h2>
 
 ![img](learning_node/imgs/async_await.jpg)
 
@@ -1771,12 +1770,12 @@ async function getData() {
 **`async/await` lets you write asynchronous code that looks like normal, synchronous code, using Promises behind the scenes.**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 <h1 style="text-align:center;" >Authentication & Security</h1>
 
 
-<h2 id="What_is_JWT" style="color:green"> 🔐 What Is JWT? </h2>
+<h2 id="What_is_JWT" style="color:green; text-align:center;"> 🔐 What Is JWT? </h2>
 
 ![img](learning_node/imgs/jwt.gif)
 
@@ -1850,9 +1849,9 @@ SflKxwRJSMeKKF2QT4fwpMeJf36PO... (signature)
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="What_is_OAuth" style="color:green"> 🔑 What Is OAuth? </h2>
+<h2 id="What_is_OAuth" style="color:green; text-align:center;"> 🔑 What Is OAuth? </h2>
 
 **OAuth** is an **authorization** framework that lets users give one app **permission** to access their data **on another service** — **without sharing their password**.
 
@@ -1903,9 +1902,9 @@ OAuth provides **secure delegated access** using **tokens**, not passwords.
 **OAuth is a secure way to let apps access your data on another service using permission-based tokens instead of passwords.**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="What_Is_Hashing_vs_Encryption" style="color:green"> 🔐 What Is Hashing vs Encryption? </h2>
+<h2 id="What_Is_Hashing_vs_Encryption" style="color:green; text-align:center;"> 🔐 What Is Hashing vs Encryption? </h2>
 
 ![img](learning_node/imgs/hashing_encrypting_decryption.png)
 
@@ -1967,9 +1966,9 @@ Then using the key → `"hello"` again
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="What_is_salting" style="color:green">🧂 What Is Salting? </h2>
+<h2 id="What_is_salting" style="color:green; text-align:center;">🧂 What Is Salting? </h2>
 
 **Salting** is a security technique where you add a **random string (salt)** to a password *before hashing it*.
 This makes the hash **unique**, even if two users have the same password.
@@ -2016,9 +2015,9 @@ Then hashed.
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="What_is_rate_limiting" style="color:green"> 🚦 What Is Rate Limiting? </h2>
+<h2 id="What_is_rate_limiting" style="color:green; text-align:center;"> 🚦 What Is Rate Limiting? </h2>
 
 ![img](learning_node/imgs/rate_limiting.jpg)
 
@@ -2080,9 +2079,9 @@ If user exceeds the allowed limit → return error:
 **Rate limiting restricts how many requests someone can send in a time period to protect servers from abuse.**
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="What_is_helmet_js" style="color:green"> 🛡️ What Is helmet.js? </h2>
+<h2 id="What_is_helmet_js" style="color:green; text-align:center;"> 🛡️ What Is helmet.js? </h2>
 
 ![img](learning_node/imgs/helmet.jpg)
 
@@ -2137,9 +2136,9 @@ Just one line: `app.use(helmet())` → your app gets multiple security layers.
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="What_is_CSRF" style="color:green"> What is CSRF (Cross-Site Request Forgery) </h2>
+<h2 id="What_is_CSRF" style="color:green; text-align:center;"> What is CSRF (Cross-Site Request Forgery) </h2>
 
 ![img](learning_node/imgs/CSRF.png)
 
@@ -2210,9 +2209,9 @@ Set-Cookie: session=abc123; SameSite=Strict;
 Send token in both **cookie + body/header** → must match.
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="What_is_Stateful_and_Stateless_authentication" style="color:green"> *Stateful Authentication and Stateless Authentication  </h2>
+<h2 id="What_is_Stateful_and_Stateless_authentication" style="color:green; text-align:center;"> *Stateful Authentication and Stateless Authentication  </h2>
 
 ![img](learning_node/imgs/stateful_stateless_auth.gif)
 
@@ -2268,12 +2267,12 @@ This is **stateless** because the server keeps **no session state**.
 | Logout?                           | Easy (delete session)  | Hard (need token blacklist) |
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
 <h1 style="text-align:center;" >Node.js Streams and Buffers</h1>
 
-<h2 id="UNIQE_IDENDIFATION" style="color:green"> 🌊 What is a Stream in Node.js? </h2>
+<h2 id="UNIQE_IDENDIFATION" style="color:green; text-align:center;"> 🌊 What is a Stream in Node.js? </h2>
 
 ![img](learning_node/imgs/Streaming.jpeg)
 
@@ -2315,9 +2314,9 @@ stream.on('data', chunk => {
 ```
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="What_are_the_four_types_of_streams" style="color:green"> 🛠️ What Are the Four Types of Streams in Node.js? </h2>
+<h2 id="What_are_the_four_types_of_streams" style="color:green; text-align:center;"> 🛠️ What Are the Four Types of Streams in Node.js? </h2>
 
 ![img](learning_node/imgs/four_type_streaming.jpeg)
 
@@ -2381,9 +2380,9 @@ Think of it as a “filter” or “processor”.
 ---
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="What_is_a_Buffer" style="color:green"> What is a Buffer? </h2>
+<h2 id="What_is_a_Buffer" style="color:green; text-align:center;"> What is a Buffer? </h2>
 
 ![img](learning_node/imgs/buffering.png)
 
@@ -2413,12 +2412,12 @@ Buffers are used when dealing with:
 
 Node.js allocates Buffers from its own memory space (outside V8 engine).
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
 <h1 style="text-align:center;" >Process & OS</h1>
 
-<h2 id="What_is_process_in_Node" style="color:green"> ⚙️ What is `process` in Node.js?** </h2>
+<h2 id="What_is_process_in_Node" style="color:green; text-align:center;"> ⚙️ What is `process` in Node.js?** </h2>
 
 ![img](learning_node/imgs/process_event_emiter.png)
 
@@ -2475,9 +2474,9 @@ console.log(process.env.NODE_ENV); // env variable
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="What_are_Environment_Variables" style="color:green"> 🌍 What are Environment Variables? </h2>
+<h2 id="What_are_Environment_Variables" style="color:green; text-align:center;"> 🌍 What are Environment Variables? </h2>
 
 Environment variables are **key–value settings** stored **outside your code** that your application can read at runtime.
 
@@ -2567,9 +2566,9 @@ console.log(process.env.JWT_SECRET);
 * Improve security
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="What_is_process_env" style="color:green">  🌿 What is `process.env`?</h2>
+<h2 id="What_is_process_env" style="color:green; text-align:center;">  🌿 What is `process.env`?</h2>
 
 `process.env` is a **special object in Node.js** that lets you access all **environment variables** of your system.
 
@@ -2646,9 +2645,9 @@ const PORT = process.env.PORT || 3000;
 * Works in all cloud servers (AWS, Vercel, DigitalOcean)
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="What_is_process_nextTick" style="color:green"> ⚡ What is `process.nextTick()`? </h2>
+<h2 id="What_is_process_nextTick" style="color:green; text-align:center;"> ⚡ What is `process.nextTick()`? </h2>
 
 
 `process.nextTick()` is a Node.js function that lets you run a callback **immediately after the current operation**, *before* the event loop continues.
@@ -2725,9 +2724,9 @@ Avoid using too many `nextTick()` calls because it can block the event loop (inf
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="process_nextTick_and_setImmediate" style="color:green"> ⚡ Difference Between `process.nextTick()` and `setImmediate()` </h2>
+<h2 id="process_nextTick_and_setImmediate" style="color:green; text-align:center;"> ⚡ Difference Between `process.nextTick()` and `setImmediate()` </h2>
 
 Here is the simplest, clearest explanation:
 
@@ -2830,11 +2829,11 @@ console.log("3 normal code");
 ```
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 <h1 style="text-align:center;" >Clustering & Scaling</h1>
 
-<h2 id="What_is_the_Cluster_Module" style="color:green"> 🧩 **What is the Cluster Module? </h2>
+<h2 id="What_is_the_Cluster_Module" style="color:green; text-align:center;"> 🧩 **What is the Cluster Module? </h2>
 
 ![img](learning_node/imgs/Clustering.png)
 
@@ -2908,9 +2907,9 @@ if (cluster.isMaster) {
 * Background job processors
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="worker_process_and_how_does_it_work" style="color:green"> 👷 What Is a Worker Process in Node.js? </h2>
+<h2 id="worker_process_and_how_does_it_work" style="color:green; text-align:center;"> 👷 What Is a Worker Process in Node.js? </h2>
 
 A **worker process** is a **separate Node.js process** created to do work in parallel with other processes.
 Node.js is single-threaded, so workers help you **use all CPU cores** and **handle more requests simultaneously**.
@@ -3008,9 +3007,9 @@ if (cluster.isMaster) {
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="Why_does_scaling_matter" style="color:green"> 📈 Why Does Scaling Matter in Node.js? </h2>
+<h2 id="Why_does_scaling_matter" style="color:green; text-align:center;"> 📈 Why Does Scaling Matter in Node.js? </h2>
 
 Scaling matters because it allows your Node.js application to handle **more users**, **more requests**, and **more workload** without slowing down or crashing.
 
@@ -3112,9 +3111,9 @@ AWS, Google Cloud automatically add/remove servers.
 | Better performance | Parallel execution of tasks      |
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
-<h2 id="What_is_PM2" style="color:green"> What is PM2? </h2>
+<h2 id="What_is_PM2" style="color:green; text-align:center;"> What is PM2? </h2>
 
 
 **PM2 (Process Manager 2)** is a **production process manager** for Node.js applications.
@@ -3196,4 +3195,4 @@ pm2 start server.js -i max
 pm2 logs
 ```
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">

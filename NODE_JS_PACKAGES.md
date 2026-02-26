@@ -1,3 +1,24 @@
+<a href="#top" id="backToTop" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+">⬆ Top</a>
+
+<script>
+document.querySelector('#backToTop').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('#top').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+</script>
+
 
 ## 🚀 Backend / Server Frameworks
 
@@ -353,11 +374,11 @@
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 <h1 style="text-align:center;" >🚀 Backend / Server Frameworks</h1>
 
-<h2 id="express" style="color:green"> Express.js (Most Popular & Simple) </h2>
+<h2 id="express" style="color:green; text-align:center;"> Express.js (Most Popular & Simple) </h2>
 
 ### ❓ What is Express?
 
@@ -406,7 +427,7 @@ app.listen(3000, () => {
 
 ---
 
-<h2 id="fastify" style="color:green"> Fastify (High Performance) </h2>
+<h2 id="fastify" style="color:green; text-align:center;"> Fastify (High Performance) </h2>
 
 ### ❓ What is Fastify?
 
@@ -450,7 +471,7 @@ fastify.listen({ port: 3000 }, () => {
 
 ---
 
-<h2 id="koa" style="color:green">🌀 Koa (Modern & Minimal)</h2>
+<h2 id="koa" style="color:green; text-align:center;">🌀 Koa (Modern & Minimal)</h2>
 
 
 ### ❓ What is Koa?
@@ -496,7 +517,7 @@ app.listen(3000);
 
 ---
 
-<h2 id="koa" style="color:green">🧱 Hapi (Enterprise Ready)</h2>
+<h2 id="koa" style="color:green; text-align:center;">🧱 Hapi (Enterprise Ready)</h2>
 
 ### ❓ What is Hapi?
 
@@ -547,7 +568,7 @@ server.start();
 
 ---
 
-<h2 id="koa" style="color:green">🧠 NestJS (Enterprise + TypeScript)</h2>
+<h2 id="koa" style="color:green; text-align:center;">🧠 NestJS (Enterprise + TypeScript)</h2>
 
 ### ❓ What is NestJS?
 
@@ -614,12 +635,12 @@ export class AppController {
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
 <h1 style="text-align:center;" >🔐 Authentication / Authorization</h1>
 
-<h2 id="jsonwebtoken" style="color:green"> 🔑 jsonwebtoken (JWT)</h2>
+<h2 id="jsonwebtoken" style="color:green; text-align:center;"> 🔑 jsonwebtoken (JWT)</h2>
 
 ### ❓ What is jsonwebtoken?
 
@@ -670,7 +691,7 @@ console.log(decoded);
 
 ---
 
-<h2 id="jsonwebtoken" style="color:green"> 🧭 Passport.js (Authentication Engine)</h2>
+<h2 id="jsonwebtoken" style="color:green; text-align:center;"> 🧭 Passport.js (Authentication Engine)</h2>
 
 ### ❓ What is Passport?
 
@@ -716,7 +737,7 @@ passport.use(new LocalStrategy(
 
 ---
 
-<h2 id="passport-jwt" style="color:green"> 🎫 passport-jwt (JWT + Passport)</h2>
+<h2 id="passport-jwt" style="color:green; text-align:center;"> 🎫 passport-jwt (JWT + Passport)</h2>
 
 ### ❓ What is passport-jwt?
 
@@ -758,7 +779,7 @@ passport.use(new Strategy(opts, (jwtPayload, done) => {
 
 ---
 
-<h2 id="passport-jwt" style="color:green"> 🔐 bcrypt (Password Hashing)</h2>
+<h2 id="passport-jwt" style="color:green; text-align:center;"> 🔐 bcrypt (Password Hashing)</h2>
 
 ### ❓ What is bcrypt?
 
@@ -799,7 +820,7 @@ console.log(isMatch); // true
 
 ---
 
-<h2 id="bcryptjs" style="color:green"> 🔐 bcryptjs (Pure JS Alternative)</h2>
+<h2 id="bcryptjs" style="color:green; text-align:center;"> 🔐 bcryptjs (Pure JS Alternative)</h2>
 
 ### ❓ What is bcryptjs?
 
@@ -838,7 +859,7 @@ console.log(valid);
 
 ---
 
-<h2 id="express-session" style="color:green"> 🔐 express-session (Session-Based Auth)</h2>
+<h2 id="express-session" style="color:green; text-align:center;"> 🔐 express-session (Session-Based Auth)</h2>
 
 ### ❓ What is express-session?
 
@@ -895,11 +916,11 @@ app.use(session({
 * **Password Security** → bcrypt
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 <h1 style="text-align:center;" >🛡️ Security / Protection</h1>
 
-<h2 id="helmet" style="color:green"> 🪖 helmet (HTTP Security Headers) </h2>
+<h2 id="helmet" style="color:green; text-align:center;"> 🪖 helmet (HTTP Security Headers) </h2>
 
 ### ❓ What is Helmet?
 
@@ -934,7 +955,7 @@ app.use(helmet());
 * Should be used at app start
 
 ---
-<h2 id="cors" style="color:green"> 🌐 cors (Cross-Origin Requests) </h2>
+<h2 id="cors" style="color:green; text-align:center;"> 🌐 cors (Cross-Origin Requests) </h2>
 
 ### ❓ What is CORS?
 
@@ -973,7 +994,7 @@ app.use(cors({
 
 ---
 
-<h2 id="express-rate-limit" style="color:green"> 🚦 express-rate-limit (Basic Rate Limiting) </h2>
+<h2 id="express-rate-limit" style="color:green; text-align:center;"> 🚦 express-rate-limit (Basic Rate Limiting) </h2>
 
 ### ❓ What is express-rate-limit?
 
@@ -1013,7 +1034,7 @@ app.use(limiter);
 * Exceed limit → 429 error
 
 ---
-<h2 id="rate-limiter-flexible" style="color:green"> 🔥 rate-limiter-flexible (Advanced Rate Limiting) </h2>
+<h2 id="rate-limiter-flexible" style="color:green; text-align:center;"> 🔥 rate-limiter-flexible (Advanced Rate Limiting) </h2>
 
 ### ❓ What is rate-limiter-flexible?
 
@@ -1097,12 +1118,12 @@ app.use('/api', limiter); // rate limit APIs
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
 <h1 style="text-align:center;" > 🚀 Backend / Server Frameworks</h1>
 
-<h2 id="mongoose" style="color:green"> 🍃 mongoose (MongoDB ODM) </h2>
+<h2 id="mongoose" style="color:green; text-align:center;"> 🍃 mongoose (MongoDB ODM) </h2>
 
 ### ❓ What is Mongoose?
 
@@ -1160,7 +1181,7 @@ user.save();
 
 ---
 
-<h2 id="Sequelize" style="color:green"> 🧱 Sequelize (SQL ORM) </h2>
+<h2 id="Sequelize" style="color:green; text-align:center;"> 🧱 Sequelize (SQL ORM) </h2>
 
 ### ❓ What is Sequelize?
 
@@ -1245,12 +1266,12 @@ User.create({
 ---
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
 <h1 style="text-align:center;" > ⚡ Real-Time / WebSocket </h1>
 
-<h2 id="socket.io" style="color:green"> 🔌 socket.io (Most Popular & Easy) </h2>
+<h2 id="socket.io" style="color:green; text-align:center;"> 🔌 socket.io (Most Popular & Easy) </h2>
 
 ### ❓ What is Socket.IO?
 
@@ -1316,7 +1337,7 @@ server.listen(3000);
 * `socket.emit()` → send event
 
 ---
-<h2 id="ws" style="color:green"> 🔗 ws (Pure WebSocket) </h2>
+<h2 id="ws" style="color:green; text-align:center;"> 🔗 ws (Pure WebSocket) </h2>
 
 ### ❓ What is ws?
 
@@ -1365,7 +1386,7 @@ wss.on('connection', (ws) => {
 * No rooms or fallback
 
 ---
-<h2 id="uWebSockets.js" style="color:green"> 🚀 uWebSockets.js (Ultra Fast) </h2>
+<h2 id="uWebSockets.js" style="color:green; text-align:center;"> 🚀 uWebSockets.js (Ultra Fast) </h2>
 
 ### ❓ What is uWebSockets.js?
 
@@ -1465,13 +1486,13 @@ uWS.App()
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
 
 <h1 style="text-align:center;" >📡 HTTP / API Clients</h1>
 
-<h2 id="axios" style="color:green"> 📦 axios (Most Popular) </h2>
+<h2 id="axios" style="color:green; text-align:center;"> 📦 axios (Most Popular) </h2>
 
 ### ❓ What is Axios?
 
@@ -1515,7 +1536,7 @@ axios.get('https://api.example.com/users')
 
 ---
 
-<h2 id="node-fetch" style="color:green">🌊 node-fetch (Fetch API for Node) </h2>
+<h2 id="node-fetch" style="color:green; text-align:center;">🌊 node-fetch (Fetch API for Node) </h2>
 
 ### ❓ What is node-fetch?
 
@@ -1556,7 +1577,7 @@ fetch('https://api.example.com/posts')
 
 ---
 
-<h2 id="got" style="color:green">🚀 got (Powerful & Modern) </h2>
+<h2 id="got" style="color:green; text-align:center;">🚀 got (Powerful & Modern) </h2>
 
 ### ❓ What is Got?
 
@@ -1599,7 +1620,7 @@ const got = require('got');
 
 ---
 
-<h2 id="got" style="color:green">🔗 superagent (Chainable API) </h2>
+<h2 id="got" style="color:green; text-align:center;">🔗 superagent (Chainable API) </h2>
 
 ### ❓ What is SuperAgent?
 
@@ -1684,7 +1705,7 @@ request
 
 ---
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 <h1 style="text-align:center;" >🧩 What is a Template Engine? (Quick idea)</h1>
 
@@ -1692,7 +1713,7 @@ A **template engine** lets you write **HTML + dynamic data** together.
 
 👉 Server sends **ready-made HTML** to the browser.
 
-<h2 id="ejs" style="color:green"> 📄 EJS (HTML-like & Beginner Friendly) </h2>
+<h2 id="ejs" style="color:green; text-align:center;"> 📄 EJS (HTML-like & Beginner Friendly) </h2>
 
 ### ❓ What is EJS?
 
@@ -1751,7 +1772,7 @@ app.get('/', (req, res) => {
 * `res.render()` → send data to template
 
 ---
-<h2 id="pug" style="color:green"> 🐶 Pug (Clean & Indentation-Based) </h2>
+<h2 id="pug" style="color:green; text-align:center;"> 🐶 Pug (Clean & Indentation-Based) </h2>
 
 ### ❓ What is Pug?
 
@@ -1806,7 +1827,7 @@ app.get('/', (req, res) => {
 
 ---
 
-<h2 id="handlebars" style="color:green"> 🧰 Handlebars (Logic-Less Templates) </h2>
+<h2 id="handlebars" style="color:green; text-align:center;"> 🧰 Handlebars (Logic-Less Templates) </h2>
 
 ### ❓ What is Handlebars?
 
@@ -1904,7 +1925,7 @@ app.get('/', (req, res) => {
 * Email templates
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
 <h1 style="text-align:center;" > 🧾 What is Validation? (Quick idea) </h1>
@@ -1915,7 +1936,7 @@ Validation checks **user input** before using it.
 
 ---
 
-<h2 id="joi" style="color:green"> 📏 Joi (Powerful Schema Validation) </h2>
+<h2 id="joi" style="color:green; text-align:center;"> 📏 Joi (Powerful Schema Validation) </h2>
 
 ### ❓ What is Joi?
 
@@ -1967,7 +1988,7 @@ if (error) {
 
 ---
 
-<h2 id="yup" style="color:green"> 🌱 Yup (Frontend + Backend) </h2>
+<h2 id="yup" style="color:green; text-align:center;"> 🌱 Yup (Frontend + Backend) </h2>
 
 ### ❓ What is Yup?
 
@@ -2015,7 +2036,7 @@ schema.validate({
 
 ---
 
-<h2 id="express-validator" style="color:green"> 🛂 express-validator (Express Middleware) </h2>
+<h2 id="express-validator" style="color:green; text-align:center;"> 🛂 express-validator (Express Middleware) </h2>
 
 ### ❓ What is express-validator?
 
@@ -2064,7 +2085,7 @@ app.post('/register',
 
 ---
 
-<h2 id="zod" style="color:green"> 🧠 Zod (TypeScript First) </h2>
+<h2 id="zod" style="color:green; text-align:center;"> 🧠 Zod (TypeScript First) </h2>
 
 ### ❓ What is Zod?
 
@@ -2159,7 +2180,7 @@ if (!result.success) {
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
 
@@ -2171,7 +2192,7 @@ Utility helpers are **small tools** that make common tasks **easy and clean**
 
 ---
 
-<h2 id="lodash" style="color:green"> 🧩 lodash (Utility Toolbox) </h2>
+<h2 id="lodash" style="color:green; text-align:center;"> 🧩 lodash (Utility Toolbox) </h2>
 
 ### ❓ What is Lodash?
 
@@ -2209,7 +2230,7 @@ console.log(unique);
 * Works with arrays & objects
 
 ---
-<h2 id="moment" style="color:green"> ⏰ moment (Date & Time – Legacy) </h2>
+<h2 id="moment" style="color:green; text-align:center;"> ⏰ moment (Date & Time – Legacy) </h2>
 
 ### ❓ What is Moment?
 
@@ -2245,7 +2266,7 @@ console.log(now);
 * Easy but heavy library
 
 ---
-<h2 id="dayjs" style="color:green"> 🌱 dayjs (Modern Moment Alternative) </h2>
+<h2 id="dayjs" style="color:green; text-align:center;"> 🌱 dayjs (Modern Moment Alternative) </h2>
 
 ### ❓ What is Day.js?
 
@@ -2282,7 +2303,7 @@ console.log(today);
 * Recommended over Moment
 
 ---
-<h2 id="uuid" style="color:green"> 🆔 uuid (Unique IDs – Standard) </h2>
+<h2 id="uuid" style="color:green; text-align:center;"> 🆔 uuid (Unique IDs – Standard) </h2>
 
 ### ❓ What is UUID?
 
@@ -2319,7 +2340,7 @@ console.log(id);
 * Standard format
 
 ---
-<h2 id="nanoid" style="color:green"> ✨ nanoid (Small & Fast IDs) </h2>
+<h2 id="nanoid" style="color:green; text-align:center;"> ✨ nanoid (Small & Fast IDs) </h2>
 
 ### ❓ What is NanoID?
 
@@ -2356,7 +2377,7 @@ console.log(id);
 * Great for public IDs
 
 ---
-<h2 id="dotenv" style="color:green"> 🌍 dotenv (Environment Variables) </h2>
+<h2 id="dotenv" style="color:green; text-align:center;"> 🌍 dotenv (Environment Variables) </h2>
 
 ### ❓ What is dotenv?
 
@@ -2435,7 +2456,7 @@ console.log(process.env.PORT);
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
 
@@ -2451,7 +2472,7 @@ Logging helps you:
 
 ---
 
-<h2 id="winston" style="color:green"> 🪵 Winston (Most Flexible Logger) </h2>
+<h2 id="winston" style="color:green; text-align:center;"> 🪵 Winston (Most Flexible Logger) </h2>
 
 ### ❓ What is Winston?
 
@@ -2577,7 +2598,7 @@ logger.error('Database failed');
 ```
 
 ---
-<h2 id="pino" style="color:green"> ⚡ Pino (Ultra Fast Logger) </h2>
+<h2 id="pino" style="color:green; text-align:center;"> ⚡ Pino (Ultra Fast Logger) </h2>
 
 ### ❓ What is Pino?
 
@@ -2619,7 +2640,7 @@ logger.error({ err: new Error('DB error') }, 'Database failed');
 * Faster than Winston
 
 ---
-<h2 id="morgan" style="color:green"> 🌐 Morgan (HTTP Request Logger) </h2>
+<h2 id="morgan" style="color:green; text-align:center;"> 🌐 Morgan (HTTP Request Logger) </h2>
 
 ### ❓ What is Morgan?
 
@@ -2662,7 +2683,7 @@ app.get('/', (req, res) => {
 * Only logs **HTTP requests**, not app logic
 
 ---
-<h2 id="debug" style="color:green"> 🔍 debug (Namespace Debugging) </h2>
+<h2 id="debug" style="color:green; text-align:center;"> 🔍 debug (Namespace Debugging) </h2>
 
 ### ❓ What is debug?
 
@@ -2737,7 +2758,7 @@ Debug → Development only
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
 <h1 style="text-align:center;" >📁 File Upload / File System (Core Idea)</h1>
@@ -2750,7 +2771,7 @@ These tools help you:
 * Work safely with files & folders
 
 ---
-<h2 id="multer" style="color:green"> 📤 multe (Most Popular File Upload Middleware) </h2>
+<h2 id="multer" style="color:green; text-align:center;"> 📤 multe (Most Popular File Upload Middleware) </h2>
 
 ### ❓ What is Multer?
 
@@ -2828,7 +2849,7 @@ app.post('/upload', upload.single('photo'), (req, res) => {
 * `upload.array()` → multiple files
 
 ---
-<h2 id="formidable" style="color:green"> 📦 formidable (Low-Level & Flexible) </h2>
+<h2 id="formidable" style="color:green; text-align:center;"> 📦 formidable (Low-Level & Flexible) </h2>
 
 ### ❓ What is Formidable?
 
@@ -2879,7 +2900,7 @@ app.post('/upload', (req, res) => {
 
 ---
 
-<h2 id="fs-extra" style="color:green"> 📂 fs-extra (Advanced File System) </h2>
+<h2 id="fs-extra" style="color:green; text-align:center;"> 📂 fs-extra (Advanced File System) </h2>
 
 ### ❓ What is fs-extra?
 
@@ -2961,27 +2982,27 @@ fs.copy('./uploads/file.txt', './backup/file.txt');
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
 
 
-<span style="color:green;">================================================================ </span>
+<hr style="border: 2px solid green;">
 
 
 
