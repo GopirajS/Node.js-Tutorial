@@ -1776,6 +1776,154 @@ const user = new User({ name: 'John', email: 'john@test.com' });
 user.save();
 ```
 
+
+### 1. DB Connection
+
+```js
+// db.js
+const mysql = require('mysql2');
+
+const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'test'
+});
+
+module.exports = db;
+```
+
+---
+
+## 2. Create Model
+
+👉 (Like Laravel Model concept — reusable functions)
+
+```js
+// models/User.js
+const db = require('../db');
+
+const User = {
+
+    getAll: (callback) => {
+        db.query('SELECT * FROM users', callback);
+    },
+
+    getById: (id, callback) => {
+        db.query('SELECT * FROM users WHERE id = ?', [id], callback);
+    },
+
+    create: (data, callback) => {
+        db.query('INSERT INTO users SET ?', data, callback);
+    },
+
+    update: (id, data, callback) => {
+        db.query('UPDATE users SET ? WHERE id = ?', [data, id], callback);
+    },
+
+    delete: (id, callback) => {
+        db.query('DELETE FROM users WHERE id = ?', [id], callback);
+    }
+
+};
+
+module.exports = User;
+```
+
+---
+
+## 3. Use Model in Controller / Route
+
+```js
+const express = require('express');
+const app = express();
+const User = require('./models/User');
+
+app.use(express.json());
+
+// Get all users
+app.get('/users', (req, res) => {
+    User.getAll((err, result) => {
+        if (err) return res.status(500).send(err);
+        res.json(result);
+    });
+});
+
+// Create user
+app.post('/users', (req, res) => {
+    User.create(req.body, (err, result) => {
+        if (err) return res.status(500).send(err);
+        res.send('User created');
+    });
+});
+```
+
+---
+
+# 🔥 Modern Version (Promise-Based – Recommended)
+
+👉 Interviewers LOVE this version
+
+```js
+// db.js
+const mysql = require('mysql2/promise');
+
+const db = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'test'
+});
+
+module.exports = db;
+```
+
+---
+
+## Model (Async/Await)
+
+```js
+// models/User.js
+const db = require('../db');
+
+const User = {
+
+    getAll: async () => {
+        const [rows] = await db.query('SELECT * FROM users');
+        return rows;
+    },
+
+    getById: async (id) => {
+        const [rows] = await db.query('SELECT * FROM users WHERE id = ?', [id]);
+        return rows[0];
+    },
+
+    create: async (data) => {
+        const [result] = await db.query('INSERT INTO users SET ?', data);
+        return result;
+    }
+
+};
+
+module.exports = User;
+```
+
+---
+
+## Usage
+
+```js
+app.get('/users', async (req, res) => {
+    try {
+        const users = await User.getAll();
+        res.json(users);
+    } catch (err) {
+        res.status(500).send(err);
+    }
+});
+```
+
+
 ---
 
 # 🟢 7. Promise Example
@@ -2045,6 +2193,8 @@ async function retry(fn, attempts = 3) {
     }
 }
 ```
+
+
 
 ---
 
