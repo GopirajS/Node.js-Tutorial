@@ -84,13 +84,13 @@
 
 ---
 
-<!-- ##  9. Streams & Buffers
+##  9. Streams & Buffers
 
 * What are streams?
 * Types of streams?
 * What is pipe()?
 * Difference between buffer and stream?
-* When to use streams? -->
+* When to use streams?
 
 ---
 
@@ -1044,22 +1044,68 @@ mongoose.connect('mongodb://127.0.0.1:27017/test_db')
 ### **Code Example (ORM - Sequelize MySQL)** 💻
 
 ```javascript id="orm1x2"
-const { Sequelize, DataTypes } = require('sequelize');
+cconst { Sequelize, DataTypes } = require('sequelize');
 
+// DB connection
 const sequelize = new Sequelize('test_db', 'root', '', {
   host: 'localhost',
   dialect: 'mysql'
 });
 
+// Model
 const User = sequelize.define('User', {
   name: DataTypes.STRING,
   age: DataTypes.INTEGER
 });
 
+// Main function
 (async () => {
-  await sequelize.sync();
-  const users = await User.findAll();
-  console.log(users);
+  try {
+    await sequelize.sync();
+
+    // ✅ 1. CREATE
+    const newUser = await User.create({
+      name: 'Gopi',
+      age: 25
+    });
+    console.log('Created:', newUser.toJSON());
+
+    // ✅ 2. GET ALL
+    const allUsers = await User.findAll();
+    console.log('All Users:', allUsers.map(u => u.toJSON()));
+
+    // ✅ 3. GET ONE (Find)
+    const user = await User.findOne({
+      where: { name: 'Gopi' }
+    });
+    console.log('Found User:', user?.toJSON());
+
+    // ✅ 4. UPDATE (Edit)
+    await User.update(
+      { age: 26 },
+      { where: { name: 'Gopi' } }
+    );
+    console.log('Updated Successfully');
+
+    // Check updated
+    const updatedUser = await User.findOne({ where: { name: 'Gopi' } });
+    console.log('After Update:', updatedUser?.toJSON());
+
+    // ✅ 5. DELETE
+    await User.destroy({
+      where: { name: 'Gopi' }
+    });
+    console.log('Deleted Successfully');
+
+    // Final check
+    const remainingUsers = await User.findAll();
+    console.log('Remaining Users:', remainingUsers.map(u => u.toJSON()));
+
+  } catch (error) {
+    console.error('Error:', error);
+  } finally {
+    await sequelize.close();
+  }
 })();
 ```
 
@@ -1243,14 +1289,23 @@ connection.beginTransaction((err) => {
 ```javascript id="jwt1x2"
 const jwt = require('jsonwebtoken');
 
-// Create Token
-const token = jwt.sign({ userId: 1 }, 'secretKey', { expiresIn: '1h' });
-
-console.log("Token:", token);
-
-// Verify Token
-const decoded = jwt.verify(token, 'secretKey');
-console.log("Decoded:", decoded);
+// Create Token (async using callback)
+jwt.sign({ userId: 1 },'secretKey',{ expiresIn: '1h' },(err, token) => {
+    if (err) {
+      console.error("Error:", err);
+      return;
+    }
+    console.log("Token:", token);
+    // Verify Token (nested callback)
+    jwt.verify(token, 'secretKey', (err, decoded) => {
+      if (err) {
+        console.error("Verify Error:", err);
+        return;
+      }
+      console.log("Decoded:", decoded);
+    });
+  }
+);
 ```
 
 
@@ -1656,10 +1711,10 @@ const WebSocket = require('ws');
 const server = new WebSocket.Server({ port: 3000 });
 
 server.on('connection', (ws) => {
-  ws.send("Connected");
+  ws.send("Connected"); // Client can resived this message
 
   ws.on('message', (msg) => {
-    console.log("Received:", msg);
+    console.log("Received:", msg); // server side we can see this message
   });
 });
 ```
@@ -1757,24 +1812,161 @@ mongoose.connect('mongodb://127.0.0.1:27017/test')
 
 ---
 
-# 🟠 6. Create Model (MongoDB)
+# 🟠 6. Create Model (MongoDB and Mysql)
 
-**Question:** How to create and use a model?
 
-```js
+## 🟡  Database Connection
+
+```js id="mongo_full_1"
+// db.js
 const mongoose = require('mongoose');
 
-const UserSchema = new mongoose.Schema({
-    name: String,
-    email: String
+mongoose.connect('mongodb://127.0.0.1:27017/test')
+    .then(() => console.log('MongoDB Connected'))
+    .catch(err => console.log(err));
+
+module.exports = mongoose;
+```
+
+---
+
+## 🔵  Model (User)
+
+```js id="mongo_full_2"
+// models/User.js
+const mongoose = require('mongoose');
+
+const userSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    age: Number
+}, { timestamps: true });
+
+const User = mongoose.model('User', userSchema);
+
+module.exports = User;
+```
+
+---
+
+## 🔴  Full CRUD API (Express)
+
+```js id="mongo_full_3"
+// app.js
+const express = require('express');
+require('./db'); // DB connection
+const User = require('./models/User');
+
+const app = express();
+app.use(express.json());
+
+/*
+----------------------------------
+CREATE USER
+----------------------------------
+*/
+app.post('/users', async (req, res) => {
+    try {
+        const user = await User.create(req.body);
+        res.status(201).json({
+            message: 'User created',
+            data: user
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 });
 
-const User = mongoose.model('User', UserSchema);
+/*
+----------------------------------
+GET ALL USERS
+----------------------------------
+*/
+app.get('/users', async (req, res) => {
+    try {
+        const users = await User.find();
+        res.json(users);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
 
-// Usage
-const user = new User({ name: 'John', email: 'john@test.com' });
-user.save();
+/*
+----------------------------------
+GET SINGLE USER
+----------------------------------
+*/
+app.get('/users/:id', async (req, res) => {
+    try {
+        const user = await User.findById(req.params.id);
+
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        res.json(user);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+/*
+----------------------------------
+UPDATE USER
+----------------------------------
+*/
+app.put('/users/:id', async (req, res) => {
+    try {
+        const user = await User.findByIdAndUpdate(
+            req.params.id,
+            req.body,
+            { new: true }
+        );
+
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        res.json({
+            message: 'User updated',
+            data: user
+        });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+/*
+----------------------------------
+DELETE USER
+----------------------------------
+*/
+app.delete('/users/:id', async (req, res) => {
+    try {
+        const user = await User.findByIdAndDelete(req.params.id);
+
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        res.json({ message: 'User deleted' });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+app.listen(3000, () => {
+    console.log('Server running on port 3000');
+});
 ```
+
 
 
 ### 1. DB Connection
@@ -2087,14 +2279,48 @@ emitter.emit('msg', 'Hello');
 
 **Question:** Implement debounce.
 
-```js id="deb456"
+
+```js
+// debounce function
 function debounce(fn, delay) {
-    let timer;
+    let timer; // store timer id
+
     return function (...args) {
+        // clear previous timer if user triggers again quickly
         clearTimeout(timer);
-        timer = setTimeout(() => fn.apply(this, args), delay);
+
+        // set new timer
+        timer = setTimeout(() => {
+            // call original function after delay
+            fn.apply(this, args);
+        }, delay);
     };
 }
+
+
+// ---------------------- REAL EXAMPLE ----------------------
+
+// Simulate API call (like searching users)
+function searchUser(query) {
+    console.log(`🔍 Searching for: ${query}`);
+}
+
+// Create debounced version (wait 1 second after last input)
+const debouncedSearch = debounce(searchUser, 1000);
+
+
+// Simulate user typing fast (like in frontend input)
+const inputs = ["g", "go", "gop", "gopi"];
+
+inputs.forEach((text, index) => {
+    setTimeout(() => {
+        console.log("User typed:", text);
+
+        // call debounced function
+        debouncedSearch(text);
+
+    }, index * 300); // user types every 300ms
+});
 ```
 
 ---
@@ -2105,14 +2331,29 @@ function debounce(fn, delay) {
 
 ```js id="thr789"
 function throttle(fn, limit) {
-    let flag = true;
-    return function (...args) {
-        if (!flag) return;
-        flag = false;
-        fn.apply(this, args);
-        setTimeout(() => flag = true, limit);
-    };
+  let flag = true;
+  return function (...args) {
+    if (!flag) return;
+    flag = false;
+    fn.apply(this, args);
+    setTimeout(() => flag = true, limit);
+  };
 }
+
+// Function to run
+function handleClick() {
+  console.log("Button clicked at", new Date().toLocaleTimeString());
+}
+
+// Apply throttle (2 seconds)
+const throttledClick = throttle(handleClick, 2000);
+
+// Simulate multiple clicks
+throttledClick();
+throttledClick();
+throttledClick();
+
+// Only first runs immediately, next runs after 2 sec
 ```
 
 ---
