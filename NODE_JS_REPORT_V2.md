@@ -17,7 +17,7 @@ html {
     right: 20px;
     background: #007bff;
     color: white;
-    padding: 8px 12px;
+    padding: 4px 6px;
     border-radius: 6px;
     text-decoration: none;
     font-size: 14px;
@@ -301,8 +301,250 @@ document.addEventListener("DOMContentLoaded", function () {
 - Return appropriate status codes.
 - Build a small REST API without Express.
 
-<h2  class="answer-heading" id="1.1">1.1 What is Node.js?</h2>
+## **Level 3 – Asynchronous Node.js**
 
+### **10. Asynchronous Programming**
+
+- [10.1 What is synchronous execution?](#10.1)
+- [10.2 What is asynchronous execution?](#10.2)
+- [10.3 What is blocking I/O?](#10.3)
+- [10.4 What is non-blocking I/O?](#10.4)
+- [10.5 What is callback-based programming?](#10.5)
+- [10.6 What is callback hell?](#10.6)
+- [10.7 What is a Promise?](#10.7)
+- [10.8 What are Promise states?](#10.8)
+- [10.9 What is Promise chaining?](#10.9)
+- [10.10 What is `async/await`?](#10.10)
+- [10.11 What is the difference between callbacks and Promises?](#10.11)
+- [10.12 What is the difference between Promise and async/await?](#10.12)
+- [10.13 What is `Promise.all()`?](#10.13)
+- [10.14 What is `Promise.allSettled()`?](#10.14)
+- [10.15 What is `Promise.race()`?](#10.15)
+- [10.16 What is `Promise.any()`?](#10.16)
+- [10.17 How do you handle asynchronous errors?](#10.17)
+- [10.18 What happens if you forget to use `await`?](#10.18)
+- [10.19 How do you execute multiple operations sequentially?](#10.19)
+- [10.20 How do you execute multiple operations in parallel?](#10.20)
+
+
+### **11. Event Loop and Thread Pool**
+
+- [11.1 What is the Node.js event loop?](#11.1)
+- [11.2 How does the event loop work?](#11.2)
+- [11.3 What is the call stack?](#11.3)
+- [11.4 What is the callback queue?](#11.4)
+- [11.5 What is the microtask queue?](#11.5)
+- [11.6 What is the timers phase?](#11.6)
+- [11.7 What is the poll phase?](#11.7)
+- [11.8 What is the check phase?](#11.8)
+- [11.9 What is the close callbacks phase?](#11.9)
+- [11.10 What is libuv?](#11.10)
+- [11.11 What is the libuv thread pool?](#11.11)
+- [11.12 What is the default thread pool size?](#11.12)
+- [11.13 What is `process.nextTick()`?](#11.13)
+- [11.14 What is the difference between `process.nextTick()` and Promise callbacks?](#11.14)
+- [11.15 Which operations use the thread pool?](#11.15)
+- [11.16 Does every asynchronous operation use the thread pool?](#11.16)
+- [11.17 How can CPU-intensive operations block the event loop?](#11.17)
+- [11.18 How do you prevent event loop blocking?](#11.18)
+- [11.19 Quick Revision – Important Concepts](#11.19)
+- [11.20 Important Event Loop Phase Order](#11.20)
+
+
+
+### **12. Error Handling in Node.js**
+
+- 12.1 What are errors in Node.js?
+- 12.2 What is a synchronous error?
+- 12.3 What is an asynchronous error?
+- 12.4 What is `try...catch`?
+- 12.5 What is `throw new Error()`?
+- 12.6 What is a custom error class?
+- 12.7 What is an operational error?
+- 12.8 What is a programming error?
+- 12.9 What is `uncaughtException`?
+- 12.10 What is `unhandledRejection`?
+- 12.11 What is the difference between `throw` and `next(err)` in Express?
+- 12.12 How do you create a centralized error handler?
+- 12.13 How do you log application errors?
+- 12.14 How should an application handle unexpected fatal errors?
+- 12.15 Why should an application not continue blindly after an uncaught exception?
+- 
+**Coding practice:**
+
+- Create request logging middleware.
+- Create JWT authentication middleware.
+- Create admin authorization middleware.
+- Create request validation middleware.
+- Create centralized error middleware.
+## **Level 4 – Express.js Backend Development**
+
+### **13. Express.js Fundamentals**
+
+- 13.1 What is Express.js?
+- 13.2 Why do we use Express with Node.js?
+- 13.3 What is the difference between Node.js and Express.js?
+- 13.4 How do you install Express?
+- 13.5 How do you create an Express server?
+- 13.6 What is `app.listen()`?
+- 13.7 What is routing?
+- 13.8 What is `app.get()`?
+- 13.9 What is `app.post()`?
+- 13.10 What is `app.put()`?
+- 13.11 What is `app.patch()`?
+- 13.12 What is `app.delete()`?
+- 13.13 What is `req.params`?
+- 13.14 What is `req.query`?
+- 13.15 What is `req.body`?
+- 13.16 What is `req.headers`?
+- 13.17 What is `res.json()`?
+- 13.18 What is `res.send()`?
+- 13.19 What is `res.status()`?
+- 13.20 What is the difference between `res.send()` and `res.json()`?
+- 13.21 What is route chaining?
+- 13.22 What is `express.Router()`?
+- 13.23 What is route modularization?
+- 13.24 What is a REST API?
+- 13.25 What are REST API best practices?
+
+
+### **14. Express Middleware**
+
+- 14.1 What is middleware?
+- 14.2 Why do we use middleware?
+- 14.3 How does middleware work?
+- 14.4 What are the parameters of middleware?
+- 14.5 What is `next()`?
+- 14.6 What happens if we don't call `next()` or send a response?
+- 14.7 What is application-level middleware?
+- 14.8 What is router-level middleware?
+- 14.9 What is built-in middleware?
+- 14.10 What is third-party middleware?
+- 14.11 What is error-handling middleware?
+- 14.12 What is the difference between middleware and controller?
+- 14.13 What is middleware execution order?
+- 14.14 How do you create authentication middleware?
+- 14.15 How do you create role-based authorization middleware?
+- 14.16 How do you handle async middleware errors?
+- 14.17 What is `express.json()`?
+- 14.18 What is `express.urlencoded()`?
+- 14.19 What is CORS middleware?
+- 14.20 What is Helmet?
+
+
+
+
+### **15. Node.js Project Architecture**
+
+- [15.1 How should we structure a Node.js project?](#15.1)
+- [15.2 What is MVC architecture?](#15.2)
+- [15.3 What is the Model layer?](#15.3)
+- [15.4 What is the View layer?](#15.4)
+- [15.5 What is the Controller layer?](#15.5)
+- [15.6 What is the Service layer?](#15.6)
+- [15.7 What is the Repository pattern?](#15.7)
+- [15.8 What is the difference between controller and service?](#15.8)
+- [15.9 What is the difference between service and repository?](#15.9)
+- [15.10 Why should we separate business logic from controllers?](#15.10)
+- [15.11 What is dependency injection?](#15.11)
+- [15.12 What is a reusable utility function?](#15.12)
+- [15.13 What is configuration management?](#15.13)
+- [15.14 How do you manage environment variables?](#15.14)
+- [15.15 What is the purpose of a centralized database connection?](#15.15)
+- [15.16 How do you handle multiple environments (development, staging, production)?](#15.16)
+- [15.17 How do you organize routes, controllers, services, models, and middleware?](#15.17)
+- [15.18 What is a monolithic architecture?](#15.18)
+- [15.19 What is a modular monolith?](#15.19)
+- [15.20 What is clean architecture?](#15.20)
+
+
+
+
+
+### **16. Authentication and Authorization**
+
+- 16.1 What is authentication?
+- 16.2 What is authorization?
+- 16.3 What is the difference between authentication and authorization?
+- 16.4 What is JWT?
+- 16.5 What are the three parts of JWT?
+- 16.6 What is a JWT payload?
+- 16.7 What is a JWT signature?
+- 16.8 What is `jwt.sign()`?
+- 16.9 What is `jwt.verify()`?
+- 16.10 What is `jwt.decode()`?
+- 16.11 What is the difference between verify and decode?
+- 16.12 What is an access token?
+- 16.13 What is a refresh token?
+- 16.14 What is the difference between access and refresh tokens?
+- 16.15 What is token expiration?
+- 16.16 How do you implement token refresh?
+- 16.17 What is role-based access control (RBAC)?
+- 16.18 What is permission-based access control?
+- 16.19 How do you protect private APIs?
+- 16.20 Where should authentication tokens be stored?
+- 16.21 What is an HttpOnly cookie?
+- 16.22 What are Secure and SameSite cookie attributes?
+- 16.23 What is session-based authentication?
+- 16.24 What is the difference between JWT and session authentication?
+- 16.25 How do you implement logout and token revocation?
+
+### **17. Database Integration**
+
+- 17.1 How do you connect Node.js with MongoDB?
+- 17.2 What is Mongoose?
+- 17.3 What is a schema?
+- 17.4 What is a model?
+- 17.5 What is a document?
+- 17.6 What is CRUD?
+- 17.7 What is `find()`?
+- 17.8 What is `findOne()`?
+- 17.9 What is `findById()`?
+- 17.10 What is `create()`?
+- 17.11 What is `save()`?
+- 17.12 What is `updateOne()`?
+- 17.13 What is `findByIdAndUpdate()`?
+- 17.14 What is `deleteOne()`?
+- 17.15 What is `findByIdAndDelete()`?
+- 17.16 What is MongoDB aggregation?
+- 17.17 What is `$match`?
+- 17.18 What is `$group`?
+- 17.19 What is `$lookup`?
+- 17.20 What is population in Mongoose?
+- 17.21 What is indexing?
+- 17.22 What is the difference between SQL and NoSQL?
+- 17.23 What is database connection pooling?
+- 17.24 What is a database transaction?
+- 17.25 How do you handle database connection failures?
+
+
+
+### **18. API Validation and Security**
+
+- 18.1 What is request validation?
+- 18.2 Why should we validate incoming API data?
+- 18.3 What is Joi?
+- 18.4 What is Zod?
+- 18.5 What is the difference between Joi and Zod?
+- 18.6 What is sanitization?
+- 18.7 What is CORS?
+- 18.8 What is XSS?
+- 18.9 What is CSRF?
+- 18.10 What is SQL injection?
+- 18.11 What is NoSQL injection?
+- 18.12 What is rate limiting?
+- 18.13 What is Helmet?
+- 18.14 What is password hashing?
+- 18.15 What is bcrypt?
+- 18.16 What is the difference between hashing and encryption?
+- 18.17 Why should passwords never be stored as plain text?
+- 18.18 What is HTTPS?
+- 18.19 How do you protect sensitive environment variables?
+- 18.20 How do you validate uploaded files?
+- [18.21 What is request size limiting?](#18.21)
+- [18.22 How do you prevent brute-force login attempts?](#18.22)
+
+<h2  class="answer-heading" id="1.1">1.1 What is Node.js?</h2>
 
 📌 **Definition:**
 
@@ -324,7 +566,6 @@ It is built on Google's **V8 JavaScript Engine**.
 
 ```js
 // app.js
-
 console.log("Hello from Node.js");
 ```
 
@@ -3826,3 +4067,3048 @@ HTTP error handling means identifying errors during request processing and sendi
 
 In Node.js, we can handle errors using conditional checks, try-catch blocks, and centralized error-handling functions.
 
+<h2  class="answer-heading" id="10.1">10.1 What is synchronous execution?</h2>
+
+
+📌 **Definition:**
+
+Synchronous execution means executing code one line at a time. Each operation must finish before the next operation starts.
+
+💻 **Example:**
+
+```js
+console.log("Task 1");
+console.log("Task 2");
+console.log("Task 3");
+```
+
+**Output:**
+
+```js
+Task 1
+Task 2
+Task 3
+```
+
+⚙️ **How it works:**
+
+1. Executes Task 1.
+2. After Task 1 finishes, executes Task 2.
+3. After Task 2 finishes, executes Task 3.
+
+🎯 **Interview Answer:**
+
+Synchronous execution means code runs sequentially, and each operation waits for the previous operation to complete.
+
+<h2  class="answer-heading" id="10.2">10.2 What is asynchronous execution?</h2>
+
+
+📌 **Definition:**
+
+Asynchronous execution allows a program to start an operation and continue executing other code without waiting for that operation to finish.
+
+💻 **Example:**
+
+```js
+console.log("Task 1");
+
+setTimeout(() => {
+    console.log("Task 2");
+}, 2000);
+
+console.log("Task 3");
+```
+
+**Output:**
+
+```js
+Task 1
+Task 3
+Task 2
+```
+
+⚙️ **How it works:**
+
+1. Executes Task 1.
+2. Starts the timer without blocking the remaining JavaScript code.
+3. Executes Task 3.
+4. After approximately 2 seconds, the callback executes.
+
+🎯 **Interview Answer:**
+
+Asynchronous execution allows Node.js to handle time-consuming operations without blocking the execution of other code.
+
+<h2  class="answer-heading" id="10.3">10.3 What is blocking I/O?</h2>
+
+
+📌 **Definition:**
+
+Blocking I/O means the program must wait until an input/output operation finishes before continuing to the next statement.
+
+💻 **Example:**
+
+```js
+const fs = require("fs");
+
+console.log("Task 1");
+
+const data = fs.readFileSync("example.txt", "utf8");
+
+console.log(data);
+console.log("Task 2");
+```
+
+**Output:**
+
+```js
+Task 1
+File content
+Task 2
+```
+
+⚙️ **How it works:**
+
+- `readFileSync()` reads the file synchronously.
+- Node.js waits until the file reading finishes.
+- Only then does it execute the next statement.
+
+🎯 **Interview Answer:**
+
+Blocking I/O stops the current execution from continuing until an I/O operation is completed.
+
+<h2  class="answer-heading" id="10.4">10.4 What is non-blocking I/O?</h2>
+
+
+📌 **Definition:**
+
+Non-blocking I/O allows Node.js to start an I/O operation and continue executing other code while waiting for the operation to finish.
+
+💻 **Example:**
+
+```js
+const fs = require("fs");
+
+console.log("Task 1");
+
+fs.readFile("example.txt", "utf8", (error, data) => {
+    if (error) {
+        console.log(error.message);
+        return;
+    }
+
+    console.log(data);
+});
+
+console.log("Task 2");
+```
+
+**Possible output:**
+
+```js
+Task 1
+Task 2
+File content
+```
+
+⚙️ **How it works:**
+
+1. Starts reading the file.
+2. Continues executing the next statement.
+3. Once the file is read, the callback is scheduled and executed.
+
+🎯 **Interview Answer:**
+
+Non-blocking I/O allows Node.js to perform I/O operations without blocking the main JavaScript execution.
+
+<h2  class="answer-heading" id="10.5">10.5 What is callback-based programming?</h2>
+
+
+📌 **Definition:**
+
+A callback is a function passed as an argument to another function. It is called when a particular operation or event occurs.
+
+💻 **Syntax:**
+
+```js
+function mainFunction(callback) {
+    // Perform an operation
+
+    callback();
+}
+
+mainFunction(() => {
+    // Callback function
+});
+```
+
+💻 **Example:**
+
+```js
+function getUser(callback) {
+    setTimeout(() => {
+        const user = {
+            id: 1,
+            name: "Arun"
+        };
+
+        callback(user);
+    }, 1000);
+}
+
+getUser((user) => {
+    console.log(user);
+});
+```
+
+**Output:**
+
+```js
+{ id: 1, name: 'Arun' }
+```
+
+⚙️ **How it works:**
+
+1. `getUser()` receives a callback function.
+2. It performs an asynchronous operation.
+3. After the operation finishes, it calls the callback.
+4. The callback receives the user data.
+
+🎯 **Interview Answer:**
+
+Callback-based programming uses functions passed as arguments to handle the result of an operation, especially asynchronous operations.
+
+<h2  class="answer-heading" id="10.6">10.6 What is callback hell?</h2>
+
+
+📌 **Definition:**
+
+Callback hell happens when multiple nested callbacks make code difficult to read, understand, and maintain.
+
+💻 **Example:**
+
+```js
+getUser((user) => {
+    getOrders(user.id, (orders) => {
+        getPayment(orders[0].id, (payment) => {
+            sendEmail(payment, (result) => {
+                console.log(result);
+            });
+        });
+    });
+});
+```
+
+**Problem:**
+
+- Too many nested callbacks.
+- Difficult to maintain code.
+- Error handling becomes complicated.
+- Code readability decreases.
+
+**Solution:** Use Promises or `async/await`.
+
+🎯 **Interview Answer:**
+
+Callback hell is a situation where multiple nested callbacks make asynchronous code difficult to read and maintain. We can avoid it using Promises and async/await.
+
+<h2  class="answer-heading" id="10.7">10.7 What is a Promise?</h2>
+
+
+📌 **Definition:**
+
+A Promise is a JavaScript object that represents the eventual success or failure of an asynchronous operation.
+
+💻 **Syntax:**
+
+```js
+const promise = new Promise((resolve, reject) => {
+    // Perform an operation
+    if (condition) {
+        resolve(value);
+    } else {
+        reject(error);
+    }
+});
+```
+
+💻 **Example:**
+
+```js
+const getUser = new Promise((resolve, reject) => {
+    const user = {
+        id: 1,
+        name: "Arun"
+    };
+
+    resolve(user);
+});
+
+getUser.then((result) => {
+    console.log(result);
+});
+```
+
+**Output:**
+
+```js
+{ id: 1, name: 'Arun' }
+```
+
+⚙️ **How it works:**
+
+- `new Promise()` creates a Promise.
+- `resolve()` indicates successful completion.
+- `reject()` indicates failure.
+- `.then()` handles the fulfilled result.
+
+🎯 **Interview Answer:**
+
+A Promise is an object used to handle asynchronous operations. It represents a value that may be available now, later, or never.
+
+<h2  class="answer-heading" id="10.8">10.8 What are Promise states?</h2>
+
+
+📌 **Definition:**
+
+A Promise has three possible states.
+
+**1. Pending**
+Waiting
+
+The asynchronous operation has not completed yet.
+
+**2. Fulfilled**
+Success
+
+The asynchronous operation completed successfully.
+
+**3. Rejected**
+Failed
+
+The asynchronous operation failed.
+
+💻 **Example:**
+
+```js
+const promise = new Promise((resolve, reject) => {
+    resolve("Success");
+});
+
+promise.then((result) => {
+    console.log(result);
+});
+```
+
+**Output:**
+
+```js
+Success
+```
+
+🎯 **Interview Answer:**
+
+A Promise has three states: pending, fulfilled, and rejected. Once it becomes fulfilled or rejected, its state cannot change again.
+
+<h2  class="answer-heading" id="10.9">10.9 What is Promise chaining?</h2>
+
+
+📌 **Definition:**
+
+Promise chaining means connecting multiple `.then()` methods to execute asynchronous operations one after another.
+
+💻 **Syntax:**
+
+```js
+promise
+    .then((result) => {
+        return nextOperation(result);
+    })
+    .then((result) => {
+        return anotherOperation(result);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+```
+
+💻 **Example:**
+
+```js
+Promise.resolve(10)
+    .then((number) => {
+        console.log(number);
+
+        return number * 2;
+    })
+    .then((result) => {
+        console.log(result);
+
+        return result + 5;
+    })
+    .then((finalResult) => {
+        console.log(finalResult);
+    });
+```
+
+**Output:**
+
+```js
+10
+20
+25
+```
+
+⚙️ **How it works:**
+
+1. First `.then()` receives `10`.
+2. Returns `20`.
+3. Second `.then()` receives `20`.
+4. Returns `25`.
+5. Third `.then()` receives `25`.
+
+🎯 **Interview Answer:**
+
+Promise chaining allows us to execute multiple asynchronous operations sequentially by returning values or Promises from `.then()`.
+
+<h2  class="answer-heading" id="10.10">10.10 What is `async/await`?</h2>
+
+
+📌 **Definition:**
+
+`async/await` is a modern JavaScript syntax that makes asynchronous code easier to read and write.
+
+- `async` makes a function return a Promise.
+- `await` waits for a Promise to settle and gives its fulfilled value or throws its rejection reason.
+
+💻 **Syntax:**
+
+```js
+async function functionName() {
+    const result = await promise;
+
+    return result;
+}
+```
+
+💻 **Example:**
+
+```js
+function getUser() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({
+                id: 1,
+                name: "Arun"
+            });
+        }, 1000);
+    });
+}
+
+async function displayUser() {
+    const user = await getUser();
+
+    console.log(user);
+}
+
+displayUser();
+```
+
+**Output:**
+
+```js
+{ id: 1, name: 'Arun' }
+```
+
+⚙️ **How it works:**
+
+1. `displayUser()` starts executing.
+2. `await` waits for `getUser()` to settle.
+3. The function pauses at that point, but the JavaScript thread is not blocked.
+4. After the Promise fulfills, execution continues.
+
+🎯 **Interview Answer:**
+
+Async/await is used to handle Promises with cleaner, more readable code. It allows us to write asynchronous operations in a synchronous-looking style.
+
+<h2  class="answer-heading" id="10.11">10.11 What is the difference between callbacks and Promises?</h2>
+
+
+📌 **Definition:**
+
+Both callbacks and Promises are used to handle asynchronous operations, but they handle results differently.
+
+| Callbacks                                       | Promises                              |
+| ----------------------------------------------- | ------------------------------------- |
+| Pass a function as an argument                  | Return a Promise object               |
+| Can create nested callback structures           | Support Promise chaining              |
+| Error handling often uses error-first callbacks | Use `.catch()`                        |
+| Can become difficult to maintain                | Easier to organize asynchronous flows |
+
+💻 **Callback example:**
+
+```js
+fs.readFile("example.txt", "utf8", (error, data) => {
+    if (error) {
+        console.log(error);
+        return;
+    }
+
+    console.log(data);
+});
+```
+
+💻 **Promise example:**
+
+```js
+fs.promises.readFile("example.txt", "utf8")
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+```
+
+🎯 **Interview Answer:**
+
+Callbacks use functions to handle asynchronous results, whereas Promises provide `.then()` and `.catch()` for better chaining and error handling.
+
+<h2  class="answer-heading" id="10.12">10.12 What is the difference between Promise and async/await?</h2>
+
+
+📌 **Definition:**
+
+Both handle asynchronous operations. `async/await` is syntax built on top of Promises.
+
+| Promise                                                 | Async/Await                                    |
+| ------------------------------------------------------- | ---------------------------------------------- |
+| Uses `.then()`                                          | Uses `await`                                   |
+| Uses `.catch()`                                         | Commonly uses `try/catch`                      |
+| Supports chaining                                       | Looks like sequential code                     |
+| Can be convenient for chaining and parallel composition | Often easier to read for sequential operations |
+
+💻 **Promise example:**
+
+```js
+getUser()
+    .then((user) => {
+        console.log(user);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+```
+
+💻 **Async/await example:**
+
+```js
+async function displayUser() {
+    try {
+        const user = await getUser();
+
+        console.log(user);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+displayUser();
+```
+
+🎯 **Interview Answer:**
+
+Promises handle asynchronous operations using `.then()` and `.catch()`. Async/await is built on Promises and makes asynchronous code easier to read and maintain.
+
+<h2  class="answer-heading" id="10.13">10.13 What is `Promise.all()`?</h2>
+
+
+📌 **Definition:**
+
+`Promise.all()` executes multiple Promises concurrently and returns a single Promise.
+
+- Resolves when all Promises fulfill.
+- Rejects as soon as one of the Promises rejects.
+- Results are returned in the original input order.
+
+💻 **Syntax:**
+
+```js
+Promise.all([promise1, promise2, promise3])
+    .then((results) => {
+        console.log(results);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+```
+
+💻 **Example:**
+
+```js
+const promise1 = Promise.resolve("User");
+const promise2 = Promise.resolve("Orders");
+const promise3 = Promise.resolve("Payments");
+
+Promise.all([promise1, promise2, promise3])
+    .then((results) => {
+        console.log(results);
+    });
+```
+
+**Output:**
+
+```js
+["User", "Orders", "Payments"]
+```
+
+⚙️ **Real-world example:**
+
+You need to fetch user details, orders, and payment information independently for a dashboard. You can use `Promise.all()` to wait for all three requests.
+
+🎯 **Interview Answer:**
+
+Promise.all() runs multiple Promises concurrently and returns their results when all fulfill. If any Promise rejects, the returned Promise rejects.
+
+<h2  class="answer-heading" id="10.14">10.14 What is `Promise.allSettled()`?</h2>
+
+
+📌 **Definition:**
+
+`Promise.allSettled()` waits for all Promises to finish, regardless of whether they fulfill or reject.
+
+💻 **Example:**
+
+```js
+const promise1 = Promise.resolve("User");
+const promise2 = Promise.reject("Orders failed");
+const promise3 = Promise.resolve("Payments");
+
+Promise.allSettled([promise1, promise2, promise3])
+    .then((results) => {
+        console.log(results);
+    });
+```
+
+**Output:**
+
+```js
+[
+    { status: "fulfilled", value: "User" },
+    { status: "rejected", reason: "Orders failed" },
+    { status: "fulfilled", value: "Payments" }
+]
+```
+
+⚙️ **How it works:**
+
+- Waits for every Promise to settle.
+- Does not reject just because one input Promise rejects.
+- Returns the status and value or rejection reason for each Promise.
+
+🎯 **Interview Answer:**
+
+Promise.allSettled() waits for all Promises to complete and returns the result of each Promise, whether successful or failed.
+
+<h2  class="answer-heading" id="10.15">10.15 What is `Promise.race()`?</h2>
+
+
+📌 **Definition:**
+
+`Promise.race()` returns a Promise that settles as soon as the first input Promise settles.
+
+Important: The first one may either fulfill or reject.
+
+💻 **Example:**
+
+```js
+const promise1 = new Promise((resolve) => {
+    setTimeout(() => resolve("Task 1"), 2000);
+});
+
+const promise2 = new Promise((resolve) => {
+    setTimeout(() => resolve("Task 2"), 1000);
+});
+
+Promise.race([promise1, promise2])
+    .then((result) => {
+        console.log(result);
+    });
+```
+
+**Output:**
+
+```js
+Task 2
+```
+
+⚙️ **How it works:**
+
+- Task 1 takes 2 seconds.
+- Task 2 takes 1 second.
+- Task 2 settles first.
+- `Promise.race()` returns its result.
+
+🎯 **Interview Answer:**
+
+Promise.race() returns the result of the first Promise that settles, whether it fulfills or rejects.
+
+<h2  class="answer-heading" id="10.16">10.16 What is `Promise.any()`?</h2>
+
+
+📌 **Definition:**
+
+`Promise.any()` returns the first successfully fulfilled Promise. It ignores rejected Promises unless all input Promises reject.
+
+💻 **Example:**
+
+```js
+const promise1 = Promise.reject("Server 1 failed");
+
+const promise2 = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("Server 2 success");
+    }, 1000);
+});
+
+const promise3 = Promise.resolve("Server 3 success");
+
+Promise.any([promise1, promise2, promise3])
+    .then((result) => {
+        console.log(result);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+```
+
+**Output:**
+
+```js
+Server 3 success
+```
+
+⚙️ **How it works:**
+
+- Promise 1 rejects.
+- Promise 2 takes 1 second.
+- Promise 3 fulfills immediately.
+- Promise 3 provides the first successful result.
+
+🎯 **Interview Answer:**
+
+Promise.any() returns the first successfully fulfilled Promise. If all Promises reject, it throws an AggregateError.
+
+<h2  class="answer-heading" id="10.17">10.17 How do you handle asynchronous errors?</h2>
+
+
+📌 **Definition:**
+
+Asynchronous errors can be handled using `.catch()` with Promises or `try/catch` with async/await.
+
+**Method 1: Promise with&#x20;**`.catch()`
+
+```js
+function getUser() {
+    return Promise.reject(new Error("User not found"));
+}
+
+getUser()
+    .then((user) => {
+        console.log(user);
+    })
+    .catch((error) => {
+        console.log(error.message);
+    });
+```
+
+**Output:**
+
+```js
+User not found
+```
+
+**Method 2: Async/await with&#x20;**`try/catch`
+
+```js
+async function displayUser() {
+    try {
+        const user = await getUser();
+
+        console.log(user);
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+displayUser();
+```
+
+**Output:**
+
+```js
+User not found
+```
+
+⚙️ **How it works:**
+
+- `try` contains the asynchronous operation.
+- `await` throws if the Promise rejects.
+- `catch` handles the error.
+
+🎯 **Interview Answer:**
+
+I handle asynchronous errors using `.catch()` with Promises or `try/catch` with async/await to prevent unhandled Promise rejections and handle failures properly.
+
+<h2  class="answer-heading" id="10.18">10.18 What happens if you forget to use `await`?</h2>
+
+
+📌 **Definition:**
+
+If you forget `await`, the variable receives the Promise object instead of its fulfilled value.
+
+💻 **Example:**
+
+```js
+function getUser() {
+    return Promise.resolve({
+        id: 1,
+        name: "Arun"
+    });
+}
+
+async function displayUser() {
+    const user = getUser();
+
+    console.log(user);
+}
+
+displayUser();
+```
+
+**Output (conceptually):**
+
+```js
+Promise { { id: 1, name: 'Arun' } }
+```
+
+**Correct code:**
+
+```js
+async function displayUser() {
+    const user = await getUser();
+
+    console.log(user);
+}
+
+displayUser();
+```
+
+**Output:**
+
+```js
+{ id: 1, name: 'Arun' }
+```
+
+⚙️ **Important:**
+
+Forgetting `await` can also cause errors when you try to access properties before the Promise has fulfilled.
+
+🎯 **Interview Answer:**
+
+If we forget `await`, we get a Promise object instead of its resolved value. We should use `await` when we need the result before continuing.
+
+<h2  class="answer-heading" id="10.19">10.19 How do you execute multiple operations sequentially?</h2>
+
+
+📌 **Definition:**
+
+Sequential execution means one asynchronous operation starts after the previous operation has completed.
+
+💻 **Example using async/await:**
+
+```js
+function getUser() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("User fetched");
+        }, 1000);
+    });
+}
+
+function getOrders() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Orders fetched");
+        }, 1000);
+    });
+}
+
+function getPayments() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Payments fetched");
+        }, 1000);
+    });
+}
+
+async function executeTasks() {
+    const user = await getUser();
+    console.log(user);
+
+    const orders = await getOrders();
+    console.log(orders);
+
+    const payments = await getPayments();
+    console.log(payments);
+}
+
+executeTasks();
+```
+
+**Output:**
+
+```js
+User fetched
+Orders fetched
+Payments fetched
+```
+
+**Sequential execution**
+
+1\. Get User (1 sec)
+
+2\. Get Orders (1 sec)
+
+3\. Get Payments (1 sec)
+
+Illustrative total: approximately 3 seconds.
+
+🎯 **Interview Answer:**
+
+We can execute multiple asynchronous operations sequentially by using `await` one after another. Each operation waits for the previous operation to complete.
+
+<h2  class="answer-heading" id="10.20">10.20 How do you execute multiple operations in parallel?</h2>
+
+
+📌 **Definition:**
+
+Parallel-style asynchronous execution means starting multiple independent asynchronous operations without waiting for each one to finish before starting the next.
+
+In JavaScript, we commonly use `Promise.all()` for this.
+
+💻 **Example:**
+
+```js
+function getUser() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("User fetched");
+        }, 1000);
+    });
+}
+
+function getOrders() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Orders fetched");
+        }, 1000);
+    });
+}
+
+function getPayments() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Payments fetched");
+        }, 1000);
+    });
+}
+
+async function executeTasks() {
+    const results = await Promise.all([
+        getUser(),
+        getOrders(),
+        getPayments()
+    ]);
+
+    console.log(results);
+}
+
+executeTasks();
+```
+
+**Output:**
+
+```js
+[
+    "User fetched",
+    "Orders fetched",
+    "Payments fetched"
+]
+```
+
+🎯 **Interview Answer:**
+
+We can execute multiple independent asynchronous operations concurrently using `Promise.all()`. It waits until all operations fulfill and returns their results.
+
+
+
+
+
+<h2  class="answer-heading" id="11.1">11.1 What is the Node.js event loop?</h2>
+
+
+📌 **Definition:**
+
+The Event Loop is a mechanism in Node.js that manages asynchronous operations and executes their callbacks when they are ready.
+
+**Why do we need it?**
+
+Node.js uses a single main JavaScript thread. The Event Loop helps it handle multiple I/O operations without waiting for each operation to finish.
+
+🎯 **Interview Answer:**
+
+The Event Loop is a mechanism in Node.js that handles asynchronous operations and executes their callbacks when they are ready, allowing Node.js to handle multiple requests efficiently.
+
+<h2  class="answer-heading" id="11.2">11.2 How does the event loop work?</h2>
+
+
+📌 **Definition:**
+
+The Event Loop continuously checks whether the Call Stack is available and whether asynchronous callbacks are ready to execute.
+
+**Event Loop execution flow:**
+
+**JavaScript Code**
+
+Synchronous statements and function calls
+
+**Call Stack**
+
+Executes JavaScript functions
+
+**Node.js / libuv**
+
+Handles timers and asynchronous I/O
+
+**Callback Queues**
+
+Ready callbacks wait for execution
+
+**Event Loop**
+
+Schedules callbacks when execution can continue
+
+Repeats while the event loop has work
+
+💻 **Example:**
+
+```js
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Timer callback");
+}, 0);
+
+console.log("End");
+```
+
+**Output:**
+
+```js
+Start
+End
+Timer callback
+```
+
+⚙️ **How it works:**
+
+1. `console.log("Start")` executes.
+2. `setTimeout()` registers a timer.
+3. `console.log("End")` executes.
+4. The timer callback becomes eligible for execution.
+5. The Event Loop executes the callback when the required conditions are met.
+
+🎯 **Interview Answer:**
+
+The Event Loop coordinates the Call Stack, asynchronous operations, and callback queues. It executes ready callbacks when the JavaScript execution stack is available.
+
+<h2  class="answer-heading" id="11.3">11.3 What is the call stack?</h2>
+
+
+📌 **Definition:**
+
+The Call Stack is a data structure that keeps track of function calls during JavaScript execution.
+
+It follows the **LIFO (Last In, First Out)** principle.
+
+💻 **Example:**
+
+```js
+function first() {
+    console.log("First function");
+    second();
+}
+
+function second() {
+    console.log("Second function");
+    third();
+}
+
+function third() {
+    console.log("Third function");
+}
+
+first();
+```
+
+**Output:**
+
+```js
+First function
+Second function
+Third function
+```
+
+
+🎯 **Interview Answer:**
+
+The Call Stack is a LIFO data structure that tracks function execution. JavaScript pushes function calls onto the stack and removes them when execution is complete.
+
+<h2  class="answer-heading" id="11.4">11.4 What is the callback queue?</h2>
+
+
+📌 **Definition:**
+
+The Callback Queue is a queue where certain asynchronous callbacks wait until they can be executed by the Event Loop.
+
+For example, timer callbacks and some I/O callbacks are scheduled for execution through the Event Loop.
+
+💻 **Example:**
+
+```js
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Callback Queue");
+}, 1000);
+
+console.log("End");
+```
+
+**Output:**
+
+```js
+Start
+End
+Callback Queue
+```
+
+⚙️ **How it works:**
+
+1. Executes `Start`.
+2. Registers the timer.
+3. Executes `End`.
+4. After the timer expires, its callback becomes ready.
+5. The callback executes when the Event Loop can process it.
+
+🎯 **Interview Answer:**
+
+The Callback Queue holds callbacks that are ready to execute. The Event Loop schedules them when the Call Stack is available.
+
+<h2  class="answer-heading" id="11.5">11.5 What is the microtask queue?</h2>
+
+
+📌 **Definition:**
+
+The Microtask Queue stores high-priority Promise callbacks and other microtasks that need to execute after the current JavaScript operation completes.
+
+Examples:
+
+- `Promise.then()`
+- `Promise.catch()`
+- `Promise.finally()`
+- `queueMicrotask()`
+
+💻 **Example:**
+
+```js
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Timer");
+}, 0);
+
+Promise.resolve().then(() => {
+    console.log("Promise");
+});
+
+console.log("End");
+```
+
+**Output:**
+
+```js
+Start
+End
+Promise
+Timer
+```
+
+⚙️ **How it works:**
+
+1. Executes `Start`.
+2. Registers the timer callback.
+3. Schedules the Promise callback as a microtask.
+4. Executes `End`.
+5. Processes the Promise microtask.
+6. Processes the timer callback when its phase is reached.
+
+🎯 **Interview Answer:**
+
+The Microtask Queue stores Promise callbacks and other microtasks. Node.js processes microtasks after the current JavaScript execution completes, before continuing with normal Event Loop work.
+
+<h2  class="answer-heading" id="11.6">11.6 What is the timers phase?</h2>
+
+
+📌 **Definition:**
+
+The Timers Phase is an Event Loop phase where callbacks registered using `setTimeout()` and `setInterval()` become eligible to execute.
+
+💻 **Example:**
+
+```js
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Timeout callback");
+}, 1000);
+
+console.log("End");
+```
+
+**Output:**
+
+```js
+Start
+End
+Timeout callback
+```
+
+⚙️ **Important:**
+
+- `setTimeout()` executes after its minimum delay has elapsed, not at an exact guaranteed time.
+- `setInterval()` schedules repeated timer callbacks.
+- Actual execution depends on Event Loop scheduling.
+
+🎯 **Interview Answer:**
+
+The Timers Phase handles callbacks for expired `setTimeout()` and `setInterval()` timers.
+
+<h2  class="answer-heading" id="11.7">11.7 What is the poll phase?</h2>
+
+
+📌 **Definition:**
+
+The Poll Phase handles I/O-related callbacks and waits for new I/O events when appropriate.
+
+Examples include:
+
+- File system I/O callbacks.
+- Network I/O callbacks.
+- Incoming connection and data events.
+
+💻 **Example:**
+
+```js
+const fs = require("fs");
+
+console.log("Start");
+
+fs.readFile("example.txt", "utf8", (error, data) => {
+    if (error) {
+        console.log(error.message);
+        return;
+    }
+
+    console.log("File reading completed");
+});
+
+console.log("End");
+```
+
+**Possible output:**
+
+```js
+Start
+End
+File reading completed
+```
+
+⚙️ **How it works:**
+
+1. Node.js starts the file-reading operation.
+2. The main JavaScript code continues.
+3. The file operation completes.
+4. Its callback is handled through the I/O processing mechanism, commonly during the Poll Phase.
+
+🎯 **Interview Answer:**
+
+The Poll Phase processes I/O callbacks and can wait for new I/O events when there is no other work to execute.
+
+<h2  class="answer-heading" id="11.8">11.8 What is the check phase?</h2>
+
+
+📌 **Definition:**
+
+The Check Phase executes callbacks registered using `setImmediate()`.
+
+💻 **Example:**
+
+```js
+console.log("Start");
+
+setImmediate(() => {
+    console.log("Immediate callback");
+});
+
+console.log("End");
+```
+
+**Output:**
+
+```js
+Start
+End
+Immediate callback
+```
+
+⚙️ **How it works:**
+
+- `setImmediate()` schedules a callback.
+- The callback executes in the Check Phase.
+- It runs after the Poll Phase in the Event Loop cycle.
+
+🎯 **Interview Answer:**
+
+The Check Phase is an Event Loop phase that executes callbacks registered using `setImmediate()`.
+
+<h2  class="answer-heading" id="11.9">11.9 What is the close callbacks phase?</h2>
+
+
+📌 **Definition:**
+
+The Close Callbacks Phase executes callbacks when certain resources, such as sockets or handles, are closed.
+
+💻 **Example:**
+
+```js
+const net = require("net");
+
+const server = net.createServer();
+
+server.on("close", () => {
+    console.log("Server closed");
+});
+
+server.listen(3000, () => {
+    console.log("Server started");
+
+    server.close();
+});
+```
+
+**Output:**
+
+```js
+Server started
+Server closed
+```
+
+⚙️ **How it works:**
+
+1. Creates a TCP server.
+2. Starts listening.
+3. Calls `server.close()`.
+4. The close event callback executes when the server is closed.
+
+🎯 **Interview Answer:**
+
+The Close Callbacks Phase handles callbacks for certain closed resources, such as sockets and handles.
+
+<h2  class="answer-heading" id="11.10">11.10 What is libuv?</h2>
+
+
+📌 **Definition:**
+
+libuv is a C library used by Node.js to provide asynchronous I/O, the Event Loop, timers, and thread pool functionality.
+
+**Main responsibilities:**
+
+- Event Loop implementation.
+- Asynchronous file system operations.
+- Thread pool management.
+- Network I/O support.
+- Timers.
+- Operating-system-level asynchronous operations.
+
+![Node.js или Go: что выбрать для своего проекта, и что выбирают крупные компании](https://images.openai.com/static-rsc-4/zx6VnQyBhqnHadPF89jBeEcJnV0hCtsIYzf-RNqdod-5GhXAuYVsKOEav6HGeaVxVshCluEe3h6crIRYR_SV0e0nG4ol5DFe9qwKURWyO8v4jLu8ZCKCEv8edWuBXVYe5HX2OKGCMHzTrqMNIC7hhttO1NdqcHl0Gj-8m-RvI3E?purpose=inline)
+
+
+🎯 **Interview Answer:**
+
+libuv is a C library used by Node.js to implement the Event Loop, asynchronous I/O operations, and thread pool functionality.
+
+<h2  class="answer-heading" id="11.11">11.11 What is the libuv thread pool?</h2>
+
+
+📌 **Definition:**
+
+The libuv Thread Pool is a group of worker threads used to execute certain operations in the background without blocking the main JavaScript thread.
+
+💻 **Example:**
+
+```js
+const crypto = require("crypto");
+
+console.log("Start");
+
+crypto.pbkdf2(
+    "password",
+    "salt",
+    100000,
+    64,
+    "sha512",
+    (error, key) => {
+        if (error) {
+            console.log(error);
+            return;
+        }
+
+        console.log("Password hashing completed");
+    }
+);
+
+console.log("End");
+```
+
+**Possible output:**
+
+```js
+Start
+End
+Password hashing completed
+```
+
+⚙️ **How it works:**
+
+1. JavaScript calls `crypto.pbkdf2()`.
+2. Node.js submits the expensive hashing operation to libuv's thread pool.
+3. The main JavaScript thread continues executing.
+4. A worker thread performs the hashing.
+5. When completed, the callback is scheduled for execution.
+
+🎯 **Interview Answer:**
+
+The libuv Thread Pool contains worker threads that handle certain expensive or blocking operations, such as file system tasks and password hashing, without blocking the main JavaScript thread.
+
+<h2  class="answer-heading" id="11.12">11.12 What is the default thread pool size?</h2>
+
+
+📌 **Definition:**
+
+The default libuv Thread Pool size in Node.js is **4 worker threads**.
+
+You can change it using the `UV_THREADPOOL_SIZE` environment variable.
+
+💻 **Example:**
+
+```js
+UV_THREADPOOL_SIZE=8 node app.js
+```
+
+**Check the configured value:**
+
+```js
+console.log(process.env.UV_THREADPOOL_SIZE || 4);
+```
+
+**Output (if not configured):**
+
+```js
+4
+```
+
+⚙️ **Important points:**
+
+- Default size: 4.
+- Can be configured using `UV_THREADPOOL_SIZE`.
+- The setting should be applied before the thread pool is initialized.
+- Increasing the size does not automatically improve performance; it depends on workload and system resources.
+
+🎯 **Interview Answer:**
+
+The default libuv Thread Pool size is 4 threads. We can configure it using the `UV_THREADPOOL_SIZE` environment variable.
+
+<h2  class="answer-heading" id="11.13">11.13 What is `process.nextTick()`?</h2>
+
+
+📌 **Definition:**
+
+`process.nextTick()` schedules a callback to execute after the current JavaScript operation completes, before the Event Loop continues to its next phase.
+
+💻 **Example:**
+
+```js
+console.log("Start");
+
+process.nextTick(() => {
+    console.log("Next Tick");
+});
+
+console.log("End");
+```
+
+**Output:**
+
+```js
+Start
+End
+Next Tick
+```
+
+⚙️ **How it works:**
+
+1. Executes `Start`.
+2. Registers the next-tick callback.
+3. Executes `End`.
+4. Processes the next-tick callback before moving to the next Event Loop phase.
+
+🎯 **Interview Answer:**
+
+`process.nextTick()` schedules a callback to run immediately after the current JavaScript operation completes, before the Event Loop continues.
+
+<h2  class="answer-heading" id="11.14">11.14 What is the difference between `process.nextTick()` and Promise callbacks?</h2>
+
+
+📌 **Definition:**
+
+Both schedule callbacks to run after the current JavaScript execution, but Node.js processes them using different queues.
+
+| `process.nextTick()`                        | Promise callbacks                                               |
+| ------------------------------------------- | --------------------------------------------------------------- |
+| Uses the next-tick queue                    | Uses the microtask queue                                        |
+| Usually processed before Promise microtasks | Processed after next-tick callbacks in normal Node.js execution |
+| Node.js-specific API                        | Standard JavaScript Promise API                                 |
+
+💻 **Example:**
+
+```js
+console.log("Start");
+
+process.nextTick(() => {
+    console.log("Next Tick");
+});
+
+Promise.resolve().then(() => {
+    console.log("Promise");
+});
+
+console.log("End");
+```
+
+**Output:**
+
+```js
+Start
+End
+Next Tick
+Promise
+```
+
+⚙️ **How it works:**
+
+1. Executes `Start`.
+2. Schedules the next-tick callback.
+3. Schedules the Promise callback.
+4. Executes `End`.
+5. Processes the next-tick queue.
+6. Processes the Promise microtask queue.
+
+🎯 **Interview Answer:**
+
+`process.nextTick()` uses Node.js's next-tick queue, while Promise callbacks use the microtask queue. In normal Node.js execution, next-tick callbacks are processed before Promise microtasks.
+
+<h2  class="answer-heading" id="11.15">11.15 Which operations use the thread pool?</h2>
+
+
+📌 **Definition:**
+
+Some Node.js operations use the libuv Thread Pool to perform work in the background.
+
+**Important examples:**
+
+| Operation                     | Uses Thread Pool? |
+| ----------------------------- | ----------------- |
+| `fs.readFile()`               | Yes               |
+| `fs.writeFile()`              | Yes               |
+| `crypto.pbkdf2()`             | Yes               |
+| `crypto.scrypt()`             | Yes               |
+| `dns.lookup()`                | Yes               |
+| `zlib` compression operations | Yes               |
+| `setTimeout()`                | No                |
+| `setImmediate()`              | No                |
+| `process.nextTick()`          | No                |
+| Typical TCP socket I/O        | Usually no        |
+
+💻 **Example:**
+
+```js
+const fs = require("fs");
+const crypto = require("crypto");
+const dns = require("dns");
+
+fs.readFile("example.txt", () => {
+    console.log("File completed");
+});
+
+crypto.pbkdf2("password", "salt", 100000, 64, "sha512", () => {
+    console.log("Crypto completed");
+});
+
+dns.lookup("example.com", () => {
+    console.log("DNS lookup completed");
+});
+```
+
+🎯 **Interview Answer:**
+
+Common operations that use the libuv Thread Pool include asynchronous file system operations, certain crypto operations, `dns.lookup()`, and zlib operations.
+
+<h2  class="answer-heading" id="11.16">11.16 Does every asynchronous operation use the thread pool?</h2>
+
+
+Important interview question
+
+📌 **Definition:**
+
+No. Not every asynchronous operation uses the libuv Thread Pool.
+
+Node.js uses different mechanisms depending on the operation.
+
+**Examples:**
+
+| Operation              | How it is handled                              |
+| ---------------------- | ---------------------------------------------- |
+| File system operations | libuv Thread Pool                              |
+| `crypto.pbkdf2()`      | libuv Thread Pool                              |
+| `setTimeout()`         | Event Loop timer mechanism                     |
+| `setImmediate()`       | Event Loop Check Phase                         |
+| Promise callbacks      | Microtask Queue                                |
+| `process.nextTick()`   | Next-tick queue                                |
+| TCP network I/O        | Operating-system event notification mechanisms |
+
+🎯 **Interview Answer:**
+
+No. Node.js uses the Thread Pool for certain operations, while timers, Promise callbacks, and network I/O use other Event Loop and operating-system mechanisms.
+
+<h2  class="answer-heading" id="11.17">11.17 How can CPU-intensive operations block the event loop?</h2>
+
+
+📌 **Definition:**
+
+CPU-intensive operations require significant processing time. If they run synchronously on the main JavaScript thread, they block the Event Loop.
+
+💻 **Example:**
+
+```js
+console.log("Start");
+
+function calculate() {
+    let total = 0;
+
+    for (let i = 0; i < 10000000000; i++) {
+        total += i;
+    }
+
+    return total;
+}
+
+console.log(calculate());
+
+console.log("End");
+```
+
+**Problem:**
+
+- The `calculate()` function takes a long time.
+- The main JavaScript thread cannot execute other JavaScript callbacks during this calculation.
+- Other incoming requests may experience delays.
+
+**Event Loop blocked**
+
+Blocking operation
+
+**Heavy CPU calculation**
+
+Main JavaScript thread is busy
+
+Other callbacks must wait
+
+🎯 **Interview Answer:**
+
+CPU-intensive synchronous operations block the main JavaScript thread, preventing the Event Loop from processing other callbacks and incoming requests efficiently.
+
+<h2  class="answer-heading" id="11.18">11.18 How do you prevent event loop blocking?</h2>
+
+
+📌 **Definition:**
+
+We prevent Event Loop blocking by moving CPU-intensive work away from the main JavaScript thread and avoiding long-running synchronous operations.
+
+**Important methods:**
+
+**1. Use Worker Threads**
+
+Worker Threads execute JavaScript in separate threads.
+
+```js
+const { Worker } = require("worker_threads");
+
+const worker = new Worker("./worker.js");
+
+worker.on("message", (result) => {
+    console.log("Result:", result);
+});
+
+worker.on("error", (error) => {
+    console.log(error);
+});
+```
+
+**2. Use Child Processes**
+
+Child processes run separate processes and are useful for isolating heavy work or running other programs.
+
+```js
+const { fork } = require("child_process");
+
+const child = fork("./worker.js");
+
+child.on("message", (result) => {
+    console.log(result);
+});
+```
+
+**3. Use Asynchronous APIs**
+
+Avoid synchronous file operations in request-handling code.
+
+```js
+// Avoid blocking operation
+fs.readFileSync("example.txt", "utf8");
+
+// Prefer asynchronous operation
+fs.readFile("example.txt", "utf8", (error, data) => {
+    if (error) {
+        console.log(error);
+        return;
+    }
+
+    console.log(data);
+});
+```
+
+**4. Break large tasks into smaller chunks**
+
+Process a large dataset in smaller batches so other callbacks get opportunities to execute between batches.
+
+**5. Use Background Job Queues**
+
+For example, use BullMQ with Redis to process heavy tasks outside the HTTP request-response flow.
+
+🎯 **Interview Answer:**
+
+We can prevent Event Loop blocking by using Worker Threads, Child Processes, asynchronous APIs, background job queues, and breaking large CPU-intensive tasks into smaller chunks.
+
+<h2  class="answer-heading" id="11.19">11.19 Quick Revision – Important Concepts</h2>
+
+
+| Concept              | Simple meaning                            |
+| -------------------- | ----------------------------------------- |
+| Event Loop           | Manages asynchronous execution            |
+| Call Stack           | Executes JavaScript functions             |
+| Callback Queue       | Holds ready callbacks                     |
+| Microtask Queue      | Holds Promise callbacks and microtasks    |
+| Timers Phase         | Handles timer callbacks                   |
+| Poll Phase           | Processes I/O callbacks                   |
+| Check Phase          | Executes `setImmediate()` callbacks       |
+| Close Callbacks      | Handles certain close events              |
+| libuv                | Provides Event Loop and async I/O support |
+| Thread Pool          | Worker threads for certain operations     |
+| `process.nextTick()` | Schedules a next-tick callback            |
+| Worker Threads       | Run JavaScript on separate threads        |
+
+<h2  class="answer-heading" id="11.20">11.20 Important Event Loop Phase Order</h2>
+
+
+## **Node.js Event Loop**
+
+1. **Timers Phase**
+
+   `setTimeout()` and `setInterval()`
+2. **Pending Callbacks Phase**
+
+   Certain deferred system I/O callbacks
+3. **Idle / Prepare**
+
+   Internal libuv operations
+4. **Poll Phase**
+
+   I/O callbacks and waiting for I/O
+5. **Check Phase**
+
+   `setImmediate()`
+6. **Close Callbacks Phase**
+
+   Certain resource close callbacks
+
+Simplified phase order. Node.js also processes next-tick callbacks and microtasks between JavaScript callback executions.
+
+
+
+
+<h2  class="answer-heading" id="15.1">15.1 How should we structure a Node.js project?</h2>
+
+## **15.1 How should we structure a Node.js project?**
+
+📌 **Definition:**
+
+A Node.js project structure is an organized arrangement of files and folders that separates different responsibilities, such as routes, controllers, services, models, middleware, and configurations.
+
+💻 **Recommended project structure:**
+
+```js
+node-project/
+│
+├── src/
+│   ├── config/
+│   │   ├── database.js
+│   │   └── env.js
+│   │
+│   ├── routes/
+│   │   └── user.routes.js
+│   │
+│   ├── controllers/
+│   │   └── user.controller.js
+│   │
+│   ├── services/
+│   │   └── user.service.js
+│   │
+│   ├── repositories/
+│   │   └── user.repository.js
+│   │
+│   ├── models/
+│   │   └── user.model.js
+│   │
+│   ├── middleware/
+│   │   ├── auth.middleware.js
+│   │   └── error.middleware.js
+│   │
+│   ├── utils/
+│   │   └── response.js
+│   │
+│   ├── validators/
+│   │   └── user.validator.js
+│   │
+│   ├── app.js
+│   └── server.js
+│
+├── .env
+├── .env.example
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+**Folder responsibilities:**
+
+| Folder          | Responsibility                             |
+| --------------- | ------------------------------------------ |
+| `config/`       | Database and application configuration     |
+| `routes/`       | API endpoint definitions                   |
+| `controllers/`  | Handle HTTP requests and responses         |
+| `services/`     | Business logic                             |
+| `repositories/` | Database query operations                  |
+| `models/`       | Database schemas and models                |
+| `middleware/`   | Authentication, validation, error handling |
+| `utils/`        | Reusable helper functions                  |
+| `validators/`   | Request data validation                    |
+
+**🎯 Interview Answer:**
+
+I structure Node.js projects using separate folders for routes, controllers, services, models, middleware, configuration, and utilities. This improves code readability, maintainability, reusability, and scalability.
+
+<h2  class="answer-heading" id="15.2">15.2 What is MVC architecture?</h2>
+
+## **15.2 What is MVC architecture?**
+
+📌 **Definition:**
+
+MVC stands for **Model-View-Controller**. It is a software architectural pattern that separates an application into three main components.
+
+
+**Example: User Management Application**
+
+- Model: Stores user information.
+- View: Displays user information.
+- Controller: Handles user requests and coordinates the response.
+
+🎯 **Interview Answer:**
+
+MVC is an architectural pattern that separates an application into Model, View, and Controller to organize data, user interface, and request-handling responsibilities.
+
+<h2  class="answer-heading" id="15.3">15.3 What is the Model layer?</h2>
+
+## **15.3 What is the Model layer?**
+
+📌 **Definition:**
+
+The Model layer manages application data and defines how data is stored and represented in the database.
+
+**Responsibilities:**
+
+- Define database schemas.
+- Define data fields and relationships.
+- Apply model-level validation.
+- Interact with the database through the ORM or ODM.
+
+💻 **Example –&#x20;**`user.model.js`**:**
+
+```js
+const mongoose = require("mongoose");
+
+const userSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
+
+    age: {
+        type: Number
+    }
+});
+
+module.exports = mongoose.model("User", userSchema);
+```
+
+🎯 **Interview Answer:**
+
+The Model layer defines the application's data structure and database schema. In MongoDB applications, we commonly use Mongoose models.
+
+<h2  class="answer-heading" id="15.4">15.4 What is the View layer?</h2>
+
+## **15.4 What is the View layer?**
+
+📌 **Definition:**
+
+The View layer is responsible for displaying data to users through the user interface.
+
+**Examples:**
+
+- HTML pages.
+- EJS templates.
+- React components.
+- Other frontend interfaces.
+
+💻 **Example – React View:**
+
+```js
+function UserProfile({ user }) {
+    return (
+        <div>
+            <h2>{user.name}</h2>
+            <p>{user.email}</p>
+        </div>
+    );
+}
+
+export default UserProfile;
+```
+
+**In a MERN application:**
+
+- React handles the View layer.
+- Node.js and Express.js handle the backend API.
+- MongoDB stores application data.
+
+🎯 **Interview Answer:**
+
+The View layer displays application data to users. In a MERN application, React commonly handles the View layer.
+
+<h2  class="answer-heading" id="15.5">15.5 What is the Controller layer?</h2>
+
+## **15.5 What is the Controller layer?**
+
+📌 **Definition:**
+
+The Controller layer receives HTTP requests, validates or coordinates request handling, calls the appropriate service, and sends HTTP responses.
+
+**Responsibilities:**
+
+- Receive requests.
+- Read request parameters and body.
+- Call service functions.
+- Return HTTP status codes and responses.
+- Forward errors to error-handling middleware.
+
+💻 **Example –&#x20;**`user.controller.js`**:**
+
+```js
+const userService = require("../services/user.service");
+
+const createUser = async (req, res, next) => {
+    try {
+        const user = await userService.createUser(req.body);
+
+        res.status(201).json({
+            success: true,
+            data: user
+        });
+    } catch (error) {
+        next(error);
+    }
+};
+
+module.exports = {
+    createUser
+};
+```
+
+🎯 **Interview Answer:**
+
+The Controller handles incoming HTTP requests, calls the appropriate service, and sends the response to the client.
+
+<h2  class="answer-heading" id="15.6">15.6 What is the Service layer?</h2>
+
+## **15.6 What is the Service layer?**
+
+📌 **Definition:**
+
+The Service layer contains the application's business logic and rules.
+
+**Responsibilities:**
+
+- Implement business rules.
+- Perform calculations.
+- Check business conditions.
+- Coordinate multiple repositories.
+- Call external services when needed.
+
+💻 **Example –&#x20;**`user.service.js`**:**
+
+```js
+const userRepository = require("../repositories/user.repository");
+
+const createUser = async (userData) => {
+    const existingUser = await userRepository.findByEmail(
+        userData.email
+    );
+
+    if (existingUser) {
+        throw new Error("Email already exists");
+    }
+
+    return await userRepository.create(userData);
+};
+
+module.exports = {
+    createUser
+};
+```
+
+🎯 **Interview Answer:**
+
+The Service layer contains business logic. It handles application rules and coordinates database operations through repositories or models.
+
+<h2  class="answer-heading" id="15.7">15.7 What is the Repository pattern?</h2>
+
+## **15.7 What is the Repository pattern?**
+
+📌 **Definition:**
+
+The Repository pattern separates database access logic from business logic.
+
+It provides a common interface for performing database operations.
+
+💻 **Example –&#x20;**`user.repository.js`**:**
+
+```js
+const User = require("../models/user.model");
+
+const create = async (userData) => {
+    return await User.create(userData);
+};
+
+const findByEmail = async (email) => {
+    return await User.findOne({ email });
+};
+
+const findAll = async () => {
+    return await User.find();
+};
+
+module.exports = {
+    create,
+    findByEmail,
+    findAll
+};
+```
+
+**Responsibilities:**
+
+- Create database records.
+- Find database records.
+- Update database records.
+- Delete database records.
+- Keep database queries separate from business rules.
+
+🎯 **Interview Answer:**
+
+The Repository pattern separates database operations from business logic. It makes database access reusable, organized, and easier to maintain or replace.
+
+<h2  class="answer-heading" id="15.8">15.8 What is the difference between controller and service?</h2>
+
+## **15.8 What is the difference between Controller and Service?**
+
+📌 **Definition:**
+
+The Controller handles HTTP requests and responses, while the Service handles business logic.
+
+| Controller                           | Service                                    |
+| ------------------------------------ | ------------------------------------------ |
+| Handles HTTP requests                | Handles business rules                     |
+| Reads `req.body`, `req.params`       | Processes application data                 |
+| Calls service methods                | Calls repositories or other services       |
+| Sends HTTP responses                 | Returns results                            |
+| Knows about Express request/response | Should generally be independent of Express |
+
+💻 **Example:**
+
+**Controller:**
+
+```js
+const userService = require("../services/user.service");
+
+const getUser = async (req, res, next) => {
+    try {
+        const user = await userService.getUserById(req.params.id);
+
+        res.status(200).json(user);
+    } catch (error) {
+        next(error);
+    }
+};
+
+module.exports = { getUser };
+```
+
+**Service:**
+
+```js
+const userRepository = require("../repositories/user.repository");
+
+const getUserById = async (id) => {
+    const user = await userRepository.findById(id);
+
+    if (!user) {
+        throw new Error("User not found");
+    }
+
+    return user;
+};
+
+module.exports = { getUserById };
+```
+
+🎯 **Interview Answer:**
+
+The Controller manages HTTP request and response handling, whereas the Service contains business logic. Keeping them separate makes the application easier to maintain and test.
+
+<h2  class="answer-heading" id="15.9">15.9 What is the difference between service and repository?</h2>
+
+## **15.9 What is the difference between Service and Repository?**
+
+📌 **Definition:**
+
+The Service handles business rules, whereas the Repository handles database operations.
+
+| Service                         | Repository                      |
+| ------------------------------- | ------------------------------- |
+| Contains business logic         | Contains database queries       |
+| Checks business conditions      | Fetches and stores data         |
+| Coordinates multiple operations | Communicates with the database  |
+| Calls repositories              | Uses models or database clients |
+
+💻 **Example:**
+
+```js
+// Service: user.service.js
+
+const userRepository = require("../repositories/user.repository");
+
+const registerUser = async (userData) => {
+    const existingUser = await userRepository.findByEmail(
+        userData.email
+    );
+
+    if (existingUser) {
+        throw new Error("Email already registered");
+    }
+
+    return userRepository.create(userData);
+};
+```
+
+```js
+// Repository: user.repository.js
+
+const User = require("../models/user.model");
+
+const findByEmail = (email) => {
+    return User.findOne({ email });
+};
+
+const create = (userData) => {
+    return User.create(userData);
+};
+
+module.exports = { findByEmail, create };
+```
+
+🎯 **Interview Answer:**
+
+The Service layer contains business logic, while the Repository layer handles database queries. The Service uses the Repository to access data.
+
+<h2  class="answer-heading" id="15.10">15.10 Why should we separate business logic from controllers?</h2>
+
+## **15.10 Why should we separate business logic from controllers?**
+
+📌 **Definition:**
+
+We separate business logic from controllers to keep controllers small and make business logic reusable, testable, and maintainable.
+
+**Without separation:**
+
+```js
+// Controller contains everything
+
+const registerUser = async (req, res) => {
+    const existingUser = await User.findOne({
+        email: req.body.email
+    });
+
+    if (existingUser) {
+        return res.status(409).json({
+            message: "Email already exists"
+        });
+    }
+
+    const user = await User.create(req.body);
+
+    res.status(201).json(user);
+};
+```
+
+**With separation:**
+
+```js
+// Controller
+
+const registerUser = async (req, res, next) => {
+    try {
+        const user = await userService.registerUser(req.body);
+
+        res.status(201).json(user);
+    } catch (error) {
+        next(error);
+    }
+};
+```
+
+```js
+// Service
+
+const registerUser = async (userData) => {
+    const existingUser = await userRepository.findByEmail(
+        userData.email
+    );
+
+    if (existingUser) {
+        throw new Error("Email already exists");
+    }
+
+    return userRepository.create(userData);
+};
+```
+
+**Benefits:**
+
+1. Code becomes easier to understand.
+2. Business logic can be reused.
+3. Unit testing becomes easier.
+4. Controllers remain small.
+5. Maintenance becomes simpler.
+
+🎯 **Interview Answer:**
+
+We separate business logic from controllers to follow the Single Responsibility Principle. It improves code reusability, testability, readability, and maintainability.
+
+<h2  class="answer-heading" id="15.11">15.11 What is dependency injection?</h2>
+
+## **15.11 What is Dependency Injection?**
+
+📌 **Definition:**
+
+Dependency Injection (DI) is a design technique in which an object or function receives the dependencies it needs from outside instead of creating them internally.
+
+**Simple example without Dependency Injection:**
+
+```js
+class UserService {
+    constructor() {
+        this.repository = new UserRepository();
+    }
+}
+```
+
+Here, `UserService` creates its own repository dependency.
+
+**Example with Dependency Injection:**
+
+```js
+class UserService {
+    constructor(userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    async getUsers() {
+        return this.userRepository.findAll();
+    }
+}
+
+const userRepository = new UserRepository();
+
+const userService = new UserService(userRepository);
+```
+
+⚙️ **How it works:**
+
+1. Create the repository.
+2. Pass the repository to the service.
+3. The service uses the injected repository.
+4. You can inject a different implementation during testing.
+
+**Real-world benefit:**
+
+You can inject a mock repository during unit testing instead of connecting to the actual database.
+
+🎯 **Interview Answer:**
+
+Dependency Injection means providing required dependencies from outside a class or function. It reduces tight coupling and makes code easier to test and maintain.
+
+<h2  class="answer-heading" id="15.12">15.12 What is a reusable utility function?</h2>
+
+## **15.12 What is a reusable utility function?**
+
+📌 **Definition:**
+
+A utility function is a reusable function that performs a common task and can be used in multiple parts of an application.
+
+**Examples:**
+
+- Date formatting.
+- Password hashing.
+- Email validation.
+- Generating random strings.
+- Formatting API responses.
+
+💻 **Example –&#x20;**`utils/format-date.js`**:**
+
+```js
+const formatDate = (date) => {
+    return new Date(date).toISOString().split("T")[0];
+};
+
+module.exports = formatDate;
+```
+
+**Using the utility:**
+
+```js
+const formatDate = require("../utils/format-date");
+
+const result = formatDate("2026-11-23");
+
+console.log(result);
+```
+
+**Output:**
+
+```js
+2026-11-23
+```
+
+🎯 **Interview Answer:**
+
+A utility function is a reusable helper function that performs a common task. We keep these functions in a separate utils folder to avoid code duplication.
+
+<h2  class="answer-heading" id="15.13">15.13 What is configuration management?</h2>
+
+## **15.13 What is configuration management?**
+
+📌 **Definition:**
+
+Configuration management means organizing and managing application settings in a centralized and maintainable way.
+
+**Examples of configuration:**
+
+- Database connection settings.
+- Server port.
+- API keys.
+- JWT secret.
+- Email server settings.
+- Application environment.
+
+💻 **Example –&#x20;**`config/env.js`**:**
+
+```js
+require("dotenv").config();
+
+module.exports = {
+    port: process.env.PORT || 5000,
+
+    databaseUrl: process.env.DATABASE_URL,
+
+    jwtSecret: process.env.JWT_SECRET,
+
+    nodeEnv: process.env.NODE_ENV || "development"
+};
+```
+
+**Using configuration:**
+
+```js
+const config = require("./config/env");
+
+console.log(config.port);
+console.log(config.nodeEnv);
+```
+
+🎯 **Interview Answer:**
+
+Configuration management means keeping application settings in an organized and centralized location instead of hardcoding them throughout the project.
+
+<h2  class="answer-heading" id="15.14">15.14 How do you manage environment variables?</h2>
+
+## **15.14 How do you manage environment variables?**
+
+📌 **Definition:**
+
+Environment variables are external configuration values used to manage environment-specific settings and sensitive information.
+
+In Node.js, we access them using `process.env`.
+
+**Step 1: Install dotenv**
+
+```js
+npm install dotenv
+```
+
+**Step 2: Create&#x20;**`.env`**&#x20;file**
+
+```js
+PORT=5000
+NODE_ENV=development
+DATABASE_URL=mongodb://localhost:27017/myapp
+JWT_SECRET=my_secret_key
+```
+
+**Step 3: Load environment variables**
+
+```js
+require("dotenv").config();
+
+console.log(process.env.PORT);
+console.log(process.env.NODE_ENV);
+```
+
+**Output:**
+
+```js
+5000
+development
+```
+
+**Important points:**
+
+- Never commit the real `.env` file to Git.
+- Add `.env` to `.gitignore`.
+- Create `.env.example` with placeholder values.
+- Validate required environment variables when the application starts.
+- Use a secure secret manager or deployment environment configuration for production secrets.
+
+🎯 **Interview Answer:**
+
+I manage environment variables using `process.env` and the dotenv package in development. I keep sensitive values outside the source code and configure them separately for each environment.
+
+<h2  class="answer-heading" id="15.15">15.15 What is the purpose of a centralized database connection?</h2>
+
+## **15.15 What is the purpose of a centralized database connection?**
+
+📌 **Definition:**
+
+A centralized database connection means managing the database connection logic in one dedicated file instead of connecting to the database separately in every controller or service.
+
+**Example –&#x20;**`config/database.js`**:**
+
+```js
+const mongoose = require("mongoose");
+
+const connectDB = async () => {
+    try {
+        await mongoose.connect(process.env.DATABASE_URL);
+
+        console.log("MongoDB connected successfully");
+    } catch (error) {
+        console.error("Database connection failed:", error.message);
+
+        process.exit(1);
+    }
+};
+
+module.exports = connectDB;
+```
+
+**Using it in&#x20;**`server.js`**:**
+
+```js
+require("dotenv").config();
+
+const app = require("./app");
+const connectDB = require("./config/database");
+
+const PORT = process.env.PORT || 5000;
+
+const startServer = async () => {
+    await connectDB();
+
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+};
+
+startServer();
+```
+
+**Benefits:**
+
+1. Avoids duplicate connection code.
+2. Makes database configuration easier.
+3. Keeps database initialization centralized.
+4. Makes error handling easier.
+5. Ensures the database is connected before accepting requests.
+
+🎯 **Interview Answer:**
+
+A centralized database connection manages database initialization in one place. It avoids duplicate code and makes connection handling, configuration, and error management easier.
+
+<h2  class="answer-heading" id="15.16">15.16 How do you handle multiple environments (development, staging, production)?</h2>
+
+## **15.16 How do you handle multiple environments (development, staging, production)?**
+
+📌 **Definition:**
+
+Different environments are separate configurations used during development, testing, and deployment.
+
+**Common environments:**
+
+| Environment | Purpose                                |
+| ----------- | -------------------------------------- |
+| Development | Local development                      |
+| Testing     | Automated testing                      |
+| Staging     | Production-like testing before release |
+| Production  | Application used by real customers     |
+
+💻 **Example configuration:**
+
+**Development&#x20;**`.env`**:**
+
+```js
+NODE_ENV=development
+PORT=5000
+DATABASE_URL=mongodb://localhost:27017/dev_db
+```
+
+**Staging environment variables:**
+
+```js
+NODE_ENV=staging
+PORT=5000
+DATABASE_URL=mongodb://staging-server/staging_db
+```
+
+**Production environment variables:**
+
+```js
+NODE_ENV=production
+PORT=5000
+DATABASE_URL=mongodb+srv://production-server/prod_db
+```
+
+**Access the environment:**
+
+```js
+console.log(process.env.NODE_ENV);
+
+if (process.env.NODE_ENV === "production") {
+    console.log("Production environment");
+} else {
+    console.log("Non-production environment");
+}
+```
+
+**Important points:**
+
+- Use separate databases for each environment.
+- Never use production credentials in local development.
+- Keep environment variables outside Git.
+- Configure production secrets through the hosting platform or secret manager.
+- Use the same application code with different configuration values.
+
+🎯 **Interview Answer:**
+
+I manage multiple environments using environment variables and separate configuration settings. Development, staging, and production use their own database URLs, credentials, and application settings.
+
+<h2  class="answer-heading" id="15.17">15.17 How do you organize routes, controllers, services, models, and middleware?</h2>
+
+## **15.17 How do you organize routes, controllers, services, models, and middleware?**
+
+📌 **Definition:**
+
+We organize these components into separate folders based on their responsibilities so that each layer handles a specific part of the application.
+
+
+**Example route –&#x20;**`user.routes.js`**:**
+
+```js
+const express = require("express");
+const userController = require("../controllers/user.controller");
+
+const router = express.Router();
+
+router.post("/users", userController.createUser);
+
+router.get("/users/:id", userController.getUser);
+
+module.exports = router;
+```
+
+**Example middleware –&#x20;**`auth.middleware.js`**:**
+
+```js
+const authMiddleware = (req, res, next) => {
+    const token = req.headers.authorization;
+
+    if (!token) {
+        return res.status(401).json({
+            message: "Unauthorized"
+        });
+    }
+
+    next();
+};
+
+module.exports = authMiddleware;
+```
+
+**Responsibilities at a glance:**
+
+| Component  | What it does                                |
+| ---------- | ------------------------------------------- |
+| Route      | Defines API endpoints                       |
+| Middleware | Performs checks before controller execution |
+| Controller | Handles HTTP request and response           |
+| Service    | Applies business rules                      |
+| Repository | Executes database queries                   |
+| Model      | Defines data structure                      |
+
+🎯 **Interview Answer:**
+
+I organize Node.js applications by separating routes, middleware, controllers, services, repositories, and models. Each layer has a specific responsibility, which makes the application easier to test, maintain, and scale.
+
+<h2  class="answer-heading" id="15.18">15.18 What is a monolithic architecture?</h2>
+
+## **15.18 What is a Monolithic Architecture?**
+
+📌 **Definition:**
+
+Monolithic architecture is a software architecture where multiple application components are developed and deployed as one application.
+
+**Example:**
+
+An e-commerce application containing:
+
+- User management.
+- Product management.
+- Order management.
+- Payment management.
+- Inventory management.
+
+All these modules run as part of one deployable application.
+
+**Monolithic Application**
+
+**Users**
+
+**Products**
+
+**Orders**
+
+**Payments**
+
+**One application deployment**
+
+**Advantages:**
+
+- Easy to start developing.
+- Simple deployment.
+- Easier debugging in smaller applications.
+- Modules can communicate directly within the application.
+
+**Disadvantages:**
+
+- Large applications can become difficult to maintain.
+- A deployment usually involves the whole application.
+- Scaling individual modules independently is difficult.
+- Poorly separated code can become tightly coupled.
+
+🎯 **Interview Answer:**
+
+Monolithic architecture combines multiple application modules into one deployable application. It is simple to develop and deploy initially, but large applications can become difficult to maintain and scale independently.
+
+<h2  class="answer-heading" id="15.19">15.19 What is a modular monolith?</h2>
+
+## **15.19 What is a Modular Monolith?**
+
+📌 **Definition:**
+
+A Modular Monolith is a single deployable application divided into independent, well-organized modules.
+
+Each module manages its own business logic and responsibilities, but all modules run within the same application.
+
+**Example: E-commerce project**
+
+```js
+src/
+│
+├── modules/
+│   ├── user/
+│   │   ├── user.routes.js
+│   │   ├── user.controller.js
+│   │   ├── user.service.js
+│   │   └── user.model.js
+│   │
+│   ├── product/
+│   │   ├── product.routes.js
+│   │   ├── product.controller.js
+│   │   ├── product.service.js
+│   │   └── product.model.js
+│   │
+│   ├── order/
+│   │   ├── order.routes.js
+│   │   ├── order.controller.js
+│   │   ├── order.service.js
+│   │   └── order.model.js
+│   │
+│   └── payment/
+│       ├── payment.routes.js
+│       ├── payment.controller.js
+│       ├── payment.service.js
+│       └── payment.model.js
+│
+├── config/
+├── middleware/
+├── shared/
+├── app.js
+└── server.js
+```
+
+**Advantages:**
+
+1. Clear separation between modules.
+2. Easier maintenance.
+3. Better code organization.
+4. Modules can be tested independently.
+5. Can evolve into microservices if there is a real need.
+
+**Monolith vs Modular Monolith:**
+
+| Monolith                               | Modular Monolith                        |
+| -------------------------------------- | --------------------------------------- |
+| One application                        | One application                         |
+| Components may be tightly coupled      | Modules have clear boundaries           |
+| Organization may be less structured    | Organized by business modules           |
+| Harder to maintain as complexity grows | Easier to maintain with good boundaries |
+| One deployment                         | One deployment                          |
+
+🎯 **Interview Answer:**
+
+A Modular Monolith is a single deployable application organized into separate business modules. It provides better code separation and maintainability without the complexity of microservices.
+
+<h2  class="answer-heading" id="15.20">15.20 What is clean architecture?</h2>
+
+## **15.20 What is Clean Architecture?**
+
+📌 **Definition:**
+
+Clean Architecture is a software architecture approach that separates business rules from external technologies such as databases, frameworks, and APIs.
+
+Its main principle is that **business logic should not depend directly on external infrastructure**.
+
+**Common layers:**
+
+1. Entities – Core business rules and domain objects.
+2. Use Cases – Application-specific business operations.
+3. Interface Adapters – Controllers, presenters, and repository implementations or adapters.
+4. Frameworks and Drivers – Express, MongoDB, external APIs, and other infrastructure.
+
+## **Clean Architecture**
+
+**Frameworks & Drivers**
+
+Express, MongoDB, external APIs
+
+**Interface Adapters**
+
+Controllers, repository adapters
+
+**Use Cases**
+
+Application business operations
+
+**Entities**
+
+Core business rules
+
+Conceptual layers: dependencies should point inward toward business rules.
+
+**Example:**
+
+Suppose you are building a payment application.
+
+- Entity: Payment rules.
+- Use Case: Process a payment.
+- Interface Adapter: Payment controller and repository adapter.
+- Framework / Driver: Express, MongoDB, Razorpay API.
+
+If you change MongoDB to PostgreSQL, the core payment business rules should not need to change.
+
+🎯 **Interview Answer:**
+
+Clean Architecture separates business logic from frameworks, databases, and external services. It uses dependency inversion so that core business rules remain independent of infrastructure.
+
+
+### **Controller vs Service vs Repository vs Model**
+
+| Layer      | Main responsibility       | Example               |
+| ---------- | ------------------------- | --------------------- |
+| Controller | HTTP request and response | `createUser()`        |
+| Service    | Business logic            | Check duplicate email |
+| Repository | Database operations       | `findByEmail()`       |
+| Model      | Database schema           | `User` schema         |
+| Middleware | Request processing        | Authentication        |
+| Utility    | Reusable helper           | `formatDate()`        |
+
+### **Monolith vs Modular Monolith vs Microservices**
+
+| Architecture     | Deployment                                 |
+| ---------------- | ------------------------------------------ |
+| Monolith         | One application                            |
+| Modular Monolith | One application with separate modules      |
+| Microservices    | Multiple independently deployable services |
+
+### **Important keywords for interviews**
+
+| Keyword | Meaning                                |
+| ------- | -------------------------------------- |
+| MVC     | Model View Controller                  |
+| DI      | Dependency Injection                   |
+| SRP     | Single Responsibility Principle        |
+| DRY     | Don't Repeat Yourself                  |
+| ORM     | Object Relational Mapping              |
+| ODM     | Object Document Mapping                |
+| API     | Application Programming Interface      |
+| SOLID   | Five object-oriented design principles |
+
+
+
+<h2  class="answer-heading" id="18.21">18.21 What is request size limiting?</h2>
+
+## **18.21 What is request size limiting?**
+
+📌 **Definition:**
+
+Request size limiting means restricting the maximum amount of data a client can send to a server.
+
+It helps protect Node.js applications from excessively large requests and resource-exhaustion attacks.
+
+**Why do we need it?**
+
+- Prevent large payload attacks.
+- Reduce memory consumption.
+- Avoid unnecessary server processing.
+- Protect API availability.
+
+**Example: Express.js**
+
+```js
+const express = require("express");
+
+const app = express();
+
+app.use(express.json({
+    limit: "1mb"
+}));
+
+app.use(express.urlencoded({
+    extended: true,
+    limit: "1mb"
+}));
+
+app.listen(5000, () => {
+    console.log("Server running");
+});
+```
+
+**How it works:**
+
+- `express.json()` parses JSON request bodies.
+- `limit: "1mb"` restricts the maximum parsed JSON body size.
+- Requests exceeding the configured limit are rejected, normally with HTTP `413 Payload Too Large`.
+
+
+**Important:**
+
+For file uploads, configure separate limits in Multer. Also apply appropriate limits at your reverse proxy or API gateway, because Express body-parser limits do not cover every request type.
+
+🎯 **Interview Answer:**
+
+Request size limiting restricts the maximum request body size accepted by the server. In Express.js, I use body-parser limits such as `express.json({ limit: "1mb" })` to protect against oversized payloads and resource-exhaustion attacks.
+
+<h2  class="answer-heading" id="18.22">18.22 How do you prevent brute-force login attempts?</h2>
+
+## **18.22 How do you prevent brute-force login attempts?**
+
+📌 **Definition:**
+
+A brute-force attack occurs when an attacker repeatedly tries different passwords to gain unauthorized access to an account.
+
+**Example:**
+
+An attacker repeatedly tries:
+
+```js
+username: arun@gmail.com
+
+password: 123456
+password: password123
+password: admin123
+password: welcome123
+password: ...
+```
+
+**How do we prevent it?**
+
+1. Rate limiting – Restrict login attempts within a time period.
+2. Account lockout – Temporarily lock an account after repeated failures, with safeguards against denial-of-service abuse.
+3. CAPTCHA – Add a challenge after suspicious activity.
+4. Strong passwords – Enforce appropriate password requirements.
+5. Password hashing – Use bcrypt or Argon2.
+6. MFA – Require an additional authentication factor.
+7. Monitoring – Detect and log suspicious login activity.
+
+**Example: Express Rate Limit**
+
+Install:
+
+```js
+npm install express-rate-limit
+```
+
+**Step 1: Create rate-limit middleware**
+
+`middleware/login-rate-limit.js`
+
+```js
+const rateLimit = require("express-rate-limit");
+
+const loginLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+
+    max: 5,
+
+    message: {
+        success: false,
+        message: "Too many login attempts. Try again later."
+    },
+
+    standardHeaders: true,
+    legacyHeaders: false
+});
+
+module.exports = loginLimiter;
+```
+
+**Step 2: Apply it to login route**
+
+```js
+const express = require("express");
+
+const loginLimiter = require("../middleware/login-rate-limit");
+const authController = require("../controllers/auth.controller");
+
+const router = express.Router();
+
+router.post(
+    "/login",
+    loginLimiter,
+    authController.login
+);
+
+module.exports = router;
+```
+
+**How it works:**
+
+1. User sends a login request.
+2. Rate limiter tracks login attempts.
+3. The user is allowed up to 5 requests within 15 minutes under this configuration.
+4. Further requests receive HTTP `429 Too Many Requests` until the window resets.
+
+**Important production considerations:**
+
+- Use a shared rate-limit store such as Redis when running multiple Node.js instances.
+- Configure proxy trust correctly when behind Nginx or a load balancer.
+- Consider limiting by both IP address and account identifier.
+- Avoid revealing whether an email address exists.
+- Use progressive delays and account protection without allowing attackers to lock out victims easily.
+
+🎯 **Interview Answer:**
+
+I prevent brute-force login attacks using rate limiting, account protection, CAPTCHA, strong password hashing, and multi-factor authentication. In Express.js, I commonly use `express-rate-limit` to restrict repeated login attempts.
