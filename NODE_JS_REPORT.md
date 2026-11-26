@@ -297,7 +297,6 @@ It is used in:
 ![img](learning_node/imgs/asynchronous-programming.png)
 
 
-
 **Non-blocking I/O** means that **Node.js does not wait** for slow operations (like reading a file, querying a database, or making an API call) to finish.
 
 Instead, it:
