@@ -258,28 +258,10 @@
 - 9.3 What is a REST API?
 - 9.4 What are REST principles?
 - 9.5 What is a RESTful API?
-- 9.6 What is HTTP?
-- 9.7 What is HTTPS?
-- 9.8 HTTP vs HTTPS?
+- 9.6 What is HTTP and HTTPS?
 - 9.9 What are HTTP methods?
-- 9.10 GET vs POST?
-- 9.11 PUT vs PATCH?
-- 9.12 DELETE vs POST?
 - 9.13 What is an HTTP status code?
-- 9.14 What is 200?
-- 9.15 What is 201?
-- 9.16 What is 204?
-- 9.17 What is 400?
-- 9.18 What is 401?
-- 9.19 What is 403?
-- 9.20 What is 404?
-- 9.21 What is 409?
-- 9.22 What is 422?
-- 9.23 What is 429?
-- 9.24 What is 500?
-- 9.25 What is 502?
-- 9.26 What is 503?
-- 9.27 What is 504?
+- 9.14 What is 200,201,204,400,401,403,404,409,422,429,500,502,503,504 ?
 - 9.28 What are request headers?
 - 9.29 What are response headers?
 - 9.30 What is Content-Type?
@@ -298,7 +280,6 @@
 - 9.43 What is API search?
 - 9.44 How do you design consistent API responses?
 - 9.45 How do you handle API errors?
-- 9.46 What is API documentation?
 - 9.47 What is OpenAPI/Swagger?
 - 9.48 How do you implement API rate limiting?
 - 9.49 How do you handle large API responses?
